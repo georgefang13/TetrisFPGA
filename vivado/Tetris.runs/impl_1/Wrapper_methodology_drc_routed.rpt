@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Mar 27 15:04:54 2024
+| Date         : Wed Apr  3 17:27:41 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Wrapper_methodology_drc_routed.rpt -pb Wrapper_methodology_drc_routed.pb -rpx Wrapper_methodology_drc_routed.rpx
 | Design       : Wrapper
@@ -23,122 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 22
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-6  | Critical Warning | No common primary clock between related clocks                   | 2          |
-| TIMING-14 | Critical Warning | LUT on the clock tree                                            | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 3          |
-| SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal                       | 4          |
-| TIMING-16 | Warning          | Large setup violation                                            | 10         |
-| TIMING-56 | Warning          | Missing logically or physically excluded clock groups constraint | 2          |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Violations found: 2
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| TIMING-56 | Warning  | Missing logically or physically excluded clock groups constraint | 2          |
++-----------+----------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-6#1 Critical Warning
-No common primary clock between related clocks  
-The clocks clk_out1_clk_wiz_0 and clk_out1_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_out1_clk_wiz_0_1]
-Related violations: <none>
-
-TIMING-6#2 Critical Warning
-No common primary clock between related clocks  
-The clocks clk_out1_clk_wiz_0_1 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0_1] -to [get_clocks clk_out1_clk_wiz_0]
-Related violations: <none>
-
-TIMING-14#1 Critical Warning
-LUT on the clock tree  
-The LUT q_reg_i_9 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
-Related violations: <none>
-
-LUTAR-1#1 Warning
-LUT drives async reset alert  
-LUT cell CPU/dx/ir/dff_loop[2].dff/q_i_1__127, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/mult_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
-LUT drives async reset alert  
-LUT cell CPU/dx/ir/dff_loop[2].dff/q_i_1__128, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/div_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#3 Warning
-LUT drives async reset alert  
-LUT cell CPU/dx/ir/dff_loop[3].dff/q_i_2__93, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/count/t0/dff/q_reg/CLR, CPU/md/count/t1/dff/q_reg/CLR,
-CPU/md/count/t2/dff/q_reg/CLR, CPU/md/count/t3/dff/q_reg/CLR,
-CPU/md/count/t4/dff/q_reg/CLR, CPU/md/count/t5/dff/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-SYNTH-6#1 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance ProcMem/MemoryArray_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
-SYNTH-6#2 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance ProcMem/MemoryArray_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
-SYNTH-6#3 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance ProcMem/MemoryArray_reg_2, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
-SYNTH-6#4 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance ProcMem/MemoryArray_reg_3, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -1.146 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[23].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -1.157 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[21].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -1.196 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -1.209 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[20].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -1.211 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[25].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -1.280 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[31].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -1.285 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[30].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -1.339 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[27].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -1.392 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[29].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -1.441 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0_1) and CPU/md/divider/r_divisor/dff_loop[28].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
 TIMING-56#1 Warning
 Missing logically or physically excluded clock groups constraint  
 Multiple clocks are user generated or auto-derived on the source pin pll/inst/plle2_adv_inst/CLKFBOUT but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clkfbout_clk_wiz_0, clkfbout_clk_wiz_0_1

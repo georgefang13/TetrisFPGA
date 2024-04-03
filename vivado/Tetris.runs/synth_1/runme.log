@@ -17,154 +17,175 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12328
+INFO: [Synth 8-7075] Helper process launched with PID 5500
 WARNING: [Synth 8-6901] identifier 'clk_50mhz' is used before its declaration [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.016 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1328.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:27]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/lja26/Desktop/Tetris/Tetris.runs/synth_1/.Xil/Vivado-12296-P2-05/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/lja26/Desktop/Tetris/Tetris.runs/synth_1/.Xil/Vivado-12296-P2-05/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/lja26/Desktop/processor-main/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'fd_latch' [C:/Users/lja26/Desktop/processor-main/fd_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/lja26/Desktop/processor-main/regfile/register.v:1]
-INFO: [Synth 8-6157] synthesizing module 'custom_dff' [C:/Users/lja26/Desktop/processor-main/regfile/custom_dff.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'custom_dff' (2#1) [C:/Users/lja26/Desktop/processor-main/regfile/custom_dff.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'register' (3#1) [C:/Users/lja26/Desktop/processor-main/regfile/register.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'fd_latch' (4#1) [C:/Users/lja26/Desktop/processor-main/fd_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'dx_latch' [C:/Users/lja26/Desktop/processor-main/dx_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dx_latch' (5#1) [C:/Users/lja26/Desktop/processor-main/dx_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'xm_latch' [C:/Users/lja26/Desktop/processor-main/xm_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'xm_latch' (6#1) [C:/Users/lja26/Desktop/processor-main/xm_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mw_latch' [C:/Users/lja26/Desktop/processor-main/mw_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mw_latch' (7#1) [C:/Users/lja26/Desktop/processor-main/mw_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/lja26/Desktop/processor-main/alu/adder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'block' [C:/Users/lja26/Desktop/processor-main/alu/block.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'block' (8#1) [C:/Users/lja26/Desktop/processor-main/alu/block.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'adder' (9#1) [C:/Users/lja26/Desktop/processor-main/alu/adder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'decoder32' [C:/Users/lja26/Desktop/processor-main/regfile/decoder32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'decoder32' (10#1) [C:/Users/lja26/Desktop/processor-main/regfile/decoder32.v:1]
-INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/lja26/Desktop/processor-main/alu/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bw_not' [C:/Users/lja26/Desktop/processor-main/alu/bw_not.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bw_not' (11#1) [C:/Users/lja26/Desktop/processor-main/alu/bw_not.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/lja26/Desktop/processor-main/alu/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2' (12#1) [C:/Users/lja26/Desktop/processor-main/alu/mux_2.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bw_and' [C:/Users/lja26/Desktop/processor-main/alu/bw_and.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bw_and' (13#1) [C:/Users/lja26/Desktop/processor-main/alu/bw_and.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bw_or' [C:/Users/lja26/Desktop/processor-main/alu/bw_or.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bw_or' (14#1) [C:/Users/lja26/Desktop/processor-main/alu/bw_or.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/lja26/Desktop/processor-main/alu/sll.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_sixteen' [C:/Users/lja26/Desktop/processor-main/alu/sll_sixteen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_sixteen' (15#1) [C:/Users/lja26/Desktop/processor-main/alu/sll_sixteen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_eight' [C:/Users/lja26/Desktop/processor-main/alu/sll_eight.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_eight' (16#1) [C:/Users/lja26/Desktop/processor-main/alu/sll_eight.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_four' [C:/Users/lja26/Desktop/processor-main/alu/sll_four.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_four' (17#1) [C:/Users/lja26/Desktop/processor-main/alu/sll_four.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_two' [C:/Users/lja26/Desktop/processor-main/alu/sll_two.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_two' (18#1) [C:/Users/lja26/Desktop/processor-main/alu/sll_two.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_one' [C:/Users/lja26/Desktop/processor-main/alu/sll_one.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_one' (19#1) [C:/Users/lja26/Desktop/processor-main/alu/sll_one.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll' (20#1) [C:/Users/lja26/Desktop/processor-main/alu/sll.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/lja26/Desktop/processor-main/alu/sra.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_sixteen' [C:/Users/lja26/Desktop/processor-main/alu/sra_sixteen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_sixteen' (21#1) [C:/Users/lja26/Desktop/processor-main/alu/sra_sixteen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_eight' [C:/Users/lja26/Desktop/processor-main/alu/sra_eight.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_eight' (22#1) [C:/Users/lja26/Desktop/processor-main/alu/sra_eight.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_four' [C:/Users/lja26/Desktop/processor-main/alu/sra_four.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_four' (23#1) [C:/Users/lja26/Desktop/processor-main/alu/sra_four.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_two' [C:/Users/lja26/Desktop/processor-main/alu/sra_two.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_two' (24#1) [C:/Users/lja26/Desktop/processor-main/alu/sra_two.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_one' [C:/Users/lja26/Desktop/processor-main/alu/sra_one.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_one' (25#1) [C:/Users/lja26/Desktop/processor-main/alu/sra_one.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra' (26#1) [C:/Users/lja26/Desktop/processor-main/alu/sra.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/lja26/Desktop/processor-main/alu/mux_8.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/lja26/Desktop/processor-main/alu/mux_4.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4' (27#1) [C:/Users/lja26/Desktop/processor-main/alu/mux_4.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_8' (28#1) [C:/Users/lja26/Desktop/processor-main/alu/mux_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (29#1) [C:/Users/lja26/Desktop/processor-main/alu/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/lja26/Desktop/processor-main/multdiv/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/lja26/Desktop/processor-main/multdiv/counter.v:1]
-INFO: [Synth 8-6157] synthesizing module 'custom_tff' [C:/Users/lja26/Desktop/processor-main/multdiv/custom_tff.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'custom_tff' (30#1) [C:/Users/lja26/Desktop/processor-main/multdiv/custom_tff.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'counter' (31#1) [C:/Users/lja26/Desktop/processor-main/multdiv/counter.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mult' [C:/Users/lja26/Desktop/processor-main/multdiv/mult.v:1]
-INFO: [Synth 8-6157] synthesizing module 'register65' [C:/Users/lja26/Desktop/processor-main/multdiv/register65.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'register65' (32#1) [C:/Users/lja26/Desktop/processor-main/multdiv/register65.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_two65' [C:/Users/lja26/Desktop/processor-main/multdiv/sra_two65.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_two65' (33#1) [C:/Users/lja26/Desktop/processor-main/multdiv/sra_two65.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mult' (34#1) [C:/Users/lja26/Desktop/processor-main/multdiv/mult.v:1]
-INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/lja26/Desktop/processor-main/multdiv/div.v:1]
-INFO: [Synth 8-6157] synthesizing module 'register64' [C:/Users/lja26/Desktop/processor-main/multdiv/register64.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'register64' (35#1) [C:/Users/lja26/Desktop/processor-main/multdiv/register64.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_one64' [C:/Users/lja26/Desktop/processor-main/multdiv/sll_one64.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_one64' (36#1) [C:/Users/lja26/Desktop/processor-main/multdiv/sll_one64.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'div' (37#1) [C:/Users/lja26/Desktop/processor-main/multdiv/div.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'multdiv' (38#1) [C:/Users/lja26/Desktop/processor-main/multdiv/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'pw_latch' [C:/Users/lja26/Desktop/processor-main/pw_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pw_latch' (39#1) [C:/Users/lja26/Desktop/processor-main/pw_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (40#1) [C:/Users/lja26/Desktop/processor-main/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/lja26/Desktop/processor-main/ROM.v:2]
+WARNING: [Synth 8-324] index 10 out of range [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:34]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14908-P2-05/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14908-P2-05/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-324] index 10 out of range [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:63]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/lja26/Desktop/tetris/processor-main/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'fd_latch' [C:/Users/lja26/Desktop/tetris/processor-main/fd_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'custom_dff' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/custom_dff.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'custom_dff' (2#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/custom_dff.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'register' (3#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fd_latch' (4#1) [C:/Users/lja26/Desktop/tetris/processor-main/fd_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dx_latch' [C:/Users/lja26/Desktop/tetris/processor-main/dx_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dx_latch' (5#1) [C:/Users/lja26/Desktop/tetris/processor-main/dx_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'xm_latch' [C:/Users/lja26/Desktop/tetris/processor-main/xm_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'xm_latch' (6#1) [C:/Users/lja26/Desktop/tetris/processor-main/xm_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mw_latch' [C:/Users/lja26/Desktop/tetris/processor-main/mw_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mw_latch' (7#1) [C:/Users/lja26/Desktop/tetris/processor-main/mw_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/lja26/Desktop/tetris/processor-main/alu/adder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'block' [C:/Users/lja26/Desktop/tetris/processor-main/alu/block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'block' (8#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (9#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/adder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder32' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/decoder32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder32' (10#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/decoder32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/lja26/Desktop/tetris/processor-main/alu/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bw_not' [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_not.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bw_not' (11#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_not.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (12#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bw_and' [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_and.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bw_and' (13#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_and.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bw_or' [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_or.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bw_or' (14#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_or.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_sixteen' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_sixteen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_sixteen' (15#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_sixteen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_eight' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_eight.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_eight' (16#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_eight.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_four' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_four.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_four' (17#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_four.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_two' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_two.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_two' (18#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_two.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_one' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_one.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_one' (19#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_one.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll' (20#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_sixteen' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_sixteen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_sixteen' (21#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_sixteen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_eight' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_eight.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_eight' (22#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_eight.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_four' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_four.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_four' (23#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_four.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_two' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_two.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_two' (24#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_two.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_one' [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_one.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_one' (25#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_one.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra' (26#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (27#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8' (28#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (29#1) [C:/Users/lja26/Desktop/tetris/processor-main/alu/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'custom_tff' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/custom_tff.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'custom_tff' (30#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/custom_tff.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (31#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register65' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register65' (32#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register65.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra_two65' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sra_two65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra_two65' (33#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sra_two65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (34#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register64' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register64.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register64' (35#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register64.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll_one64' [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sll_one64.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll_one64' (36#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sll_one64.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'div' (37#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multdiv' (38#1) [C:/Users/lja26/Desktop/tetris/processor-main/multdiv/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pw_latch' [C:/Users/lja26/Desktop/tetris/processor-main/pw_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pw_latch' (39#1) [C:/Users/lja26/Desktop/tetris/processor-main/pw_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (40#1) [C:/Users/lja26/Desktop/tetris/processor-main/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:2]
 	Parameter MEMFILE bound to: 80'b01110100011010010110110101101001011011100110011100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'timing.mem' is read successfully [C:/Users/lja26/Desktop/processor-main/ROM.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'ROM' (41#1) [C:/Users/lja26/Desktop/processor-main/ROM.v:2]
-INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/lja26/Desktop/processor-main/regfile/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'tri_state' [C:/Users/lja26/Desktop/processor-main/regfile/tri_state.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'tri_state' (42#1) [C:/Users/lja26/Desktop/processor-main/regfile/tri_state.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile' (43#1) [C:/Users/lja26/Desktop/processor-main/regfile/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/lja26/Desktop/processor-main/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (44#1) [C:/Users/lja26/Desktop/processor-main/RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'timing.mem' is read successfully [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (41#1) [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tri_state' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/tri_state.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tri_state' (42#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/tri_state.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (43#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (44#1) [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (45#1) [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.016 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1328.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.016 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.016 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1329.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1328.902 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
-Finished Parsing XDC File [c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
+Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
+Finished Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
 Parsing XDC File [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'JB[10]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:60]
 Finished Parsing XDC File [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1390.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1388.883 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1390.582 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1388.883 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for pll. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,7 +197,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
 	                1 Bit    Registers := 1772  
 +---RAMs : 
 	             128K Bit	(4096 X 32 bit)          RAMs := 1     
@@ -185,9 +206,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   65 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 48    
+	   2 Input   32 Bit        Muxes := 47    
 	   2 Input    5 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -204,7 +224,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -217,15 +237,6 @@ ROM: Preliminary Mapping Report
 |Wrapper     | InstMem/dataOut_reg | 4096x17       | Block RAM      | 
 +------------+---------------------+---------------+----------------+
 
-
-Block RAM: Preliminary Mapping Report (see note below)
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
-Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -233,39 +244,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1390.582 ; gain = 61.566
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1471.527 ; gain = 142.512
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Final Mapping Report
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1493.520 ; gain = 164.504
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -283,37 +274,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,44 +318,34 @@ Report BlackBoxes:
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |clk_wiz  |     1|
-|2     |BUFG     |     1|
-|3     |LUT1     |     2|
-|4     |LUT2     |   318|
-|5     |LUT3     |   266|
-|6     |LUT4     |   291|
-|7     |LUT5     |   455|
-|8     |LUT6     |  1192|
-|9     |RAMB36E1 |     6|
-|12    |FDCE     |  1464|
-|13    |FDRE     |   239|
-|14    |IBUF     |    17|
-|15    |OBUF     |    16|
-+------+---------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |FDRE    |     7|
+|3     |IBUF    |     7|
+|4     |OBUF    |     8|
+|5     |OBUFT   |     8|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1505.324 ; gain = 114.742
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1505.324 ; gain = 176.309
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1517.383 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.883 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1521.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.883 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 97ed9cb
+Synth Design complete, checksum: 8046a4b2
 INFO: [Common 17-83] Releasing license: Synthesis
-112 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+104 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1521.082 ; gain = 192.066
-INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/Tetris/Tetris.runs/synth_1/Wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1388.883 ; gain = 59.980
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 15:02:16 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 17:26:44 2024...

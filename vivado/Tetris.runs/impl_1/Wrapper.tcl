@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/lja26/Desktop/Tetris/Tetris.runs/impl_1/Wrapper.tcl"
+  variable script "C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -126,7 +126,7 @@ set rc [catch {
   set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   open_checkpoint Wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/Users/lja26/Desktop/Tetris/Tetris.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/lja26/Desktop/tetris/vivado/Tetris.cache/wt [current_project]
 set_property TOP Wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

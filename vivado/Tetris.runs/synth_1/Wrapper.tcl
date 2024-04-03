@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/lja26/Desktop/Tetris/Tetris.runs/synth_1/Wrapper.tcl"
+  variable script "C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/Wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,66 +79,66 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/lja26/Desktop/Tetris/Tetris.cache/wt [current_project]
-set_property parent.project_path C:/Users/lja26/Desktop/Tetris/Tetris.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/lja26/Desktop/tetris/vivado/Tetris.cache/wt [current_project]
+set_property parent.project_path C:/Users/lja26/Desktop/tetris/vivado/Tetris.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/lja26/Desktop/Tetris/Tetris.cache/ip [current_project]
+set_property ip_output_repo c:/Users/lja26/Desktop/tetris/vivado/Tetris.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem C:/Users/lja26/Desktop/vivado_timing/timing.mem
 read_verilog -library xil_defaultlib {
-  C:/Users/lja26/Desktop/processor-main/RAM.v
-  C:/Users/lja26/Desktop/processor-main/ROM.v
-  C:/Users/lja26/Desktop/processor-main/alu/adder.v
-  C:/Users/lja26/Desktop/processor-main/alu/alu.v
-  C:/Users/lja26/Desktop/processor-main/alu/block.v
-  C:/Users/lja26/Desktop/processor-main/alu/bw_and.v
-  C:/Users/lja26/Desktop/processor-main/alu/bw_not.v
-  C:/Users/lja26/Desktop/processor-main/alu/bw_or.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/counter.v
-  C:/Users/lja26/Desktop/processor-main/regfile/custom_dff.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/custom_tff.v
-  C:/Users/lja26/Desktop/processor-main/regfile/decoder32.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/div.v
-  C:/Users/lja26/Desktop/processor-main/dx_latch.v
-  C:/Users/lja26/Desktop/processor-main/fd_latch.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/mult.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/multdiv.v
-  C:/Users/lja26/Desktop/processor-main/alu/mux_2.v
-  C:/Users/lja26/Desktop/processor-main/alu/mux_4.v
-  C:/Users/lja26/Desktop/processor-main/alu/mux_8.v
-  C:/Users/lja26/Desktop/processor-main/mw_latch.v
-  C:/Users/lja26/Desktop/processor-main/processor.v
-  C:/Users/lja26/Desktop/processor-main/pw_latch.v
-  C:/Users/lja26/Desktop/processor-main/regfile/regfile.v
-  C:/Users/lja26/Desktop/processor-main/regfile/register.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/register64.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/register65.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll_eight.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll_four.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll_one.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/sll_one64.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll_sixteen.v
-  C:/Users/lja26/Desktop/processor-main/alu/sll_two.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra_eight.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra_four.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra_one.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra_sixteen.v
-  C:/Users/lja26/Desktop/processor-main/alu/sra_two.v
-  C:/Users/lja26/Desktop/processor-main/multdiv/sra_two65.v
-  C:/Users/lja26/Desktop/processor-main/regfile/tri_state.v
-  C:/Users/lja26/Desktop/processor-main/xm_latch.v
+  C:/Users/lja26/Desktop/tetris/processor-main/RAM.v
+  C:/Users/lja26/Desktop/tetris/processor-main/ROM.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/adder.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/alu.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/block.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_and.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_not.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/bw_or.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/counter.v
+  C:/Users/lja26/Desktop/tetris/processor-main/regfile/custom_dff.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/custom_tff.v
+  C:/Users/lja26/Desktop/tetris/processor-main/regfile/decoder32.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/div.v
+  C:/Users/lja26/Desktop/tetris/processor-main/dx_latch.v
+  C:/Users/lja26/Desktop/tetris/processor-main/fd_latch.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/mult.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/multdiv.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_2.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_4.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/mux_8.v
+  C:/Users/lja26/Desktop/tetris/processor-main/mw_latch.v
+  C:/Users/lja26/Desktop/tetris/processor-main/processor.v
+  C:/Users/lja26/Desktop/tetris/processor-main/pw_latch.v
+  C:/Users/lja26/Desktop/tetris/processor-main/regfile/regfile.v
+  C:/Users/lja26/Desktop/tetris/processor-main/regfile/register.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register64.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/register65.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_eight.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_four.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_one.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sll_one64.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_sixteen.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sll_two.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_eight.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_four.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_one.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_sixteen.v
+  C:/Users/lja26/Desktop/tetris/processor-main/alu/sra_two.v
+  C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sra_two65.v
+  C:/Users/lja26/Desktop/tetris/processor-main/regfile/tri_state.v
+  C:/Users/lja26/Desktop/tetris/processor-main/xm_latch.v
   C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v
 }
-read_ip -quiet c:/Users/lja26/Desktop/Tetris/Tetris.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/lja26/Desktop/tetris/vivado/Tetris.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
