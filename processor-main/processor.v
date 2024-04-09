@@ -111,17 +111,17 @@ module processor(
 
     assign dx_rs2 = x_decode[22] ? 5'b11110 : (x_decode[2]||x_decode[4]||x_decode[6]||x_decode[7]||x_decode[8]) ? dx_ir_out[26:22] : dx_ir_out[16:12];
     assign ctrl_alu_b[3] = m_decode[21] && dx_rs2 == 5'b11110;
-    assign ctrl_alu_b[2] = (mw_ir_out[26:22] != 0 && (dx_rs2 == mw_ir_out[26:22]) && ~(d_decode[4]||x_decode[7]||w_decode[2]||w_decode[6]||w_decode[7])) || ((w_decode[21] || pw_ex_out) && dx_ir_out[21:17] == 5'b11110) || (w_decode[3] && (dx_rs2 == 5'b11111));
-    assign ctrl_alu_b[1] = xm_ir_out[26:22] != 0 && (dx_rs2 == xm_ir_out[26:22]) && ~(d_decode[4]||x_decode[7]||x_decode[8]||m_decode[2]||m_decode[6]||m_decode[7]||m_decode[8]);
-    assign ctrl_alu_b[0] = xm_ir_out[26:22] != 0 && (dx_rs2 == xm_ir_out[26:22]) && m_decode[8] && ~(d_decode[4]||x_decode[7]||x_decode[8]||m_decode[2]||m_decode[6]||m_decode[7]);
-
+    assign ctrl_alu_b[2] = (mw_ir_out[26:22] != 0 && (dx_rs2 == mw_ir_out[26:22]) && ~(d_decode[4]||w_decode[2]||w_decode[6]||w_decode[7])) || ((w_decode[21] || pw_ex_out) && dx_ir_out[21:17] == 5'b11110) || (w_decode[3] && (dx_rs2 == 5'b11111));
+    assign ctrl_alu_b[1] = xm_ir_out[26:22] != 0 && (dx_rs2 == xm_ir_out[26:22]) && ~(d_decode[4]||x_decode[8]||m_decode[2]||m_decode[6]||m_decode[7]||m_decode[8]);
+    assign ctrl_alu_b[0] = xm_ir_out[26:22] != 0 && (dx_rs2 == xm_ir_out[26:22]) && m_decode[8] && ~(d_decode[4]||x_decode[8]||m_decode[2]||m_decode[6]||m_decode[7]);
+   
     // JR bypassing
     assign ctrl_jr[2] = mw_ir_out[26:22] != 0 && isJr && (fd_ir_out[26:22] == mw_ir_out[26:22]); 
     assign ctrl_jr[1] = xm_ir_out[26:22] != 0 && isJr && (fd_ir_out[26:22] == xm_ir_out[26:22]); 
     assign ctrl_jr[0] = dx_ir_out[26:22] != 0 && isJr && (fd_ir_out[26:22] == dx_ir_out[26:22]) && ~x_decode[8];
 
     // Memory bypassing
-    assign ctrl_mem_d = mw_ir_out[26:22] != 0 && (mw_ir_out[26:22] == xm_ir_out[26:22]);
+    assign ctrl_mem_d = mw_ir_out[26:22] != 0 && ~w_decode[7] && (mw_ir_out[26:22] == xm_ir_out[26:22]);
 
     // Declaring each pipelining latch:
     fd_latch fd(fd_pc_out, fd_ir_out, nClock, fd_enable, reset, pc_plus_one, fd_ir_in);
