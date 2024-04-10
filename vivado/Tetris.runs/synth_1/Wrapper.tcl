@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/lja26/Desktop/tetris/vivado/Tetris.cache/ip
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/lja26/Desktop/vivado_timing/timing.mem
+read_mem C:/Users/lja26/Desktop/tetris/tetris.mem
 read_verilog -library xil_defaultlib {
   C:/Users/lja26/Desktop/tetris/processor-main/RAM.v
   C:/Users/lja26/Desktop/tetris/processor-main/ROM.v

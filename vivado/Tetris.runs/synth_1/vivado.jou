@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Apr  9 22:00:40 2024
-# Process ID: 13916
+# Start of session at: Wed Apr 10 16:34:42 2024
+# Process ID: 14412
 # Current directory: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1
 # Command line: vivado.exe -log Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
 # Log file: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/Wrapper.vds

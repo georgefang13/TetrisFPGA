@@ -74,12 +74,27 @@ module Wrapper (
         always @(posedge clock) begin
                 LED[0] <= memDataOut[0];
             end
+            
+    // Fibonacci LSFR Random Number 
+    reg [15:0] state = 16'hACE1; // best seed for 16 bit LSFR
+    wire next_msb;
+    
+    always @(posedge clock)
+    begin
+        assign next_msb = ((state[0] ^ state[2]) ^ stage[3]) ^ state[5];
+        state <= (state >> 1);
+        state[15] <= next_msb;
+    end
+             
         
 	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "tetris";
 	localparam FILES_PATH = "C:/Users/lja26/Desktop/tetris/";
 	
-assign cpu_regA = (rs1 != 27) ? regA : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
+    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
+    
+    
+    
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
 								
@@ -110,7 +125,7 @@ assign cpu_regA = (rs1 != 27) ? regA : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4]
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
 		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
 				
-    wire [6399:0] curr_grid;
+//    wire [6399:0] curr_grid;
     wire[11:0] mem_addr;
     wire[11:0] block_addr;
     
@@ -118,10 +133,10 @@ assign cpu_regA = (rs1 != 27) ? regA : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4]
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clock), 
 		.wEn(mwe), 
-		.addr(memAddr[11:0]), 
+		.addr(mem_addr), 
 		.dataIn(memDataIn), 
-		.dataOut(memDataOut),
-		.curr_grid(curr_grid)
+		.dataOut(memDataOut)
+//		.curr_grid(curr_grid)
 		);
 		
 		
@@ -232,7 +247,7 @@ assign cpu_regA = (rs1 != 27) ? regA : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4]
         19; // Default value for cases beyond 380	
 //    assign block_addr = //(((y-40)/20) * 10) + ((x-220)/20);
 	assign block_addr = (10 * block_y) + block_x;
-	assign block_color = curr_grid[(block_addr+1)*32-1:block_addr*32];
+	assign block_color = memDataOut[2:0];
 	
     wire isGameBoard, isGrid;
 	assign isGameBoard = (x >= 220) && (x < 420) && (y >= 40) && (y < 440);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712714437">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712781280">
   <File Type="PA-TCL" Name="Wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Wrapper_reports.tcl"/>
@@ -326,7 +326,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vivado_timing/timing.mem">
+    <File Path="$PPRDIR/../tetris.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
