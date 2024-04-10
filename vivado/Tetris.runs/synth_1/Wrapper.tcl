@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -92,6 +93,7 @@ read_mem C:/Users/lja26/Desktop/vivado_timing/timing.mem
 read_verilog -library xil_defaultlib {
   C:/Users/lja26/Desktop/tetris/processor-main/RAM.v
   C:/Users/lja26/Desktop/tetris/processor-main/ROM.v
+  C:/Users/lja26/Desktop/lab6_kit/VGATimingGenerator.v
   C:/Users/lja26/Desktop/tetris/processor-main/alu/adder.v
   C:/Users/lja26/Desktop/tetris/processor-main/alu/alu.v
   C:/Users/lja26/Desktop/tetris/processor-main/alu/block.v
@@ -133,7 +135,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/lja26/Desktop/tetris/processor-main/multdiv/sra_two65.v
   C:/Users/lja26/Desktop/tetris/processor-main/regfile/tri_state.v
   C:/Users/lja26/Desktop/tetris/processor-main/xm_latch.v
-  C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v
+  C:/Users/lja26/Desktop/tetris/tetris_wrapper.v
 }
 read_ip -quiet C:/Users/lja26/Desktop/tetris/vivado/Tetris.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
@@ -149,8 +151,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

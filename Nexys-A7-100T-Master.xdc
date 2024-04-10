@@ -8,6 +8,37 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk_100mhz]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_100mhz]
 #create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} -add [get_ports clk_50mhz]
 
+// VGA Port
+set_property PACKAGE_PIN D8 [get_ports {VGA_B[3]}]
+set_property PACKAGE_PIN D7 [get_ports {VGA_B[2]}]
+set_property PACKAGE_PIN C7 [get_ports {VGA_B[1]}]
+set_property PACKAGE_PIN B7 [get_ports {VGA_B[0]}]
+set_property PACKAGE_PIN A6 [get_ports {VGA_G[3]}]
+set_property PACKAGE_PIN B6 [get_ports {VGA_G[2]}]
+set_property PACKAGE_PIN A5 [get_ports {VGA_G[1]}]
+set_property PACKAGE_PIN C6 [get_ports {VGA_G[0]}]
+set_property PACKAGE_PIN A4 [get_ports {VGA_R[3]}]
+set_property PACKAGE_PIN C5 [get_ports {VGA_R[2]}]
+set_property PACKAGE_PIN B4 [get_ports {VGA_R[1]}]
+set_property PACKAGE_PIN A3 [get_ports {VGA_R[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_B[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_B[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_B[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_B[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_G[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_G[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_G[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_G[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_R[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_R[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_R[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_R[0]}]
+
+// Sync Ports
+set_property PACKAGE_PIN B11 [get_ports hSync]
+set_property PACKAGE_PIN B12 [get_ports vSync]
+set_property IOSTANDARD LVCMOS33 [get_ports hSync]
+set_property IOSTANDARD LVCMOS33 [get_ports vSync]
 
 
 ##Switches
