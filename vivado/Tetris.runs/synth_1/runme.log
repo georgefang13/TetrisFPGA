@@ -17,16 +17,14 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5500
-WARNING: [Synth 8-6901] identifier 'clk_50mhz' is used before its declaration [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:33]
+INFO: [Synth 8-7075] Helper process launched with PID 7968
+WARNING: [Synth 8-6901] identifier 'clk_50mhz' is used before its declaration [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:39]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1328.902 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:27]
-WARNING: [Synth 8-324] index 10 out of range [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:34]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14908-P2-05/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14908-P2-05/realtime/clk_wiz_0_stub.v:5]
-WARNING: [Synth 8-324] index 10 out of range [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:63]
+INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:27]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14412-P2-05/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/.Xil/Vivado-14412-P2-05/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/lja26/Desktop/tetris/processor-main/processor.v:20]
 INFO: [Synth 8-6157] synthesizing module 'fd_latch' [C:/Users/lja26/Desktop/tetris/processor-main/fd_latch.v:1]
 INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/register.v:1]
@@ -106,8 +104,8 @@ INFO: [Synth 8-6157] synthesizing module 'pw_latch' [C:/Users/lja26/Desktop/tetr
 INFO: [Synth 8-6155] done synthesizing module 'pw_latch' (39#1) [C:/Users/lja26/Desktop/tetris/processor-main/pw_latch.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'processor' (40#1) [C:/Users/lja26/Desktop/tetris/processor-main/processor.v:20]
 INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:2]
-	Parameter MEMFILE bound to: 80'b01110100011010010110110101101001011011100110011100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'timing.mem' is read successfully [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:11]
+	Parameter MEMFILE bound to: 320'b01000011001110100010111101010101011100110110010101110010011100110010111101101100011010100110000100110010001101100010111101000100011001010111001101101011011101000110111101110000001011110111010001100101011101000111001001101001011100110010111101110100011001010111010001110010011010010111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/lja26/Desktop/tetris/tetris.mem' is read successfully [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (41#1) [C:/Users/lja26/Desktop/tetris/processor-main/ROM.v:2]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'tri_state' [C:/Users/lja26/Desktop/tetris/processor-main/regfile/tri_state.v:1]
@@ -115,65 +113,79 @@ INFO: [Synth 8-6155] done synthesizing module 'tri_state' (42#1) [C:/Users/lja26
 INFO: [Synth 8-6155] done synthesizing module 'regfile' (43#1) [C:/Users/lja26/Desktop/tetris/processor-main/regfile/regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (44#1) [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (45#1) [C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v:27]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/lja26/Desktop/lab6_kit/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (45#1) [C:/Users/lja26/Desktop/lab6_kit/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAM__parameterized0' [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 320'b01000011001110100010111101010101011100110110010101110010011100110010111101101100011010100110000100110010001101100010111101000100011001010111001101101011011101000110111101110000001011110111010001100101011101000111001001101001011100110010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/lja26/Desktop/tetris/colors.mem' is read successfully [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'RAM__parameterized0' (45#1) [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM' is unconnected for instance 'ColorPalette' [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:178]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:178]
+INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (46#1) [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1328.902 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.902 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.902 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1328.902 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.121 . Memory (MB): peak = 1329.211 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
 Finished Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
-Parsing XDC File [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:15]
-WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:16]
-WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:19]
-WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:20]
-WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:24]
-WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:28]
-WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:50]
-WARNING: [Vivado 12-584] No ports matched 'JB[10]'. [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc:60]
-Finished Parsing XDC File [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '//' is not supported in the xdc constraint file. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command '//' is not supported in the xdc constraint file. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:81]
+Finished Parsing XDC File [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1388.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1390.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1388.883 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1390.598 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -182,32 +194,45 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100mhz. (constraint file  c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for pll. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
 	   3 Input      1 Bit         XORs := 256   
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
-	               17 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1772  
 +---RAMs : 
 	             128K Bit	(4096 X 32 bit)          RAMs := 1     
-+---ROMs : 
-	                    ROMs := 1     
+	               3K Bit	(256 X 12 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   65 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 47    
+	  60 Input   32 Bit        Muxes := 1     
+	   5 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 9     
+	  20 Input    5 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -224,19 +249,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-ROM: Preliminary Mapping Report
-+------------+---------------------+---------------+----------------+
-|Module Name | RTL Object          | Depth x Width | Implemented As | 
-+------------+---------------------+---------------+----------------+
-|Wrapper     | InstMem/dataOut_reg | 4096x17       | Block RAM      | 
-+------------+---------------------+---------------+----------------+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -244,19 +270,37 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1390.598 ; gain = 61.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1498.508 ; gain = 169.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1516.602 ; gain = 187.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -274,37 +318,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1523.371 ; gain = 194.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1523.371 ; gain = 194.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1523.371 ; gain = 194.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1523.371 ; gain = 194.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1523.398 ; gain = 194.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1523.398 ; gain = 194.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -318,34 +362,49 @@ Report BlackBoxes:
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |clk_wiz |     1|
-|2     |FDRE    |     7|
-|3     |IBUF    |     7|
-|4     |OBUF    |     8|
-|5     |OBUFT   |     8|
-+------+--------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    63|
+|4     |LUT1     |    22|
+|5     |LUT2     |   248|
+|6     |LUT3     |   348|
+|7     |LUT4     |   467|
+|8     |LUT5     |   565|
+|9     |LUT6     |  1217|
+|10    |MUXF7    |     9|
+|11    |RAMB36E1 |     4|
+|12    |FDCE     |    49|
+|13    |FDRE     |  1643|
+|14    |IBUF     |     7|
+|15    |OBUF     |    15|
+|16    |OBUFT    |    15|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1523.398 ; gain = 194.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.883 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.883 ; gain = 59.980
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1523.398 ; gain = 132.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1523.398 ; gain = 194.188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1535.438 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1539.098 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 8046a4b2
+Synth Design complete, checksum: 7ab0029d
 INFO: [Common 17-83] Releasing license: Synthesis
-104 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+116 Infos, 21 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1388.883 ; gain = 59.980
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1539.098 ; gain = 209.887
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 17:26:44 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 16:35:34 2024...

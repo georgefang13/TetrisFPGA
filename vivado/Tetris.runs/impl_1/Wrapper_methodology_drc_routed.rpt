@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Apr  3 17:27:41 2024
+| Date         : Wed Apr 10 16:37:37 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Wrapper_methodology_drc_routed.rpt -pb Wrapper_methodology_drc_routed.pb -rpx Wrapper_methodology_drc_routed.rpx
 | Design       : Wrapper
@@ -23,23 +23,177 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 2
-+-----------+----------+------------------------------------------------------------------+------------+
-| Rule      | Severity | Description                                                      | Violations |
-+-----------+----------+------------------------------------------------------------------+------------+
-| TIMING-56 | Warning  | Missing logically or physically excluded clock groups constraint | 2          |
-+-----------+----------+------------------------------------------------------------------+------------+
+             Violations found: 31
++-----------+------------------+------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                      | Violations |
++-----------+------------------+------------------------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 1          |
+| TIMING-14 | Critical Warning | LUT on the clock tree                                            | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 20         |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
+| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 3          |
+| SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal                       | 4          |
++-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-56#1 Warning
-Missing logically or physically excluded clock groups constraint  
-Multiple clocks are user generated or auto-derived on the source pin pll/inst/plle2_adv_inst/CLKFBOUT but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clkfbout_clk_wiz_0, clkfbout_clk_wiz_0_1
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock pll/inst/clk_in1 is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
-TIMING-56#2 Warning
-Missing logically or physically excluded clock groups constraint  
-Multiple clocks are user generated or auto-derived on the source pin pll/inst/plle2_adv_inst/CLKOUT0 but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clk_out1_clk_wiz_0, clk_out1_clk_wiz_0_1
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT q_reg_i_6 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/hPos_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin Display/vPos_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock pll/inst/clk_in1 is created on an inappropriate internal pin pll/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net clk_100mhz_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_100mhz_IBUF_inst/O, pixCounter_reg[0]/C, pixCounter_reg[1]/C
+pll/clk_in1
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell CPU/dx/ir/dff_loop[6].dff/q_i_2__279, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/count/t0/dff/q_reg/CLR, CPU/md/count/t1/dff/q_reg/CLR,
+CPU/md/count/t2/dff/q_reg/CLR, CPU/md/count/t3/dff/q_reg/CLR,
+CPU/md/count/t4/dff/q_reg/CLR, CPU/md/count/t5/dff/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell CPU/pw/ir/dff_loop[4].dff/q_i_1__120, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/div_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell CPU/pw/ir/dff_loop[4].dff/q_i_1__123, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/mult_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance ProcMem/MemoryArray_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance ProcMem/MemoryArray_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance ProcMem/MemoryArray_reg_2, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance ProcMem/MemoryArray_reg_3, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
 Related violations: <none>
 
 

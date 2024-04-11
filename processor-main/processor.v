@@ -39,8 +39,9 @@ module processor(
     ctrl_readRegB,                  // O: Register to read from port B of RegFile
     data_writeReg,                  // O: Data to write to for RegFile
     data_readRegA,                  // I: Data from port A of RegFile
-    data_readRegB                   // I: Data from port B of RegFile
+    data_readRegB,                   // I: Data from port B of RegFile
 	 
+	isLWSW
 	);
 
 	// Control signals
@@ -52,7 +53,7 @@ module processor(
 
 	// Dmem
 	output [31:0] address_dmem, data;
-	output wren;
+	output wren, isLWSW;
 	input [31:0] q_dmem;
 
 	// Regfile
@@ -122,6 +123,8 @@ module processor(
 
     // Memory bypassing
     assign ctrl_mem_d = mw_ir_out[26:22] != 0 && ~w_decode[7] && (mw_ir_out[26:22] == xm_ir_out[26:22]);
+    
+    assign isLWSW = m_decode[7] || m_decode[8];
 
     // Declaring each pipelining latch:
     fd_latch fd(fd_pc_out, fd_ir_out, nClock, fd_enable, reset, pc_plus_one, fd_ir_in);

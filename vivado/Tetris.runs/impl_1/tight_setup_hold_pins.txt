@@ -1,0 +1,9 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[30].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[22].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[21].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[29].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[15].dff/q_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

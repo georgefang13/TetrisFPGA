@@ -1,0 +1,2729 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 9148
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Apr 09 17:38:15 EDT 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	C:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	lja26
+User home directory: C:/Users/lja26
+User working directory: C:/Users/lja26/Desktop/tetris/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.1
+RDI_DATADIR: C:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/lja26/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/lja26/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/lja26/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/lja26/Desktop/tetris/vivado/vivado.log
+Vivado journal file: 	C:/Users/lja26/Desktop/tetris/vivado/vivado.jou
+Engine tmp dir: 	C:/Users/lja26/Desktop/tetris/vivado/.Xil/Vivado-9148-P2-05
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,327 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 80 MB (+81725kb) [00:00:04]
+// [Engine Memory]: 1,327 MB (+1240369kb) [00:00:04]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\lja26\Desktop\tetris\vivado\Tetris.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/lja26/Desktop/tetris/vivado/Tetris.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 118 MB (+34861kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  3170 ms.
+// Tcl Message: open_project C:/Users/lja26/Desktop/tetris/vivado/Tetris.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,327 MB. GUI used memory: 69 MB. Current time: 4/9/24, 5:38:15 PM EDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.887 ; gain = 0.000 
+// Project name: Tetris; location: C:/Users/lja26/Desktop/tetris/vivado; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 124 MB (+468kb) [00:00:12]
+// a (cs): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 141 MB (+11175kb) [00:00:14]
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 153 MB (+5246kb) [00:00:18]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 35 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1219 ms.
+selectButton((HResource) null, "Properties_settings"); // x: TRUE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), Display : VGATimingGenerator (VGATimingGenerator.v)]", 3, false); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Wrapper_timing.v]", 2, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // an
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+// Elapsed time: 13 seconds
+setFileChooser("C:/Users/lja26/Desktop/tetris/tetris_wrapper.v");
+// 'dM' command handler elapsed time: 12 seconds
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 161 MB (+321kb) [00:01:19]
+// bz (cs):  Replace File : addNotify
+// Tcl Message: update_files -from_files C:/Users/lja26/Desktop/tetris/tetris_wrapper.v -to_files C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file 'C:/Users/lja26/Desktop/vivado_timing/Wrapper_timing.v' with file 'C:/Users/lja26/Desktop/tetris/tetris_wrapper.v'. 
+dismissDialog("Replace File"); // bz
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 2, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-100T-Master.xdc]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // an
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+setFileChooser("C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc");
+// 'dM' command handler elapsed time: 3 seconds
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_files -from_files C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc -to_files C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file 'C:/Users/lja26/Desktop/vivado_timing/Nexys-A7-100T-Master.xdc' with file 'C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc'. 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), Display : VGATimingGenerator (VGATimingGenerator.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), Display : VGATimingGenerator (VGATimingGenerator.v)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1125 ms.
+// [GUI Memory]: 170 MB (+610kb) [00:01:50]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 123 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ColorPalette : RAM (RAM.v)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ColorPalette : RAM (RAM.v)]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1109 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ColorPalette : RAM (RAM.v)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ColorPalette : RAM (RAM.v)]", 4, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+// Elapsed time: 241 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), AsciiData : RAM (RAM.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), AsciiData : RAM (RAM.v)]", 6, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), Display : VGATimingGenerator (VGATimingGenerator.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), Display : VGATimingGenerator (VGATimingGenerator.v)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1104 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), ps2interface : xil_defaultlib.Ps2Interface]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // an
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/lja26/Desktop/lab6_kit/VGAController.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/lja26/Desktop/lab6_kit/VGAController.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 30 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // af
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ak
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // an
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // af
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+// 'g' command handler elapsed time: 3 seconds
+dismissDialog("Add Sources"); // c
+// Elapsed time: 408 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGATimingGenerator (VGATimingGenerator.v)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGATimingGenerator (VGATimingGenerator.v)]", 3, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1121 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 1,327 MB. GUI used memory: 103 MB. Current time: 4/9/24, 6:08:19 PM EDT
+// Elapsed time: 1138 seconds
+selectCodeEditor("tetris_wrapper.v", 176, 99); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 25, 106); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 59, 117); // bP
+selectCodeEditor("tetris_wrapper.v", 222, 262); // bP
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-100T-Master.xdc]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-100T-Master.xdc]", 9, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1110 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-100T-Master.xdc]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-100T-Master.xdc]", 9, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("Nexys-A7-100T-Master.xdc", 61, 186); // bP
+typeControlKey((HResource) null, "Nexys-A7-100T-Master.xdc", 'v'); // bP
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectCodeEditor("tetris_wrapper.v", 112, 131); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+// Elapsed time: 83 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectCodeEditor("tetris_wrapper.v", 238, 215); // bP
+selectCodeEditor("tetris_wrapper.v", 124, 224); // bP
+selectCodeEditor("tetris_wrapper.v", 127, 258); // bP
+selectCodeEditor("tetris_wrapper.v", 91, 181); // bP
+selectCodeEditor("tetris_wrapper.v", 211, 450); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 47 seconds
+selectCodeEditor("tetris_wrapper.v", 53, 293); // bP
+selectCodeEditor("tetris_wrapper.v", 243, 258); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, tetris_wrapper.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper_tb (Wrapper_tb.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, tetris_wrapper.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, tetris_wrapper.v]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("tetris_wrapper.v", 114, 192); // bP
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // h
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // h
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near ). [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:36]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\tetris_wrapper.v;-;;-;16;-;line;-;36;-;;-;16;-;"); // ah
+selectCodeEditor("tetris_wrapper.v", 151, 163); // bP
+selectCodeEditor("tetris_wrapper.v", 109, 251); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 204, 35); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper_tb (Wrapper_tb.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper_tb (Wrapper_tb.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1115 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper_tb (Wrapper_tb.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // an
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/lja26/Desktop/tetris/processor-main/Wrapper_tb.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/lja26/Desktop/tetris/processor-main/Wrapper_tb.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper_tb (Wrapper_tb.v)]", 1, true); // D - Node
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGATimingGenerator (VGATimingGenerator.v)]", 2, false); // D
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 1, true); // ah - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 1); // ah
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectCheckBox(PAResourceItoN.LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // g: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 18:19:58 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0, true); // ah - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0); // ah
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0); // ah
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+// Elapsed time: 78 seconds
+selectCodeEditor("tetris_wrapper.v", 528, 446); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 90, 331); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("tetris_wrapper.v", 425, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 160, 263); // bP
+selectCodeEditor("tetris_wrapper.v", 599, 259); // bP
+selectCodeEditor("tetris_wrapper.v", 591, 260); // bP
+selectCodeEditor("tetris_wrapper.v", 602, 460); // bP
+selectCodeEditor("tetris_wrapper.v", 619, 444); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 87 seconds
+selectCodeEditor("tetris_wrapper.v", 227, 135); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 136, 124); // bP
+selectCodeEditor("tetris_wrapper.v", 153, 138); // bP
+selectCodeEditor("tetris_wrapper.v", 177, 162); // bP
+selectCodeEditor("tetris_wrapper.v", 155, 183); // bP
+selectCodeEditor("tetris_wrapper.v", 144, 203); // bP
+selectCodeEditor("tetris_wrapper.v", 138, 216); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectCodeEditor("tetris_wrapper.v", 108, 269); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("tetris_wrapper.v", 139, 157); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 168, 314); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 209, 356); // bP
+selectCodeEditor("tetris_wrapper.v", 153, 312); // bP
+selectCodeEditor("tetris_wrapper.v", 153, 312); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 2); // m
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 199, 345); // bP
+selectCodeEditor("tetris_wrapper.v", 576, 267); // bP
+selectCodeEditor("tetris_wrapper.v", 633, 247); // bP
+selectCodeEditor("tetris_wrapper.v", 641, 257); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 96, 280); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 219, 231); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 244 seconds
+selectCodeEditor("tetris_wrapper.v", 189, 164); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 418, 175); // bP
+selectCodeEditor("tetris_wrapper.v", 453, 185); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 968, 261); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,327 MB. GUI used memory: 90 MB. Current time: 4/9/24, 6:38:20 PM EDT
+// Elapsed time: 669 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("tetris_wrapper.v", 449, 184); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 253 seconds
+selectCodeEditor("tetris_wrapper.v", 134, 467); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 81, 144); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 2); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tetris_wrapper.v", 322, 441); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// Elapsed time: 76 seconds
+selectCodeEditor("tetris_wrapper.v", 177, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 140, 422); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 0, 431); // bP
+selectCodeEditor("tetris_wrapper.v", 348, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 338, 415); // bP
+selectCodeEditor("tetris_wrapper.v", 344, 413); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 342, 467); // bP
+// Elapsed time: 80 seconds
+selectCodeEditor("tetris_wrapper.v", 343, 467); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 304, 470); // bP
+selectCodeEditor("tetris_wrapper.v", 270, 464); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 345, 428); // bP
+selectCodeEditor("tetris_wrapper.v", 338, 441); // bP
+selectCodeEditor("tetris_wrapper.v", 317, 489); // bP
+selectCodeEditor("tetris_wrapper.v", 285, 475); // bP
+selectCodeEditor("tetris_wrapper.v", 235, 468); // bP
+selectCodeEditor("tetris_wrapper.v", 277, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 301, 396); // bP
+selectCodeEditor("tetris_wrapper.v", 333, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 284, 414); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tetris_wrapper.v", 617, 342); // bP
+// Elapsed time: 99 seconds
+selectCodeEditor("tetris_wrapper.v", 253, 405); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 146, 412); // bP
+selectCodeEditor("tetris_wrapper.v", 195, 414); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 210, 406); // bP
+selectCodeEditor("tetris_wrapper.v", 213, 414); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 110, 439); // bP
+selectCodeEditor("tetris_wrapper.v", 160, 433); // bP
+selectCodeEditor("tetris_wrapper.v", 227, 435); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("tetris_wrapper.v", 338, 450); // bP
+// Elapsed time: 72 seconds
+selectCodeEditor("tetris_wrapper.v", 181, 436); // bP
+selectCodeEditor("tetris_wrapper.v", 182, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 200, 453); // bP
+selectCodeEditor("tetris_wrapper.v", 206, 466); // bP
+selectCodeEditor("tetris_wrapper.v", 210, 479); // bP
+selectCodeEditor("tetris_wrapper.v", 180, 483); // bP
+selectCodeEditor("tetris_wrapper.v", 221, 427); // bP
+selectCodeEditor("tetris_wrapper.v", 240, 494); // bP
+// Elapsed time: 31 seconds
+selectCodeEditor("tetris_wrapper.v", 186, 480); // bP
+selectCodeEditor("tetris_wrapper.v", 181, 488); // bP
+selectCodeEditor("tetris_wrapper.v", 211, 464); // bP
+selectCodeEditor("tetris_wrapper.v", 186, 496); // bP
+selectCodeEditor("tetris_wrapper.v", 198, 505); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("tetris_wrapper.v", 271, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 201, 336); // bP
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 18:57:28 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectCodeEditor("tetris_wrapper.v", 82, 391); // bP
+selectCodeEditor("tetris_wrapper.v", 82, 391, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 85, 376); // bP
+selectCodeEditor("tetris_wrapper.v", 85, 375, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 51, 354); // bP
+selectCodeEditor("tetris_wrapper.v", 57, 363); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("tetris_wrapper.v", 96, 425); // bP
+// Elapsed time: 26 seconds
+selectCodeEditor("tetris_wrapper.v", 51, 217); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tetris_wrapper.v", 48, 216); // bP
+selectCodeEditor("tetris_wrapper.v", 44, 212); // bP
+selectCodeEditor("tetris_wrapper.v", 163, 345); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 40, 208); // bP
+selectCodeEditor("tetris_wrapper.v", 135, 163); // bP
+// Elapsed time: 43 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v), ProcMem : RAM (RAM.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v), ProcMem : RAM (RAM.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v), ProcMem : RAM (RAM.v)]", 6, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("RAM.v", 161, 300); // bP
+selectCodeEditor("RAM.v", 116, 297); // bP
+selectCodeEditor("RAM.v", 64, 274); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("RAM.v", 63, 261); // bP
+selectCodeEditor("RAM.v", 88, 216); // bP
+selectCodeEditor("RAM.v", 99, 258); // bP
+selectCodeEditor("RAM.v", 141, 318); // bP
+selectCodeEditor("RAM.v", 116, 267); // bP
+// Elapsed time: 25 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("RAM.v", 140, 270); // bP
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 509, 27); // bP
+// Elapsed time: 38 seconds
+typeControlKey((HResource) null, "RAM.v", 'v'); // bP
+selectCodeEditor("RAM.v", 181, 217); // bP
+// Elapsed time: 32 seconds
+selectCodeEditor("RAM.v", 335, 282); // bP
+selectCodeEditor("RAM.v", 126, 297); // bP
+selectCodeEditor("RAM.v", 128, 249); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 105, 298); // bP
+selectCodeEditor("RAM.v", 102, 245); // bP
+selectCodeEditor("RAM.v", 82, 258); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 19:03:16 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 19:03:55 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 52 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 19:04:57 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 44 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cs):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+dismissDialog("Open Hardware Manager"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // an
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bz (cs):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2021.1   **** Build date : Jun 10 2021 at 20:17:23     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2021.1   ****** Build date   : May 26 2021-13:32:33     **** Build number : 2021.1.1622050353       ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1328.887 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  3938 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3967A 
+// [Engine Memory]: 2,448 MB (+1105450kb) [01:27:54]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,450 MB. GUI used memory: 95 MB. Current time: 4/9/24, 7:06:00 PM EDT
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 15 seconds
+dismissDialog("Auto Connect"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 11 seconds
+selectCodeEditor("RAM.v", 91, 283); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 255, 399); // bP
+selectCodeEditor("tetris_wrapper.v", 311, 398); // bP
+selectCodeEditor("tetris_wrapper.v", 261, 391); // bP
+selectCodeEditor("tetris_wrapper.v", 665, 390); // bP
+selectCodeEditor("tetris_wrapper.v", 634, 407); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 19:07:27 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 19:08:06 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 54 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 19:09:02 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 44 seconds
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 131 seconds
+selectCodeEditor("tetris_wrapper.v", 29, 364); // bP
+selectCodeEditor("tetris_wrapper.v", 120, 354); // bP
+selectCodeEditor("tetris_wrapper.v", 115, 367); // bP
+selectCodeEditor("tetris_wrapper.v", 115, 367, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("tetris_wrapper.v", 602, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 631, 379); // bP
+selectCodeEditor("tetris_wrapper.v", 646, 354); // bP
+selectCodeEditor("tetris_wrapper.v", 639, 364); // bP
+// Elapsed time: 322 seconds
+selectCodeEditor("tetris_wrapper.v", 306, 370); // bP
+selectCodeEditor("tetris_wrapper.v", 275, 469); // bP
+// Elapsed time: 110 seconds
+selectCodeEditor("tetris_wrapper.v", 219, 448); // bP
+selectCodeEditor("tetris_wrapper.v", 270, 321); // bP
+selectCodeEditor("tetris_wrapper.v", 252, 312); // bP
+selectCodeEditor("tetris_wrapper.v", 276, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 268, 315); // bP
+// Elapsed time: 102 seconds
+selectCodeEditor("tetris_wrapper.v", 138, 328); // bP
+selectCodeEditor("tetris_wrapper.v", 269, 318); // bP
+selectCodeEditor("tetris_wrapper.v", 466, 322); // bP
+selectCodeEditor("tetris_wrapper.v", 305, 406); // bP
+selectCodeEditor("tetris_wrapper.v", 175, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 153, 403); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("tetris_wrapper.v", 283, 367); // bP
+selectCodeEditor("tetris_wrapper.v", 195, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 303, 396); // bP
+selectCodeEditor("tetris_wrapper.v", 205, 351); // bP
+// Elapsed time: 30 seconds
+selectCodeEditor("tetris_wrapper.v", 179, 249); // bP
+selectCodeEditor("tetris_wrapper.v", 228, 347); // bP
+selectCodeEditor("tetris_wrapper.v", 234, 385); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 165, 229); // bP
+selectCodeEditor("tetris_wrapper.v", 144, 212); // bP
+selectCodeEditor("tetris_wrapper.v", 377, 264); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("tetris_wrapper.v", 48, 375); // bP
+selectCodeEditor("tetris_wrapper.v", 70, 348); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 3, 214); // bP
+selectCodeEditor("tetris_wrapper.v", 239, 232); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 349, 225); // bP
+selectCodeEditor("tetris_wrapper.v", 425, 230); // bP
+selectCodeEditor("tetris_wrapper.v", 534, 229); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 120, 210); // bP
+selectCodeEditor("tetris_wrapper.v", 76, 221); // bP
+selectCodeEditor("tetris_wrapper.v", 74, 211); // bP
+selectCodeEditor("tetris_wrapper.v", 131, 231); // bP
+selectCodeEditor("tetris_wrapper.v", 129, 231); // bP
+selectCodeEditor("tetris_wrapper.v", 134, 235); // bP
+selectCodeEditor("tetris_wrapper.v", 156, 215); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 19:24:44 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("tetris_wrapper.v", 84, 110); // bP
+selectCodeEditor("tetris_wrapper.v", 84, 110, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 329, 404); // bP
+selectCodeEditor("tetris_wrapper.v", 329, 404, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 203, 317); // bP
+selectCodeEditor("tetris_wrapper.v", 530, 322); // bP
+selectCodeEditor("tetris_wrapper.v", 199, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 203, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 317, 298); // bP
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Tue Apr  9 19:25:25 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 52 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// 'cA' command handler elapsed time: 49 seconds
+dismissDialog("Resetting Runs"); // bz
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 19:27:07 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log [Tue Apr  9 19:27:07 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 102 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 95 MB. Current time: 4/9/24, 7:28:50 PM EDT
+// Tcl Message: open_run impl_1 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 3,420 MB (+890864kb) [01:50:54]
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3374.098 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2021.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Common 17-41] Interrupt caught. Command should exit soon. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 4059.738 ; gain = 0.000 open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4059.738 ; gain = 1010.598 
+// Tcl Message: INFO: [Common 17-344] 'open_run' was cancelled 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// 'dU' command handler elapsed time: 9 seconds
+dismissDialog("Open Implemented Design"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 76 seconds
+selectCodeEditor("tetris_wrapper.v", 184, 358); // bP
+selectCodeEditor("tetris_wrapper.v", 196, 340); // bP
+selectCodeEditor("tetris_wrapper.v", 288, 398); // bP
+selectCodeEditor("tetris_wrapper.v", 265, 394); // bP
+selectCodeEditor("tetris_wrapper.v", 174, 348); // bP
+selectCodeEditor("tetris_wrapper.v", 550, 361); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 283, 400); // bP
+selectCodeEditor("tetris_wrapper.v", 287, 399); // bP
+selectCodeEditor("tetris_wrapper.v", 291, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 299, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 151, 401); // bP
+// Elapsed time: 51 seconds
+selectCodeEditor("tetris_wrapper.v", 141, 344); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 222, 346); // bP
+// Elapsed time: 42 seconds
+selectCodeEditor("tetris_wrapper.v", 177, 364); // bP
+// Elapsed time: 84 seconds
+selectCodeEditor("tetris_wrapper.v", 429, 369); // bP
+selectCodeEditor("tetris_wrapper.v", 428, 368, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 427, 368); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 84 seconds
+selectCodeEditor("tetris_wrapper.v", 191, 390); // bP
+// Elapsed time: 201 seconds
+selectCodeEditor("tetris_wrapper.v", 138, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 292, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 308, 386); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("tetris_wrapper.v", 382, 386); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 294, 381); // bP
+selectCodeEditor("tetris_wrapper.v", 286, 384); // bP
+selectCodeEditor("tetris_wrapper.v", 350, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 288, 381); // bP
+selectCodeEditor("tetris_wrapper.v", 297, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 196, 348); // bP
+selectCodeEditor("tetris_wrapper.v", 197, 379); // bP
+selectCodeEditor("tetris_wrapper.v", 197, 379, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 243, 384); // bP
+selectCodeEditor("tetris_wrapper.v", 243, 384, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 300, 385); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 348, 380); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 439, 382); // bP
+selectCodeEditor("tetris_wrapper.v", 479, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 520, 382); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 551, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 599, 365); // bP
+selectCodeEditor("tetris_wrapper.v", 593, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 626, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 669, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 735, 389); // bP
+selectCodeEditor("tetris_wrapper.v", 765, 380); // bP
+selectCodeEditor("tetris_wrapper.v", 765, 380, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 854, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 646, 391); // bP
+selectCodeEditor("tetris_wrapper.v", 909, 380); // bP
+// Elapsed time: 48 seconds
+selectCodeEditor("tetris_wrapper.v", 138, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 870, 390); // bP
+selectCodeEditor("tetris_wrapper.v", 760, 395); // bP
+selectCodeEditor("tetris_wrapper.v", 100, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 100, 402, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 178, 399); // bP
+selectCodeEditor("tetris_wrapper.v", 178, 399, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 227, 405); // bP
+selectCodeEditor("tetris_wrapper.v", 227, 405, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 317, 401); // bP
+selectCodeEditor("tetris_wrapper.v", 316, 401, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 368, 401); // bP
+selectCodeEditor("tetris_wrapper.v", 368, 401, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 450, 403); // bP
+selectCodeEditor("tetris_wrapper.v", 450, 403, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 263, 405); // bP
+selectCodeEditor("tetris_wrapper.v", 496, 398); // bP
+// Elapsed time: 31 seconds
+selectCodeEditor("tetris_wrapper.v", 395, 417); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 19:42:35 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("tetris_wrapper.v", 397, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 397, 383, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 397, 383); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 19:43:17 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 56 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 19:44:14 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 43 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,445 MB. GUI used memory: 95 MB. Current time: 4/9/24, 7:44:58 PM EDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// [Engine Memory]: 3,591 MB (+54kb) [02:06:55]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1521 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4059.738 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2021.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 4085.852 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 4085.852 ; gain = 0.000 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4085.852 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1311 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dU' command handler elapsed time: 6 seconds
+dismissDialog("Open Implemented Design"); // bz
+// [GUI Memory]: 196 MB (+18745kb) [02:07:00]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 33, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD, "Open New Target..."); // an
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Run Command: PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD
+// aN (cs): Open New Hardware Target: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton("CANCEL", "Cancel"); // JButton
+// 'H' command handler elapsed time: 3 seconds
+dismissDialog("Open New Hardware Target"); // aN
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 167 seconds
+selectCodeEditor("tetris_wrapper.v", 547, 392); // bP
+selectCodeEditor("tetris_wrapper.v", 1039, 380); // bP
+// Elapsed time: 197 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1436 ms.
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("tetris_wrapper.v", 382, 135); // bP
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tetris_wrapper.v", 246, 215); // bP
+selectCodeEditor("tetris_wrapper.v", 328, 187); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("tetris_wrapper.v", 450, 211); // bP
+typeControlKey(null, null, 'z');
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 266, 113); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 241, 111); // bP
+selectCodeEditor("tetris_wrapper.v", 55, 126); // bP
+selectCodeEditor("tetris_wrapper.v", 210, 445); // bP
+selectCodeEditor("tetris_wrapper.v", 139, 449); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 268, 285); // bP
+selectCodeEditor("tetris_wrapper.v", 270, 222); // bP
+selectCodeEditor("tetris_wrapper.v", 443, 131); // bP
+selectCodeEditor("tetris_wrapper.v", 205, 127); // bP
+// Elapsed time: 107 seconds
+selectCodeEditor("tetris_wrapper.v", 484, 151); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 254, 345); // bP
+selectCodeEditor("tetris_wrapper.v", 300, 300); // bP
+selectCodeEditor("tetris_wrapper.v", 263, 358); // bP
+selectCodeEditor("tetris_wrapper.v", 268, 341); // bP
+selectCodeEditor("tetris_wrapper.v", 286, 327); // bP
+selectCodeEditor("tetris_wrapper.v", 276, 340); // bP
+selectCodeEditor("tetris_wrapper.v", 300, 329); // bP
+// Elapsed time: 83 seconds
+selectCodeEditor("tetris_wrapper.v", 78, 279); // bP
+selectCodeEditor("tetris_wrapper.v", 78, 279, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 288 seconds
+selectCodeEditor("tetris_wrapper.v", 126, 314); // bP
+selectCodeEditor("tetris_wrapper.v", 126, 314, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 138, 340); // bP
+selectCodeEditor("tetris_wrapper.v", 146, 329); // bP
+selectCodeEditor("tetris_wrapper.v", 146, 329, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("tetris_wrapper.v", 921, 283); // bP
+// Elapsed time: 37 seconds
+selectCodeEditor("tetris_wrapper.v", 273, 139); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 288, 168); // bP
+selectCodeEditor("tetris_wrapper.v", 289, 168, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 289, 169); // bP
+// Elapsed time: 402 seconds
+selectCodeEditor("tetris_wrapper.v", 181, 202); // bP
+selectCodeEditor("tetris_wrapper.v", 181, 202, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 180, 212); // bP
+selectCodeEditor("tetris_wrapper.v", 180, 212, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 178, 240); // bP
+selectCodeEditor("tetris_wrapper.v", 178, 240, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 255, 224); // bP
+// Elapsed time: 34 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 417, 63); // bP
+selectCodeEditor("RAM.v", 358, 100); // bP
+selectCodeEditor("RAM.v", 358, 125); // bP
+selectCodeEditor("RAM.v", 359, 111); // bP
+selectCodeEditor("RAM.v", 348, 143); // bP
+selectCodeEditor("RAM.v", 613, 25); // bP
+// Elapsed time: 89 seconds
+selectCodeEditor("RAM.v", 228, 313); // bP
+selectCodeEditor("RAM.v", 608, 26); // bP
+selectCodeEditor("RAM.v", 649, 31); // bP
+selectCodeEditor("RAM.v", 657, 26); // bP
+selectCodeEditor("RAM.v", 726, 23); // bP
+selectCodeEditor("RAM.v", 683, 26); // bP
+// Elapsed time: 131 seconds
+selectCodeEditor("RAM.v", 294, 204); // bP
+selectCodeEditor("RAM.v", 282, 230); // bP
+selectCodeEditor("RAM.v", 686, 23); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("RAM.v", 381, 139); // bP
+selectCodeEditor("RAM.v", 364, 115); // bP
+// Elapsed time: 39 seconds
+selectCodeEditor("RAM.v", 402, 117); // bP
+selectCodeEditor("RAM.v", 402, 130); // bP
+selectCodeEditor("RAM.v", 316, 157); // bP
+selectCodeEditor("RAM.v", 320, 162); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 3,625 MB. GUI used memory: 137 MB. Current time: 4/9/24, 8:15:01 PM EDT
+// Elapsed time: 13 seconds
+selectCodeEditor("RAM.v", 281, 434); // bP
+selectCodeEditor("RAM.v", 286, 434); // bP
+selectCodeEditor("RAM.v", 96, 131); // bP
+selectCodeEditor("RAM.v", 127, 128); // bP
+selectCodeEditor("RAM.v", 144, 169); // bP
+selectCodeEditor("RAM.v", 133, 177); // bP
+// Elapsed time: 58 seconds
+selectCodeEditor("RAM.v", 310, 164); // bP
+selectCodeEditor("RAM.v", 198, 153); // bP
+selectCodeEditor("RAM.v", 198, 153, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("RAM.v", 269, 174); // bP
+selectCodeEditor("RAM.v", 354, 188); // bP
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1436 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RAM.v", 236, 199); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectCodeEditor("tetris_wrapper.v", 304, 264); // bP
+selectCodeEditor("tetris_wrapper.v", 303, 262); // bP
+selectCodeEditor("tetris_wrapper.v", 306, 269); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 205, 332); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 191, 401); // bP
+selectCodeEditor("tetris_wrapper.v", 194, 401); // bP
+// Elapsed time: 26 seconds
+selectCodeEditor("tetris_wrapper.v", 144, 346); // bP
+selectCodeEditor("tetris_wrapper.v", 113, 117); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("tetris_wrapper.v", 111, 247); // bP
+selectCodeEditor("tetris_wrapper.v", 111, 247); // bP
+// Elapsed time: 27 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 159, 190); // bP
+selectCodeEditor("RAM.v", 228, 166); // bP
+selectCodeEditor("RAM.v", 215, 165); // bP
+selectCodeEditor("RAM.v", 245, 150); // bP
+selectCodeEditor("RAM.v", 253, 158); // bP
+selectCodeEditor("RAM.v", 258, 158); // bP
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1440 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1188 ms. Increasing delay to 3564 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 20:19:13 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2515] part-select of memory MemoryArray is not allowed [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:11]. ]", 5, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\processor-main\RAM.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-1718] cannot assign an unpacked type to a packed type [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:11]. ]", 6, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\processor-main\RAM.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah
+// Elapsed time: 29 seconds
+selectCodeEditor("RAM.v", 336, 188); // bP
+typeControlKey((HResource) null, "RAM.v", 'c'); // bP
+typeControlKey((HResource) null, "RAM.v", 'c'); // bP
+selectCodeEditor("RAM.v", 407, 183); // bP
+// Elapsed time: 35 seconds
+selectCodeEditor("RAM.v", 329, 167); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2515] part-select of memory MemoryArray is not allowed [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:11]. ]", 5, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\processor-main\RAM.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah
+selectCodeEditor("RAM.v", 329, 185); // bP
+selectCodeEditor("RAM.v", 329, 185, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("RAM.v", 329, 185); // bP
+typeControlKey((HResource) null, "RAM.v", 'c'); // bP
+// Elapsed time: 122 seconds
+selectCodeEditor("RAM.v", 322, 314); // bP
+// Elapsed time: 83 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectCodeEditor("tetris_wrapper.v", 56, 170); // bP
+selectCodeEditor("tetris_wrapper.v", 82, 191); // bP
+selectCodeEditor("tetris_wrapper.v", 83, 191, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 380, 240); // bP
+selectCodeEditor("tetris_wrapper.v", 385, 200); // bP
+// Elapsed time: 110 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2515] part-select of memory MemoryArray is not allowed [C:/Users/lja26/Desktop/tetris/processor-main/RAM.v:11]. ]", 5, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\processor-main\RAM.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah
+selectCodeEditor("RAM.v", 294, 179); // bP
+selectCodeEditor("RAM.v", 294, 179, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("RAM.v", 357, 186); // bP
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+// Elapsed time: 154 seconds
+selectCodeEditor("tetris_wrapper.v", 227, 361); // bP
+selectCodeEditor("tetris_wrapper.v", 258, 314); // bP
+selectCodeEditor("tetris_wrapper.v", 240, 246); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 9, 245); // bP
+selectCodeEditor("tetris_wrapper.v", 36, 273); // bP
+selectCodeEditor("tetris_wrapper.v", 27, 262); // bP
+selectCodeEditor("tetris_wrapper.v", 247, 358); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 173, 266); // bP
+selectCodeEditor("tetris_wrapper.v", 204, 353); // bP
+selectCodeEditor("tetris_wrapper.v", 212, 353); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // o - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v), CPU : processor (processor.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Wrapper (tetris_wrapper.v), CPU : processor (processor.v), xm : xm_latch (xm_latch.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1168 ms.
+selectCodeEditor("processor.v", 108, 421); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("processor.v", 150, 393); // bP
+selectCodeEditor("processor.v", 128, 403); // bP
+selectCodeEditor("processor.v", 117, 399); // bP
+selectCodeEditor("processor.v", 184, 341); // bP
+selectCodeEditor("processor.v", 96, 276); // bP
+selectCodeEditor("processor.v", 97, 281); // bP
+selectCodeEditor("processor.v", 103, 282); // bP
+selectCodeEditor("processor.v", 71, 278); // bP
+selectCodeEditor("processor.v", 113, 313); // bP
+selectCodeEditor("processor.v", 809, 323); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+selectCodeEditor("tetris_wrapper.v", 109, 190); // bP
+selectCodeEditor("tetris_wrapper.v", 121, 191); // bP
+selectCodeEditor("tetris_wrapper.v", 127, 265); // bP
+selectCodeEditor("tetris_wrapper.v", 324, 312); // bP
+selectCodeEditor("tetris_wrapper.v", 310, 314); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 292, 290); // bP
+selectCodeEditor("tetris_wrapper.v", 203, 285); // bP
+selectCodeEditor("tetris_wrapper.v", 170, 281); // bP
+selectCodeEditor("tetris_wrapper.v", 152, 284); // bP
+selectCodeEditor("tetris_wrapper.v", 151, 284); // bP
+selectCodeEditor("tetris_wrapper.v", 209, 194); // bP
+// Elapsed time: 44 seconds
+selectCodeEditor("tetris_wrapper.v", 188, 453); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 222, 384); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 223, 378); // bP
+selectCodeEditor("tetris_wrapper.v", 398, 400); // bP
+selectCodeEditor("tetris_wrapper.v", 391, 382); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("tetris_wrapper.v", 279, 347); // bP
+selectCodeEditor("tetris_wrapper.v", 202, 350); // bP
+selectCodeEditor("tetris_wrapper.v", 202, 350); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+selectCodeEditor("tetris_wrapper.v", 247, 330); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 345, 132); // bP
+selectCodeEditor("RAM.v", 338, 108); // bP
+selectCodeEditor("RAM.v", 318, 109); // bP
+selectCodeEditor("RAM.v", 268, 267); // bP
+selectCodeEditor("RAM.v", 346, 178); // bP
+selectCodeEditor("RAM.v", 321, 104); // bP
+selectCodeEditor("RAM.v", 337, 376); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1662 ms.
+// TclEventType: DG_GRAPH_STALE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tetris_wrapper.v", 333, 224); // bP
+selectCodeEditor("tetris_wrapper.v", 217, 228); // bP
+selectCodeEditor("tetris_wrapper.v", 223, 203); // bP
+selectCodeEditor("tetris_wrapper.v", 221, 211); // bP
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 1); // m
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 328, 242); // bP
+selectCodeEditor("tetris_wrapper.v", 149, 224); // bP
+selectCodeEditor("tetris_wrapper.v", 168, 254); // bP
+selectCodeEditor("tetris_wrapper.v", 66, 255); // bP
+selectCodeEditor("tetris_wrapper.v", 207, 228); // bP
+selectCodeEditor("tetris_wrapper.v", 229, 230); // bP
+selectCodeEditor("tetris_wrapper.v", 236, 212); // bP
+selectCodeEditor("tetris_wrapper.v", 206, 233); // bP
+selectCodeEditor("tetris_wrapper.v", 218, 242); // bP
+selectCodeEditor("tetris_wrapper.v", 221, 232); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 462, 317); // bP
+selectCodeEditor("tetris_wrapper.v", 464, 324); // bP
+// Elapsed time: 48 seconds
+selectCodeEditor("tetris_wrapper.v", 285, 364); // bP
+selectCodeEditor("tetris_wrapper.v", 164, 366); // bP
+selectCodeEditor("tetris_wrapper.v", 169, 365); // bP
+selectCodeEditor("tetris_wrapper.v", 297, 368); // bP
+// Elapsed time: 42 seconds
+selectCodeEditor("tetris_wrapper.v", 271, 367); // bP
+// Elapsed time: 42 seconds
+selectCodeEditor("tetris_wrapper.v", 216, 458); // bP
+selectCodeEditor("tetris_wrapper.v", 216, 458, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 480, 415); // bP
+selectCodeEditor("tetris_wrapper.v", 480, 415, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("tetris_wrapper.v", 567, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 111, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 111, 334, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 383, 325); // bP
+selectCodeEditor("tetris_wrapper.v", 383, 325, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 394, 340); // bP
+selectCodeEditor("tetris_wrapper.v", 396, 333); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("tetris_wrapper.v", 361, 422); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 391, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 391, 414, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 375, 418); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 369, 418); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("tetris_wrapper.v", 462, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 435, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 435, 421, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 439, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 439, 417, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 200, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 262, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 344, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 262, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 380, 422); // bP
+selectCodeEditor("tetris_wrapper.v", 383, 422, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 418, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 357, 413); // bP
+selectCodeEditor("tetris_wrapper.v", 460, 422); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("tetris_wrapper.v", 496, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 496, 421, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 551, 420); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 567, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 452, 417); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 650, 418); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 761, 419); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("tetris_wrapper.v", 567, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 815, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 825, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 557, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 526, 417); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("tetris_wrapper.v", 592, 413); // bP
+selectCodeEditor("tetris_wrapper.v", 566, 420); // bP
+// Elapsed time: 23 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("tetris_wrapper.v", 582, 413); // bP
+selectCodeEditor("tetris_wrapper.v", 581, 413, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 765, 416); // bP
+selectCodeEditor("tetris_wrapper.v", 765, 416, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 770, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 778, 412); // bP
+selectCodeEditor("tetris_wrapper.v", 652, 421); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 841, 416); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 664, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 708, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 708, 417, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 855, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 888, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 888, 421, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 890, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 890, 421, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 982, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 1021, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 1021, 420, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 985, 413); // bP
+selectCodeEditor("tetris_wrapper.v", 1022, 415); // bP
+selectCodeEditor("tetris_wrapper.v", 1022, 415, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 982, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 1018, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 1018, 417, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 981, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 1026, 417); // bP
+selectCodeEditor("tetris_wrapper.v", 1026, 417, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 821, 449); // bP
+selectCodeEditor("tetris_wrapper.v", 80, 211); // bP
+selectCodeEditor("tetris_wrapper.v", 80, 211, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 91, 210); // bP
+selectCodeEditor("tetris_wrapper.v", 91, 210, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 86, 191); // bP
+selectCodeEditor("tetris_wrapper.v", 86, 191, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 90, 173); // bP
+selectCodeEditor("tetris_wrapper.v", 90, 173, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 92, 167); // bP
+selectCodeEditor("tetris_wrapper.v", 92, 167, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 336, 455); // bP
+selectCodeEditor("tetris_wrapper.v", 172, 425); // bP
+selectCodeEditor("tetris_wrapper.v", 172, 425, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 172, 411); // bP
+selectCodeEditor("tetris_wrapper.v", 172, 411, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 197, 418); // bP
+selectCodeEditor("tetris_wrapper.v", 239, 410); // bP
+selectCodeEditor("tetris_wrapper.v", 278, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 286, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 287, 420, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 392, 414); // bP
+selectCodeEditor("tetris_wrapper.v", 392, 414, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 432, 416); // bP
+selectCodeEditor("tetris_wrapper.v", 432, 416, false, false, false, false, true); // bP - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,625 MB. GUI used memory: 136 MB. Current time: 4/9/24, 8:45:01 PM EDT
+selectCodeEditor("tetris_wrapper.v", 78, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 78, 330, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 278, 412); // bP
+selectCodeEditor("tetris_wrapper.v", 303, 452); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 1036, 420); // bP
+selectCodeEditor("tetris_wrapper.v", 815, 505); // bP
+selectCodeEditor("tetris_wrapper.v", 1013, 419); // bP
+selectCodeEditor("tetris_wrapper.v", 1013, 419, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 893, 421); // bP
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1827 ms.
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 20:46:06 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bz
+selectCodeEditor("tetris_wrapper.v", 115, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 115, 331, false, false, false, false, true); // bP - Double Click
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("tetris_wrapper.v", 87, 453); // bP
+selectCodeEditor("tetris_wrapper.v", 87, 453, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("tetris_wrapper.v", 124, 251); // bP
+selectCodeEditor("tetris_wrapper.v", 124, 251, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 96, 175); // bP
+selectCodeEditor("tetris_wrapper.v", 96, 175, false, false, false, false, true); // bP - Double Click
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("tetris_wrapper.v", 133, 280); // bP
+selectCodeEditor("tetris_wrapper.v", 133, 280, false, false, false, false, true); // bP - Double Click
+// ag (cs): Synthesis Completed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 20:46:56 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 61 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 20:47:58 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 45 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 29 seconds
+selectCodeEditor("tetris_wrapper.v", 218, 289); // bP
+selectCodeEditor("tetris_wrapper.v", 211, 279); // bP
+selectCodeEditor("tetris_wrapper.v", 207, 289); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("tetris_wrapper.v", 513, 400); // bP
+selectCodeEditor("tetris_wrapper.v", 513, 400, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 570, 404); // bP
+selectCodeEditor("tetris_wrapper.v", 570, 404, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 491, 403); // bP
+selectCodeEditor("tetris_wrapper.v", 491, 403, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 186, 315); // bP
+selectCodeEditor("tetris_wrapper.v", 120, 318); // bP
+selectCodeEditor("tetris_wrapper.v", 119, 318, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 47 seconds
+selectCodeEditor("tetris_wrapper.v", 60, 398); // bP
+selectCodeEditor("tetris_wrapper.v", 66, 350); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 85, 347); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 59, 297); // bP
+selectCodeEditor("tetris_wrapper.v", 454, 255); // bP
+selectCodeEditor("tetris_wrapper.v", 141, 296); // bP
+selectCodeEditor("tetris_wrapper.v", 154, 299); // bP
+selectCodeEditor("tetris_wrapper.v", 159, 299); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 676, 399); // bP
+selectCodeEditor("tetris_wrapper.v", 676, 399, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 776, 402); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 120 seconds
+selectCodeEditor("tetris_wrapper.v", 305, 442); // bP
+selectCodeEditor("tetris_wrapper.v", 260, 425); // bP
+selectCodeEditor("tetris_wrapper.v", 252, 432); // bP
+selectCodeEditor("tetris_wrapper.v", 127, 302); // bP
+selectCodeEditor("tetris_wrapper.v", 125, 312); // bP
+// Elapsed time: 35 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 19 seconds
+selectCodeEditor("tetris_wrapper.v", 627, 400); // bP
+selectCodeEditor("tetris_wrapper.v", 627, 400, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 513, 400); // bP
+selectCodeEditor("tetris_wrapper.v", 513, 400, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 594, 321); // bP
+selectCodeEditor("tetris_wrapper.v", 488, 401); // bP
+selectCodeEditor("tetris_wrapper.v", 488, 401, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 415, 311); // bP
+// Elapsed time: 166 seconds
+selectCodeEditor("tetris_wrapper.v", 578, 310); // bP
+// Elapsed time: 24 seconds
+selectCodeEditor("tetris_wrapper.v", 255, 317); // bP
+selectCodeEditor("tetris_wrapper.v", 238, 198); // bP
+// Elapsed time: 71 seconds
+selectCodeEditor("tetris_wrapper.v", 241, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 192, 387); // bP
+selectCodeEditor("tetris_wrapper.v", 195, 386); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 535, 402); // bP
+selectCodeEditor("tetris_wrapper.v", 540, 404); // bP
+// Elapsed time: 40 seconds
+selectCodeEditor("tetris_wrapper.v", 459, 325); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("tetris_wrapper.v", 237, 232); // bP
+selectCodeEditor("tetris_wrapper.v", 94, 250); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 167, 276); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("tetris_wrapper.v", 90, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 95, 335); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 119, 368); // bP
+selectCodeEditor("tetris_wrapper.v", 119, 368); // bP
+selectCodeEditor("tetris_wrapper.v", 290, 377); // bP
+selectCodeEditor("tetris_wrapper.v", 290, 366); // bP
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 1203, 398); // bP
+// Elapsed time: 29 seconds
+selectCodeEditor("tetris_wrapper.v", 185, 359); // bP
+selectCodeEditor("tetris_wrapper.v", 216, 346); // bP
+selectCodeEditor("tetris_wrapper.v", 229, 370); // bP
+selectCodeEditor("tetris_wrapper.v", 7, 329); // bP
+selectCodeEditor("tetris_wrapper.v", 320, 193); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2062 ms.
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2016 ms. Increasing delay to 6048 ms.
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 21:02:25 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("tetris_wrapper.v", 280, 346); // bP
+selectCodeEditor("tetris_wrapper.v", 361, 348); // bP
+selectCodeEditor("tetris_wrapper.v", 553, 403); // bP
+selectCodeEditor("tetris_wrapper.v", 553, 403, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 677, 401); // bP
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 30 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 21:03:47 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 106 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 21:05:34 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 50 seconds
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 61 seconds
+selectCodeEditor("tetris_wrapper.v", 324, 390); // bP
+selectCodeEditor("tetris_wrapper.v", 362, 364); // bP
+selectCodeEditor("tetris_wrapper.v", 362, 364, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 362, 364); // bP
+selectCodeEditor("tetris_wrapper.v", 337, 424); // bP
+selectCodeEditor("tetris_wrapper.v", 348, 441); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("tetris_wrapper.v", 335, 317); // bP
+// Elapsed time: 31 seconds
+selectCodeEditor("tetris_wrapper.v", 209, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 187, 315); // bP
+selectCodeEditor("tetris_wrapper.v", 212, 315); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 189, 319); // bP
+selectCodeEditor("tetris_wrapper.v", 189, 319, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 231, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 377, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 228, 321); // bP
+selectCodeEditor("tetris_wrapper.v", 244, 313); // bP
+// Elapsed time: 40 seconds
+selectCodeEditor("tetris_wrapper.v", 346, 315); // bP
+selectCodeEditor("tetris_wrapper.v", 349, 317); // bP
+// Elapsed time: 63 seconds
+selectCodeEditor("tetris_wrapper.v", 242, 321); // bP
+selectCodeEditor("tetris_wrapper.v", 295, 307); // bP
+// Elapsed time: 85 seconds
+selectCodeEditor("tetris_wrapper.v", 279, 318); // bP
+selectCodeEditor("tetris_wrapper.v", 233, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 239, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 213, 312); // bP
+selectCodeEditor("tetris_wrapper.v", 265, 323); // bP
+selectCodeEditor("tetris_wrapper.v", 282, 312); // bP
+selectCodeEditor("tetris_wrapper.v", 167, 315); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1997 ms.
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 21:12:40 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 67 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 21:13:50 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,625 MB. GUI used memory: 138 MB. Current time: 4/9/24, 9:15:02 PM EDT
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 95 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 21:15:27 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 45 seconds
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 12 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 37 seconds
+selectCodeEditor("tetris_wrapper.v", 439, 311); // bP
+selectCodeEditor("tetris_wrapper.v", 439, 311, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 439, 311); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 46 seconds
+selectCodeEditor("tetris_wrapper.v", 233, 360); // bP
+selectCodeEditor("tetris_wrapper.v", 201, 312); // bP
+// Elapsed time: 150 seconds
+selectCodeEditor("tetris_wrapper.v", 103, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 103, 313, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 459, 284); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 193, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 125, 315); // bP
+selectCodeEditor("tetris_wrapper.v", 152, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 152, 313, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 152, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 190, 313); // bP
+selectCodeEditor("tetris_wrapper.v", 190, 313, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 36, 284); // bP
+selectCodeEditor("tetris_wrapper.v", 36, 284, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 101, 284); // bP
+selectCodeEditor("tetris_wrapper.v", 101, 284, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 103, 295); // bP
+selectCodeEditor("tetris_wrapper.v", 103, 295, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 103, 281); // bP
+selectCodeEditor("tetris_wrapper.v", 103, 281, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("tetris_wrapper.v", 234, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 239, 385); // bP
+// Elapsed time: 86 seconds
+selectCodeEditor("tetris_wrapper.v", 436, 398); // bP
+selectCodeEditor("tetris_wrapper.v", 275, 306); // bP
+selectCodeEditor("tetris_wrapper.v", 275, 306, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 296, 318); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("tetris_wrapper.v", 275, 323); // bP
+selectCodeEditor("tetris_wrapper.v", 266, 311); // bP
+// Elapsed time: 52 seconds
+selectCodeEditor("tetris_wrapper.v", 317, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 400, 308); // bP
+selectCodeEditor("tetris_wrapper.v", 413, 312); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("tetris_wrapper.v", 400, 319); // bP
+selectCodeEditor("tetris_wrapper.v", 423, 325); // bP
+selectCodeEditor("tetris_wrapper.v", 420, 314); // bP
+// Elapsed time: 63 seconds
+selectCodeEditor("tetris_wrapper.v", 422, 314); // bP
+selectCodeEditor("tetris_wrapper.v", 169, 317); // bP
+// Elapsed time: 35 seconds
+selectCodeEditor("tetris_wrapper.v", 195, 315); // bP
+selectCodeEditor("tetris_wrapper.v", 76, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 99, 324); // bP
+// Elapsed time: 49 seconds
+selectCodeEditor("tetris_wrapper.v", 396, 328); // bP
+selectCodeEditor("tetris_wrapper.v", 146, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 307, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 286, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 287, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 301, 332); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 321, 330); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 446, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 405, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 479, 335); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 563, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 609, 338); // bP
+selectCodeEditor("tetris_wrapper.v", 649, 329); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 628, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 729, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 767, 329); // bP
+selectCodeEditor("tetris_wrapper.v", 795, 332); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 813, 327); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 667, 335); // bP
+selectCodeEditor("tetris_wrapper.v", 837, 335); // bP
+selectCodeEditor("tetris_wrapper.v", 837, 335, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 835, 335); // bP
+selectCodeEditor("tetris_wrapper.v", 835, 335, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 882, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 884, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 718, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 882, 337); // bP
+selectCodeEditor("tetris_wrapper.v", 958, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 958, 330, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 1004, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 1005, 332); // bP
+selectCodeEditor("tetris_wrapper.v", 1005, 332, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 1037, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 1037, 331, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 1041, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 1041, 333, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 1043, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 1073, 340); // bP
+selectCodeEditor("tetris_wrapper.v", 1150, 332); // bP
+selectCodeEditor("tetris_wrapper.v", 1173, 341); // bP
+selectCodeEditor("tetris_wrapper.v", 1179, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 662, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 662, 333, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 828, 330); // bP
+selectCodeEditor("tetris_wrapper.v", 828, 330, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 877, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 917, 328); // bP
+selectCodeEditor("tetris_wrapper.v", 549, 341); // bP
+selectCodeEditor("tetris_wrapper.v", 146, 333); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 734, 329); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("tetris_wrapper.v", 679, 334); // bP
+selectCodeEditor("tetris_wrapper.v", 679, 334, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 843, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 843, 333, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 721, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 726, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 891, 333); // bP
+selectCodeEditor("tetris_wrapper.v", 931, 335); // bP
+selectCodeEditor("tetris_wrapper.v", 884, 332); // bP
+selectCodeEditor("tetris_wrapper.v", 860, 341); // bP
+selectCodeEditor("tetris_wrapper.v", 853, 331); // bP
+selectCodeEditor("tetris_wrapper.v", 832, 333); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("tetris_wrapper.v", 196, 328); // bP
+selectCodeEditor("tetris_wrapper.v", 196, 328, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 196, 328); // bP
+selectCodeEditor("tetris_wrapper.v", 24, 347); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tetris_wrapper.v", 146, 335); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 708, 353); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 167, 352); // bP
+selectCodeEditor("tetris_wrapper.v", 200, 347); // bP
+selectCodeEditor("tetris_wrapper.v", 200, 347, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 299, 350); // bP
+selectCodeEditor("tetris_wrapper.v", 287, 343); // bP
+selectCodeEditor("tetris_wrapper.v", 235, 350); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 278, 349); // bP
+selectCodeEditor("tetris_wrapper.v", 308, 350); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 307, 341); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 350, 348); // bP
+selectCodeEditor("tetris_wrapper.v", 390, 351); // bP
+selectCodeEditor("tetris_wrapper.v", 435, 352); // bP
+selectCodeEditor("tetris_wrapper.v", 461, 352); // bP
+selectCodeEditor("tetris_wrapper.v", 248, 348); // bP
+selectCodeEditor("tetris_wrapper.v", 451, 347); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 466, 346); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 544, 349); // bP
+selectCodeEditor("tetris_wrapper.v", 544, 350, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 660, 345); // bP
+selectCodeEditor("tetris_wrapper.v", 660, 345, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 587, 352); // bP
+selectCodeEditor("tetris_wrapper.v", 740, 350); // bP
+selectCodeEditor("tetris_wrapper.v", 777, 350); // bP
+selectCodeEditor("tetris_wrapper.v", 777, 350, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 777, 350); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 36 seconds
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 0, 144); // bP
+selectCodeEditor("tetris_wrapper.v", 331, 326); // bP
+selectCodeEditor("tetris_wrapper.v", 173, 109); // bP
+selectCodeEditor("tetris_wrapper.v", 173, 109, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 173, 109); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 28, 108); // bP
+selectCodeEditor("tetris_wrapper.v", 429, 261); // bP
+selectCodeEditor("tetris_wrapper.v", 431, 288); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 111, 79); // bP
+selectCodeEditor("tetris_wrapper.v", 183, 313); // bP
+// Elapsed time: 27 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "block"); // l
+selectCodeEditor("tetris_wrapper.v", 138, 26); // bP
+selectCodeEditor("tetris_wrapper.v", 138, 26, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 86, 291); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("tetris_wrapper.v", 166, 298); // bP
+selectCodeEditor("tetris_wrapper.v", 187, 301); // bP
+selectCodeEditor("tetris_wrapper.v", 201, 298); // bP
+selectCodeEditor("tetris_wrapper.v", 257, 304); // bP
+selectCodeEditor("tetris_wrapper.v", 370, 302); // bP
+selectCodeEditor("tetris_wrapper.v", 221, 305); // bP
+selectCodeEditor("tetris_wrapper.v", 221, 305, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 359, 305); // bP
+selectCodeEditor("tetris_wrapper.v", 361, 297); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("tetris_wrapper.v", 260, 302); // bP
+selectCodeEditor("tetris_wrapper.v", 333, 299); // bP
+// Elapsed time: 38 seconds
+selectCodeEditor("tetris_wrapper.v", 370, 301); // bP
+selectCodeEditor("tetris_wrapper.v", 133, 298); // bP
+selectCodeEditor("tetris_wrapper.v", 133, 298, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 363, 282); // bP
+selectCodeEditor("tetris_wrapper.v", 366, 282); // bP
+selectCodeEditor("tetris_wrapper.v", 469, 318); // bP
+selectCodeEditor("tetris_wrapper.v", 455, 296); // bP
+selectCodeEditor("tetris_wrapper.v", 131, 313); // bP
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13, true); // o - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13, true); // o - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bz (cs):  Resetting Runs : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2111 ms.
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr  9 21:35:15 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 214, 373); // bP
+selectCodeEditor("tetris_wrapper.v", 362, 318); // bP
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 53 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 21:36:26 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 98 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ag
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Tue Apr  9 21:38:06 2024] Launched impl_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 59 seconds
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 10 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 3,625 MB. GUI used memory: 138 MB. Current time: 4/9/24, 9:45:02 PM EDT
+// Elapsed time: 393 seconds
+selectCodeEditor("tetris_wrapper.v", 215, 155); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+// Elapsed time: 263 seconds
+selectCodeEditor("tetris_wrapper.v", 373, 190); // bP
+selectCodeEditor("tetris_wrapper.v", 356, 194); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RAM.v", 0); // m
+selectCodeEditor("RAM.v", 164, 160); // bP
+selectCodeEditor("RAM.v", 26, 166); // bP
+typeControlKey((HResource) null, "RAM.v", 'c'); // bP
+// Elapsed time: 146 seconds
+selectCodeEditor("RAM.v", 465, 100); // bP
+// Elapsed time: 88 seconds
+selectCodeEditor("RAM.v", 302, 84); // bP
+selectCodeEditor("RAM.v", 322, 76); // bP
+selectCodeEditor("RAM.v", 224, 96); // bP
+selectCodeEditor("RAM.v", 319, 111); // bP
+selectCodeEditor("RAM.v", 326, 108); // bP
+selectCodeEditor("RAM.v", 323, 114); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("RAM.v", 314, 132); // bP
+selectCodeEditor("RAM.v", 258, 135); // bP
+selectCodeEditor("RAM.v", 323, 179); // bP
+typeControlKey((HResource) null, "RAM.v", 'v'); // bP
+selectCodeEditor("RAM.v", 194, 127); // bP
+selectCodeEditor("RAM.v", 157, 254); // bP
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  2054 ms.
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGATimingGenerator.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tetris_wrapper.v", 2); // m
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectCodeEditor("tetris_wrapper.v", 211, 434); // bP
+selectCodeEditor("tetris_wrapper.v", 315, 439); // bP
+selectCodeEditor("tetris_wrapper.v", 334, 421); // bP
+selectCodeEditor("tetris_wrapper.v", 160, 429); // bP
+selectCodeEditor("tetris_wrapper.v", 160, 429, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("tetris_wrapper.v", 200, 245); // bP
+selectCodeEditor("tetris_wrapper.v", 212, 257); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Run Synthesis"); // A
+// Elapsed time: 79 seconds
+selectCodeEditor("tetris_wrapper.v", 367, 308); // bP
+selectCodeEditor("tetris_wrapper.v", 378, 295); // bP
+// Elapsed time: 46 seconds
+selectCodeEditor("tetris_wrapper.v", 292, 318); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 376, 323); // bP
+selectCodeEditor("tetris_wrapper.v", 372, 312); // bP
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 292, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 426, 314); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("tetris_wrapper.v", 199, 310); // bP
+selectCodeEditor("tetris_wrapper.v", 199, 310); // bP
+selectCodeEditor("tetris_wrapper.v", 199, 319); // bP
+selectCodeEditor("tetris_wrapper.v", 203, 322); // bP
+selectCodeEditor("tetris_wrapper.v", 278, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 278, 316); // bP
+selectCodeEditor("tetris_wrapper.v", 336, 325); // bP
+selectCodeEditor("tetris_wrapper.v", 336, 320); // bP
+selectCodeEditor("tetris_wrapper.v", 339, 321); // bP
+selectCodeEditor("tetris_wrapper.v", 363, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 463, 306); // bP
+selectCodeEditor("tetris_wrapper.v", 404, 369); // bP
+selectCodeEditor("tetris_wrapper.v", 429, 366); // bP
+selectCodeEditor("tetris_wrapper.v", 338, 371); // bP
+selectCodeEditor("tetris_wrapper.v", 338, 371); // bP
+selectCodeEditor("tetris_wrapper.v", 343, 373); // bP
+selectCodeEditor("tetris_wrapper.v", 417, 336); // bP
+selectCodeEditor("tetris_wrapper.v", 350, 360); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("tetris_wrapper.v", 430, 365); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("tetris_wrapper.v", 80, 364); // bP
+selectCodeEditor("tetris_wrapper.v", 359, 443); // bP
+selectCodeEditor("tetris_wrapper.v", 368, 443); // bP
+selectCodeEditor("tetris_wrapper.v", 501, 363); // bP
+selectCodeEditor("tetris_wrapper.v", 506, 385); // bP
+selectCodeEditor("tetris_wrapper.v", 506, 385, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'c'); // bP
+selectCodeEditor("tetris_wrapper.v", 712, 381); // bP
+selectCodeEditor("tetris_wrapper.v", 712, 381, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 901, 384); // bP
+selectCodeEditor("tetris_wrapper.v", 901, 384, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 1084, 388); // bP
+selectCodeEditor("tetris_wrapper.v", 1084, 388, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 455, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 455, 383, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 664, 383); // bP
+selectCodeEditor("tetris_wrapper.v", 664, 383, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 880, 381); // bP
+selectCodeEditor("tetris_wrapper.v", 880, 381, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 1075, 374); // bP
+selectCodeEditor("tetris_wrapper.v", 1075, 374, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tetris_wrapper.v", 'v'); // bP
+selectCodeEditor("tetris_wrapper.v", 857, 445); // bP
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  2382 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue Apr  9 22:00:37 2024] Launched synth_1... Run output will be captured here: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-1002] block_addr is not a constant [C:/Users/lja26/Desktop/tetris/tetris_wrapper.v:235]. ]", 5, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\lja26\Desktop\tetris\tetris_wrapper.v;-;;-;16;-;line;-;235;-;;-;16;-;"); // ah
+// Elapsed time: 12 seconds
+selectCodeEditor("tetris_wrapper.v", 219, 301); // bP
+// Elapsed time: 156 seconds
+selectCodeEditor("tetris_wrapper.v", 548, 68); // bP
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE3967A 
+// o (cs): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE

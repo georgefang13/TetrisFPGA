@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Apr  3 17:27:40 2024
+| Date         : Wed Apr 10 16:37:36 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
 | Design       : Wrapper
@@ -49,7 +49,7 @@ Related violations: <none>
 
 PLIO-3#1 Warning
 Placement Constraints Check for IO constraints  
-Partially locked IO Bus is found. Following components of the IO Bus JB[9:0] are not locked:  JB[6] JB[5] JB[0]
+Partially locked IO Bus is found. Following components of the IO Bus JB[10:1] are not locked:  JB[6] JB[5]
 Related violations: <none>
 
 
