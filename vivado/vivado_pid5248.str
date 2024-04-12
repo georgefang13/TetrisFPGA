@@ -2331,3 +2331,6 @@ selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
 dismissDialog("Close Hardware Target"); // o
 // Elapsed time: 160 seconds
 selectCodeEditor("tetris_wrapper.v", 429, 292); // bP
+// Elapsed time: 145 seconds
+selectCodeEditor("tetris_wrapper.v", 595, 132); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,864 MB. GUI used memory: 101 MB. Current time: 4/11/24, 10:46:53 PM EDT
