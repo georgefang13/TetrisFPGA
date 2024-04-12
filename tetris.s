@@ -262,6 +262,12 @@ bne $r1, $r2, not_left
 j move_left
 
 not_left:
+addi $r2, $r0, 3
+bne $r1, $r2, not_down
+j fall
+
+not_down:
+
 addi $r2, $r0, 2
 bne $r1, $r2, not_right
 j move_right
@@ -385,24 +391,43 @@ sw $r1, 0($r15)
 j delay
 
 move_left:
-# grab current state
-addi $r2, $r0, 201
-addi $r3, $r0, 206
-addi $r4, $r0, -10
 addi $r5, $r0, 191
-
-left_check_outer:
-addi $r2, $r2, 1
-lw $r1, 0($r2)
-blt $r2, $r3, left_check_inner
-
-j set_left
-
-left_check_inner:
+addi $r4, $r0, -10
+lw $r1, 202($r0)
+left_check1:
 addi $r4, $r4, 10
-blt $r5, $r4, left_check_outer
-bne $r4, $r1, left_check_inner
+blt $r5, $r4, left_check2_setup
+bne $r4, $r1, left_check1
+j delay
 
+left_check2_setup:
+addi $r5, $r0, 191
+addi $r4, $r0, -10
+lw $r1, 203($r0)
+left_check2:
+addi $r4, $r4, 10
+blt $r5, $r4, left_check3_setup
+bne $r4, $r1, left_check2
+j delay
+
+left_check3_setup:
+addi $r5, $r0, 191
+addi $r4, $r0, -10
+lw $r1, 204($r0)
+left_check3:
+addi $r4, $r4, 10
+blt $r5, $r4, left_check4_setup
+bne $r4, $r1, left_check3
+j delay
+
+left_check4_setup:
+addi $r5, $r0, 191
+addi $r4, $r0, -10
+lw $r1, 205($r0)
+left_check4:
+addi $r4, $r4, 10
+blt $r5, $r4, set_left
+bne $r4, $r1, left_check4
 j delay
 
 set_left:
@@ -421,27 +446,46 @@ sw $r3, 209($r0)
 sw $r4, 210($r0)
 sw $r5, 211($r0)
 
-j render_ns
+j collide_detect
 
 move_right:
-# grab current state
-addi $r2, $r0, 201
-addi $r3, $r0, 206
-addi $r4, $r0, -1
 addi $r5, $r0, 200
-
-right_check_outer:
-addi $r2, $r2, 1
-lw $r1, 0($r2)
-blt $r2, $r3, right_check_inner
-
-j set_right
-
-right_check_inner:
+addi $r4, $r0, -1
+lw $r1, 202($r0)
+right_check1:
 addi $r4, $r4, 10
-blt $r5, $r4, right_check_outer
-bne $r4, $r1, right_check_inner
+blt $r5, $r4, right_check2_setup
+bne $r4, $r1, right_check1
+j delay
 
+right_check2_setup:
+addi $r5, $r0, 200
+addi $r4, $r0, -1
+lw $r1, 203($r0)
+right_check2:
+addi $r4, $r4, 10
+blt $r5, $r4, right_check3_setup
+bne $r4, $r1, right_check2
+j delay
+
+right_check3_setup:
+addi $r5, $r0, 200
+addi $r4, $r0, -1
+lw $r1, 204($r0)
+right_check3:
+addi $r4, $r4, 10
+blt $r5, $r4, right_check4_setup
+bne $r4, $r1, right_check3
+j delay
+
+right_check4_setup:
+addi $r5, $r0, 200
+addi $r4, $r0, -1
+lw $r1, 205($r0)
+right_check4:
+addi $r4, $r4, 10
+blt $r5, $r4, set_right
+bne $r4, $r1, right_check4
 j delay
 
 set_right:
@@ -462,7 +506,59 @@ sw $r3, 209($r0)
 sw $r4, 210($r0)
 sw $r5, 211($r0)
 
+j collide_detect
+
+collide_detect:
+
+# load next state
+lw $r2, 208($r0)
+lw $r3, 209($r0)
+lw $r4, 210($r0)
+lw $r5, 211($r0)
+#check for collisions:
+
+#load game board slots
+lw $r12, 0($r2)
+lw $r13, 0($r3)
+lw $r14, 0($r4)
+lw $r15, 0($r5)
+
+# check to see if colliding with any non-active pieces
+addi $r8, $r0, 8
+blt $r12, $r8, gen_empty_check1
+gen_fall_check2:
+blt $r13, $r8, gen_empty_check2
+gen_fall_check3:
+blt $r14, $r8, gen_empty_check3
+gen_fall_check4:
+blt $r15, $r8, gen_empty_check4
+
+# check to see if colliding with out of bounds
+gen_bottom_check:
+addi $r8, $r0, 199
+blt $r8, $r2, delay
+blt $r8, $r3, delay
+blt $r8, $r4, delay
+blt $r8, $r5, delay
+
 j render_ns
+
+gen_empty_check1:
+bne $r12, $r0, delay
+j gen_fall_check2
+
+gen_empty_check2:
+bne $r13, $r0, delay
+j gen_fall_check3
+
+gen_empty_check3:
+bne $r14, $r0, delay
+j gen_fall_check4
+
+gen_empty_check4:
+bne $r15, $r0, delay
+j gen_bottom_check
+
 
 die:
 nop
