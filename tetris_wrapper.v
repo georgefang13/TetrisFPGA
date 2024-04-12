@@ -62,22 +62,22 @@ module Wrapper (
     );
     
     // Input Indicators
-//    always @(posedge clock) begin
-//        LED[0] <= JB[1]; // Up
-//        LED[1] <= JB[2]; // Right
-//        LED[2] <= JB[3]; // Down
-//        LED[3] <= JB[4]; // Left
-//        LED[4] <= JB[7]; // SL
-//        LED[5] <= JB[8]; // SR
-//        LED[6] <= JB[9]; // Hold
-//        LED[7] <= JB[10]; // Reset      
-//    end
-    always @(posedge clock) begin
-//        LED[2:0] <= state[2:0];   
-        LED[2:0] <= block_color;
-        LED[15:8] <= regA[7:0];
+   always @(posedge clock) begin
+       LED[0] <= JB[1]; // Up
+       LED[1] <= JB[2]; // Right
+       LED[2] <= JB[3]; // Down
+       LED[3] <= JB[4]; // Left
+       LED[4] <= JB[7]; // SL
+       LED[5] <= JB[8]; // SR
+       LED[6] <= JB[9]; // Hold
+       LED[7] <= JB[10]; // Reset      
+   end
+//     always @(posedge clock) begin
+// //        LED[2:0] <= state[2:0];   
+//         LED[2:0] <= block_color;
+//         LED[15:8] <= regA[7:0];
         
-    end
+//     end
    
 
 //        always @(posedge clock) begin
@@ -100,7 +100,8 @@ module Wrapper (
 	localparam INSTR_FILE = "tetris";
 	localparam FILES_PATH = "C:/Users/lja26/Desktop/tetris/";
 	
-    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
+	//    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
+    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[4] ? 4 : JB[2] ? 2 : 0;
     
     
     
