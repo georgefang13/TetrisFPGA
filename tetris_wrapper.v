@@ -27,6 +27,7 @@
 module Wrapper (
     input clk_100mhz,
     input [10:1] JB,
+    input BTNL,
     output reg [15:0] LED,
     output hSync, 		// H Sync Signal
 	output vSync, 		// Veritcal Sync Signal
@@ -37,6 +38,7 @@ module Wrapper (
     
     wire clock, reset;
     assign clock = clk_50mhz;
+//    assign clock = BTNL;
 //    assign reset = JB[10]; 
     assign reset = 1'b0;
    
@@ -70,18 +72,25 @@ module Wrapper (
 //        LED[6] <= JB[9]; // Hold
 //        LED[7] <= JB[10]; // Reset      
 //    end
+    always @(posedge clock) begin
+//        LED[2:0] <= state[2:0];   
+        LED[2:0] <= block_color;
+        LED[15:8] <= regA[7:0];
+        
+    end
+   
 
-        always @(posedge clock) begin
-                LED[0] <= memDataOut[0];
-            end
+//        always @(posedge clock) begin
+//                LED[0] <= memDataOut[0];
+//            end
             
     // Fibonacci LSFR Random Number 
     reg [15:0] state = 16'hACE1; // best seed for 16 bit LSFR
     wire next_msb;
+    assign next_msb = ((state[0] ^ state[2]) ^ state[3]) ^ state[5];
     
     always @(posedge clock)
     begin
-        assign next_msb = ((state[0] ^ state[2]) ^ stage[3]) ^ state[5];
         state <= (state >> 1);
         state[15] <= next_msb;
     end
@@ -247,12 +256,13 @@ module Wrapper (
         19; // Default value for cases beyond 380	
 //    assign block_addr = //(((y-40)/20) * 10) + ((x-220)/20);
 	assign block_addr = (10 * block_y) + block_x;
+	wire [2:0] block_color;
 	assign block_color = memDataOut[2:0];
 	
     wire isGameBoard, isGrid;
 	assign isGameBoard = (x >= 220) && (x < 420) && (y >= 40) && (y < 440);
 	assign isGrid = ((((x - 220) % 20) == 0) || (((x - 220) % 20) == 19) || (((y - 40) % 20) == 0) || (((y - 40) % 20) == 19)) && isGameBoard; // later we can make the grid fainter and the border solid white
-	assign colorOut = isGrid ? white : ~isGameBoard ? colorBack : (block_color == 0) ? black : (block_color == 1) ? cyan : (block_color == 2) ? blue : (block_color == 3) ? orange : (block_color == 4) ? yellow : (block_color == 5) ? green : (block_color == 6) ? purple : (block_color == 7) ? red : red;
+	assign colorOut = isGrid ? white : ~isGameBoard ? colorBack : (block_color == 3'b0) ? black : (block_color == 3'b001) ? cyan : (block_color == 3'b111) ? blue : (block_color == 3'b110) ? orange : (block_color == 3'b010) ? yellow : (block_color == 3'b011) ? green : (block_color == 3'b101) ? purple : (block_color == 3'b100) ? red : red;
     
     assign {VGA_R, VGA_G, VGA_B} = colorOut;
     

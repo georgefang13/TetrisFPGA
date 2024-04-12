@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Apr 10 16:36:50 2024
+| Date         : Thu Apr 11 22:21:30 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
 | Design       : Wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    33 |
-|    Minimum number of control sets                        |    33 |
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    52 |
+| Unused register locations in slices containing registers |    57 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    33 |
+| Total control sets |    49 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    26 |
+| >= 16              |    42 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,54 +58,70 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             300 |          116 |
-| No           | No                    | Yes                    |               6 |            3 |
+| No           | No                    | No                     |             324 |          150 |
+| No           | No                    | Yes                    |               6 |            2 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             801 |          409 |
-| Yes          | No                    | Yes                    |              43 |           25 |
-| Yes          | Yes                   | No                     |              62 |           38 |
+| Yes          | No                    | No                     |            1315 |          634 |
+| Yes          | No                    | Yes                    |              44 |           31 |
+| Yes          | Yes                   | No                     |              62 |           37 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------+-----------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|    Clock Signal    |              Enable Signal              |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------+-----------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_1       | CPU/pw/ir/dff_loop[4].dff/clr01_out |                1 |              1 |         1.00 |
-|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_2       | CPU/pw/ir/dff_loop[4].dff/clr0      |                1 |              1 |         1.00 |
-|  clk_100mhz_IBUF   |                                         |                                     |                1 |              2 |         2.00 |
-|  pll/inst/clk_out1 |                                         | CPU/dx/ir/dff_loop[6].dff/p_27_in   |                3 |              6 |         2.00 |
-|  nClock            | CPU/dx/ir/dff_loop[6].dff/p_27_in       | CPU/pw/r/q_reg_0                    |                3 |              7 |         2.33 |
-|  clk25             |                                         |                                     |                5 |             10 |         2.00 |
-|  clk25             | Display/vPos                            |                                     |                4 |             10 |         2.50 |
-|  pll/inst/clk_out1 |                                         |                                     |               11 |             25 |         2.27 |
-|  pll/inst/clk_out1 | CPU/md/mult_enable/wMult_enable         | CPU/dx/ir/dff_loop[6].dff/q_reg_1   |               21 |             31 |         1.48 |
-|  pll/inst/clk_out1 | CPU/md/div_enable/wDiv_enable           | CPU/dx/ir/dff_loop[6].dff/q_reg_2   |               17 |             31 |         1.82 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_10                      |                                     |               15 |             32 |         2.13 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_12                      |                                     |               14 |             32 |         2.29 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_8                       |                                     |               16 |             32 |         2.00 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_1                       |                                     |               16 |             32 |         2.00 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_3                       |                                     |               15 |             32 |         2.13 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_5                       |                                     |               21 |             32 |         1.52 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_6                       |                                     |               15 |             32 |         2.13 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_4                       |                                     |               18 |             32 |         1.78 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_9                       |                                     |               17 |             32 |         1.88 |
-|  pll/inst/clk_out1 | CPU/md/mult_enable/in_enable0           |                                     |               12 |             32 |         2.67 |
-|  pll/inst/clk_out1 | CPU/md/div_enable/in_enable0            |                                     |               16 |             32 |         2.00 |
-|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_2       |                                     |               15 |             32 |         2.13 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_7                       |                                     |               17 |             32 |         1.88 |
-|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_1       |                                     |               17 |             32 |         1.88 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_14                      |                                     |               19 |             32 |         1.68 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_13                      |                                     |               15 |             32 |         2.13 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_11                      |                                     |               25 |             32 |         1.28 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_2                       |                                     |               29 |             32 |         1.10 |
-|  pll/inst/clk_out1 | CPU/pw/ex/q_reg_15                      |                                     |               17 |             32 |         1.88 |
-|  nClock            | CPU/md/count/t4/dff/pw_enable           | CPU/pw/r/q_reg_0                    |               20 |             34 |         1.70 |
-|  nClock            | CPU/fd/ir/dff_loop[26].dff/q_i_3__104_0 |                                     |               38 |             87 |         2.29 |
-|  nClock            | CPU/pw/ir/dff_loop[4].dff/dx_enable     |                                     |               38 |             96 |         2.53 |
-|  nClock            |                                         |                                     |               99 |            263 |         2.66 |
-+--------------------+-----------------------------------------+-------------------------------------+------------------+----------------+--------------+
++--------------------+-------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |            Enable Signal            |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_4   | CPU/dx/ir/dff_loop[6].dff/q_reg_1 |                1 |              1 |         1.00 |
+|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_2   | CPU/dx/ir/dff_loop[6].dff/q_reg_3 |                1 |              1 |         1.00 |
+|  clk_100mhz_IBUF   |                                     |                                   |                1 |              2 |         2.00 |
+|  pll/inst/clk_out1 |                                     | CPU/dx/ir/dff_loop[6].dff/wClear  |                2 |              6 |         3.00 |
+|  nClock            | CPU/dx/ir/dff_loop[6].dff/p_27_in   | CPU/pw/r/q_reg_0                  |                4 |              8 |         2.00 |
+|  clk25             |                                     |                                   |                4 |             10 |         2.50 |
+|  clk25             | Display/vPos                        |                                   |                4 |             10 |         2.50 |
+|  pll/inst/clk_out1 | CPU/md/mult_enable/wMult_enable     | CPU/dx/ir/dff_loop[6].dff/q_reg_4 |               17 |             31 |         1.82 |
+|  pll/inst/clk_out1 | CPU/md/div_enable/wDiv_enable       | CPU/dx/ir/dff_loop[6].dff/q_reg_2 |               20 |             31 |         1.55 |
+|  pll/inst/clk_out1 | CPU/md/div_enable/in_enable0        |                                   |               15 |             32 |         2.13 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_17 |                                   |                9 |             32 |         3.56 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_11 |                                   |               20 |             32 |         1.60 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_31 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_14 |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_18 |                                   |               24 |             32 |         1.33 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_33 |                                   |               29 |             32 |         1.10 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_34 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_4  |                                   |               15 |             32 |         2.13 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_12 |                                   |               14 |             32 |         2.29 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_29 |                                   |               14 |             32 |         2.29 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_16 |                                   |               11 |             32 |         2.91 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_22 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_24 |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_27 |                                   |               14 |             32 |         2.29 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_25 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_32 |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_28 |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_30 |                                   |               22 |             32 |         1.45 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_13 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_15 |                                   |               15 |             32 |         2.13 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_10 |                                   |               17 |             32 |         1.88 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_23 |                                   |               29 |             32 |         1.10 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_20 |                                   |               14 |             32 |         2.29 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_35 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_26 |                                   |               21 |             32 |         1.52 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_19 |                                   |               13 |             32 |         2.46 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_7  |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_8  |                                   |               15 |             32 |         2.13 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_9  |                                   |               12 |             32 |         2.67 |
+|  pll/inst/clk_out1 | RegisterFile/RDdecoder/q_reg        |                                   |               19 |             32 |         1.68 |
+|  pll/inst/clk_out1 | CPU/md/mult_enable/in_enable0       |                                   |               19 |             32 |         1.68 |
+|  pll/inst/clk_out1 | CPU/mw/ir/dff_loop[30].dff/q_reg_21 |                                   |               14 |             32 |         2.29 |
+|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_4   |                                   |               17 |             32 |         1.88 |
+|  pll/inst/clk_out1 | CPU/dx/ir/dff_loop[6].dff/q_reg_2   |                                   |               13 |             32 |         2.46 |
+|  nClock            | CPU/md/count/t4/dff/pw_enable       | CPU/pw/r/q_reg_0                  |               25 |             34 |         1.36 |
+|  pll/inst/clk_out1 |                                     |                                   |               33 |             44 |         1.33 |
+|  nClock            | CPU/dx/ir/dff_loop[25].dff/q_reg_17 |                                   |               39 |             89 |         2.28 |
+|  nClock            | CPU/pw/ir/dff_loop[3].dff/dx_enable |                                   |               48 |             96 |         2.00 |
+|  nClock            |                                     |                                   |              112 |            269 |         2.40 |
++--------------------+-------------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

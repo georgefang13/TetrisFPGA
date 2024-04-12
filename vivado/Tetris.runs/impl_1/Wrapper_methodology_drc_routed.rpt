@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Apr 10 16:37:37 2024
+| Date         : Thu Apr 11 22:22:24 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Wrapper_methodology_drc_routed.rpt -pb Wrapper_methodology_drc_routed.pb -rpx Wrapper_methodology_drc_routed.rpx
 | Design       : Wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 42
 +-----------+------------------+------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                      | Violations |
 +-----------+------------------+------------------------------------------------------------------+------------+
@@ -34,6 +34,7 @@ Table of Contents
 | CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                                     | 3          |
 | SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal                       | 4          |
+| TIMING-16 | Warning          | Large setup violation                                            | 11         |
 +-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -161,19 +162,19 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell CPU/dx/ir/dff_loop[6].dff/q_i_2__279, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/count/t0/dff/q_reg/CLR, CPU/md/count/t1/dff/q_reg/CLR,
-CPU/md/count/t2/dff/q_reg/CLR, CPU/md/count/t3/dff/q_reg/CLR,
-CPU/md/count/t4/dff/q_reg/CLR, CPU/md/count/t5/dff/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CPU/dx/ir/dff_loop[6].dff/q_i_1__371, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/mult_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell CPU/pw/ir/dff_loop[4].dff/q_i_1__120, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/div_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CPU/dx/ir/dff_loop[6].dff/q_i_1__373, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/div_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell CPU/pw/ir/dff_loop[4].dff/q_i_1__123, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/mult_enable/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CPU/dx/ir/dff_loop[6].dff/q_i_2__102, with 2 or more inputs, drives asynchronous preset/clear pin(s) CPU/md/count/t0/dff/q_reg/CLR, CPU/md/count/t1/dff/q_reg/CLR,
+CPU/md/count/t2/dff/q_reg/CLR, CPU/md/count/t3/dff/q_reg/CLR,
+CPU/md/count/t4/dff/q_reg/CLR, CPU/md/count/t5/dff/q_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-6#1 Warning
@@ -194,6 +195,61 @@ Related violations: <none>
 SYNTH-6#4 Warning
 Timing of a RAM block might be sub-optimal  
 The timing for the instance ProcMem/MemoryArray_reg_3, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.003 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[13].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.023 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.052 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[18].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.069 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[25].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.085 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[29].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.110 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[20].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.113 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[23].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.125 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[19].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.259 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[30].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.302 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[28].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.351 ns between CPU/dx/ir/dff_loop[30].dff/q_reg/C (clocked by clk_out1_clk_wiz_0) and CPU/md/divider/r_divisor/dff_loop[27].dff/q_reg/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 
