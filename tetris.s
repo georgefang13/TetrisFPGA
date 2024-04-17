@@ -355,6 +355,8 @@ sw $r1, 0($r4)
 lw $r5, 205($r0)
 sw $r1, 0($r5)
 
+jal line_clear
+
 j place_block
 
 
@@ -387,6 +389,8 @@ sw $r1, 0($r12)
 sw $r1, 0($r13)
 sw $r1, 0($r14)
 sw $r1, 0($r15)
+
+jal line_clear
 
 j delay
 
@@ -559,6 +563,118 @@ gen_empty_check4:
 bne $r15, $r0, delay
 j gen_bottom_check
 
+line_clear:
+
+# set row counter and 8, 190
+addi $r11, $r0, -10
+addi $r18, $r0, 8 
+addi $r19, $r0, 189
+addi $r20, $r0, 10
+
+# zero score increment
+add $r14, $r0, $r0
+
+lc_loop:
+# increment RC and set column count
+addi $r11, $r11, 10
+addi $r12, $r0, -1
+lc_row_loop:
+# add to column, calculate mem address
+addi $r12, $r12, 1
+add $r13, $r11, $r12
+# load value at address
+lw $r1, 0($r13)
+# check to see if its an inactive block
+blt $r1, $r18, lc_zero_check
+j end_lc_loop
+lc_zero_check:
+bne $r1, $r0, lc_end_check
+j end_lc_loop
+
+# see if were at end of the row
+lc_end_check:
+blt $r12, $r20, lc_row_loop
+
+clear:
+
+# increment line cleared counter
+addi $r14, $r14, 1
+
+add $r22, $r11, $r0
+
+# clear current row
+sw $r0, 0($r22)
+sw $r0, 1($r22)
+sw $r0, 2($r22)
+sw $r0, 3($r22)
+sw $r0, 4($r22)
+sw $r0, 5($r22)
+sw $r0, 6($r22)
+sw $r0, 7($r22)
+sw $r0, 8($r22)
+sw $r0, 9($r22)
+
+# shift everything above down
+shift_down:
+# row above
+addi $r23, $r22, -1
+
+# load row above
+lw $r1, 0($r23)
+lw $r2, 1($r23)
+lw $r3, 2($r23)
+lw $r4, 3($r23)
+lw $r5, 4($r23)
+lw $r6, 5($r23)
+lw $r7, 6($r23)
+lw $r8, 7($r23)
+lw $r9, 8($r23)
+lw $r10, 9($r23)
+
+# store in row below
+sw $r1, 0($r22)
+sw $r2, 1($r22)
+sw $r3, 2($r22)
+sw $r4, 3($r22)
+sw $r5, 4($r22)
+sw $r6, 5($r22)
+sw $r7, 6($r22)
+sw $r8, 7($r22)
+sw $r9, 8($r22)
+sw $r10, 9($r22)
+
+# move curr row up 
+addi $r22, $r22, -1
+# check if at the top
+blt $r0, $r22, shift_down
+
+# If checked the whole board, break
+end_lc_loop:
+blt $r11, $r19, lc_loop
+
+addi $r15, $r0, 4
+blt $r14, $r15, score_lt4
+addi $r24, $r24, 800
+
+score_lt4:
+addi $r15, $r0, 3
+blt $r14, $r15, score_lt3
+addi $r24, $r24, 400
+j score_done
+
+score_lt3:
+addi $r15, $r0, 2
+blt $r14, $r15, score_lt2
+addi $r24, $r24, 200
+j score_done
+
+score_lt2:
+addi $r15, $r0, 1
+blt $r14, $r15, score_done
+addi $r24, $r24, 100
+
+score_done:
+jr $ra
 
 die:
 nop
