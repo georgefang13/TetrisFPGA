@@ -101,7 +101,7 @@ module Wrapper (
 	localparam FILES_PATH = "C:/Users/lja26/Desktop/tetris/";
 	
 	//    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
-    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : 0;
+    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[8] ? 8 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : 0;
     
     
     

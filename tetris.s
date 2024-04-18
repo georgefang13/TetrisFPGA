@@ -5,7 +5,9 @@ addi $r26, $r0, 1220
 sll $r26, $r26, 10  # build ~50,000,000
 
 # set stack pointer:
-addi $r29, $r0, 225
+addi $r29, $r0, 250
+
+new_game:
 
 # wait for start/reset
 addi $r2, $r0, 10
@@ -29,44 +31,44 @@ blt $r5, $r6, clear
 
 # get 5 random numbers and store them
 add $r1, $r28, $r0
-sw $r1, 218($r0)
+sw $r1, 235($r0)
 nop  # allow for more random generation
 nop 
 add $r2, $r28, $r0
-sw $r2, 219($r0)
+sw $r2, 236($r0)
 nop
 nop
 add $r3, $r28, $r0
-sw $r3, 220($r0)
+sw $r3, 237($r0)
 nop
 nop
 add $r4, $r28, $r0
-sw $r4, 221($r0)
+sw $r4, 238($r0)
 nop
 nop
 add $r5, $r28, $r0
-sw $r5, 222($r0)
+sw $r5, 239($r0)
 
 
 place_block:
 # Get next piece
-lw $r1, 218($r0)
+lw $r1, 235($r0)
 
 # shift up next blocks and get new random block
-lw $r2, 219($r0)
-sw $r2, 218($r0)
+lw $r2, 236($r0)
+sw $r2, 235($r0)
 
-lw $r3, 220($r0)
-sw $r3, 219($r0)
+lw $r3, 237($r0)
+sw $r3, 236($r0)
 
-lw $r4, 221($r0)
-sw $r4, 220($r0)
+lw $r4, 238($r0)
+sw $r4, 237($r0)
 
-lw $r5, 222($r0)
-sw $r5, 221($r0)
+lw $r5, 239($r0)
+sw $r5, 238($r0)
 
 add $r5, $r28, $r0
-sw $r5, 222($r0)
+sw $r5, 239($r0)
 
 
 # Store rotation
@@ -92,6 +94,24 @@ addi $r2, $r2, 1
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 3
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 3
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 1
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 4
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 5
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 
@@ -114,6 +134,24 @@ addi $r2, $r2, 1
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 5
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 3
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 1
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 4
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 5
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 lt6:
@@ -135,6 +173,24 @@ addi $r2, $r2, 1
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 4
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 3
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 1
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 4
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 5
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 lt5:
@@ -156,6 +212,24 @@ addi $r2, $r2, 10
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 3
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 4
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 0
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 4
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 5
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 lt4:
@@ -177,6 +251,24 @@ addi $r2, $r0, 13
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 4
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 5
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 0
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 3
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 4
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 
@@ -186,7 +278,6 @@ blt $r1, $r6, lt2
 nop
 nop
 nop
-
 
 #place O block
 #store type
@@ -200,6 +291,24 @@ addi $r2, $r0, 14
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 4
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 5
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 0
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 4
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 1
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 5
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 1
+sw $r2, 226($r0) # y4
+
 j decode_done
 
 lt2:
@@ -217,6 +326,23 @@ addi $r2, $r2, 1
 sw $r2, 204($r0)
 addi $r2, $r2, 1
 sw $r2, 205($r0)
+
+addi $r2, $r0, 3
+sw $r2, 219($r0) # x1
+addi $r2, $r0, 0
+sw $r2, 220($r0) # y1
+addi $r2, $r0, 4
+sw $r2, 221($r0) # x2
+addi $r2, $r0, 0
+sw $r2, 222($r0) # y2
+addi $r2, $r0, 5
+sw $r2, 223($r0) # x3
+addi $r2, $r0, 0
+sw $r2, 224($r0) # y3
+addi $r2, $r0, 6
+sw $r2, 225($r0) # x4
+addi $r2, $r0, 0
+sw $r2, 226($r0) # y4
 
 decode_done:
 
@@ -257,6 +383,11 @@ bne $r1, $r2, not_reset
 j start_game
 
 not_reset:
+addi $r2, $r0, 8
+bne $r1, $r2, not_RCW
+j RCW
+
+not_RCW:
 addi $r2, $r0, 4
 bne $r1, $r2, not_left
 j move_left
@@ -296,6 +427,37 @@ lw $r5, 205($r0)
 addi $r5, $r5, 10
 sw $r5, 211($r0)
 
+# updating the X and Y coords
+lw $r16, 219($r0)
+sw $r16, 227($r0)
+
+lw $r6, 220($r0)
+addi $r6, $r6, 1
+sw $r6, 228($r0)
+
+lw $r17, 221($r0)
+sw $r17, 229($r0)
+
+lw $r7, 222($r0)
+addi $r7, $r7, 1
+sw $r7, 230($r0)
+
+lw $r18, 223($r0)
+sw $r18, 231($r0)
+
+lw $r8, 224($r0)
+addi $r8, $r8, 1
+sw $r8, 232($r0)
+
+lw $r18, 225($r0)
+sw $r18, 233($r0)
+
+lw $r9, 226($r0)
+addi $r9, $r9, 1
+sw $r9, 234($r0)
+
+lw $r1, 201($r0)
+sw $r1, 207($r0)
 
 #check for collisions:
 
@@ -359,11 +521,14 @@ jal line_clear
 
 j place_block
 
-
 render_ns:
 # load type and make active
 lw $r1, 200($r0)
 addi $r1, $r1, 8
+
+# load and store rotation
+lw $r16, 207($r0)
+sw $r16, 201($r0)
 
 # grab current and next state
 lw $r2, 202($r0)
@@ -390,49 +555,68 @@ sw $r1, 0($r13)
 sw $r1, 0($r14)
 sw $r1, 0($r15)
 
+# grab next X and Y and store in current
+lw $r2, 227($r0)
+lw $r3, 228($r0)
+lw $r4, 229($r0)
+lw $r5, 230($r0)
+lw $r6, 231($r0)
+lw $r7, 232($r0)
+lw $r8, 233($r0)
+lw $r9, 234($r0)
+
+sw $r2, 219($r0)
+sw $r3, 220($r0)
+sw $r4, 221($r0)
+sw $r5, 222($r0)
+sw $r6, 223($r0)
+sw $r7, 224($r0)
+sw $r8, 225($r0)
+sw $r9, 226($r0)
+
 jal line_clear
 
 j delay
 
 move_left:
-addi $r5, $r0, 191
-addi $r4, $r0, -10
-lw $r1, 202($r0)
-left_check1:
-addi $r4, $r4, 10
-blt $r5, $r4, left_check2_setup
-bne $r4, $r1, left_check1
-j delay
 
-left_check2_setup:
-addi $r5, $r0, 191
-addi $r4, $r0, -10
-lw $r1, 203($r0)
-left_check2:
-addi $r4, $r4, 10
-blt $r5, $r4, left_check3_setup
-bne $r4, $r1, left_check2
-j delay
+# addi $r5, $r0, 191
+# addi $r4, $r0, -10
+# lw $r1, 202($r0)
+# left_check1:
+# addi $r4, $r4, 10
+# blt $r5, $r4, left_check2_setup
+# bne $r4, $r1, left_check1
+# j delay
 
-left_check3_setup:
-addi $r5, $r0, 191
-addi $r4, $r0, -10
-lw $r1, 204($r0)
-left_check3:
-addi $r4, $r4, 10
-blt $r5, $r4, left_check4_setup
-bne $r4, $r1, left_check3
-j delay
+# left_check2_setup:
+# addi $r5, $r0, 191
+# addi $r4, $r0, -10
+# lw $r1, 203($r0)
+# left_check2:
+# addi $r4, $r4, 10
+# blt $r5, $r4, left_check3_setup
+# bne $r4, $r1, left_check2
+# j delay
 
-left_check4_setup:
-addi $r5, $r0, 191
-addi $r4, $r0, -10
-lw $r1, 205($r0)
-left_check4:
-addi $r4, $r4, 10
-blt $r5, $r4, set_left
-bne $r4, $r1, left_check4
-j delay
+# left_check3_setup:
+# addi $r5, $r0, 191
+# addi $r4, $r0, -10
+# lw $r1, 204($r0)
+# left_check3:
+# addi $r4, $r4, 10
+# blt $r5, $r4, left_check4_setup
+# bne $r4, $r1, left_check3
+# j delay
+
+# left_check4_setup:
+# addi $r5, $r0, 191
+# addi $r4, $r0, -10
+# lw $r1, 205($r0)
+# left_check4:
+# addi $r4, $r4, 10
+# blt $r5, $r4, set_left
+# bne $r4, $r1, left_check4
 
 set_left:
 lw $r2, 202($r0)
@@ -450,47 +634,74 @@ sw $r3, 209($r0)
 sw $r4, 210($r0)
 sw $r5, 211($r0)
 
+# updating the X and Y coords
+lw $r2, 219($r0)
+lw $r12, 220($r0)
+lw $r3, 221($r0)
+lw $r13, 222($r0)
+lw $r4, 223($r0)
+lw $r14, 224($r0)
+lw $r5, 225($r0)
+lw $r15, 226($r0)
+
+addi $r2, $r2, -1
+addi $r3, $r3, -1
+addi $r4, $r4, -1
+addi $r5, $r5, -1
+
+sw $r2, 227($r0)
+sw $r12, 228($r0)
+sw $r3, 229($r0)
+sw $r13, 230($r0)
+sw $r4, 231($r0)
+sw $r14, 232($r0)
+sw $r5, 233($r0)
+sw $r15, 234($r0)
+
+lw $r1, 201($r0)
+sw $r1, 207($r0)
+
 j collide_detect
 
 move_right:
-addi $r5, $r0, 200
-addi $r4, $r0, -1
-lw $r1, 202($r0)
-right_check1:
-addi $r4, $r4, 10
-blt $r5, $r4, right_check2_setup
-bne $r4, $r1, right_check1
-j delay
+# addi $r5, $r0, 200
+# addi $r4, $r0, -1
+# lw $r1, 202($r0)
+# right_check1:
+# addi $r4, $r4, 10
+# blt $r5, $r4, right_check2_setup
+# bne $r4, $r1, right_check1
+# j delay
 
-right_check2_setup:
-addi $r5, $r0, 200
-addi $r4, $r0, -1
-lw $r1, 203($r0)
-right_check2:
-addi $r4, $r4, 10
-blt $r5, $r4, right_check3_setup
-bne $r4, $r1, right_check2
-j delay
+# right_check2_setup:
+# addi $r5, $r0, 200
+# addi $r4, $r0, -1
+# lw $r1, 203($r0)
+# right_check2:
+# addi $r4, $r4, 10
+# blt $r5, $r4, right_check3_setup
+# bne $r4, $r1, right_check2
+# j delay
 
-right_check3_setup:
-addi $r5, $r0, 200
-addi $r4, $r0, -1
-lw $r1, 204($r0)
-right_check3:
-addi $r4, $r4, 10
-blt $r5, $r4, right_check4_setup
-bne $r4, $r1, right_check3
-j delay
+# right_check3_setup:
+# addi $r5, $r0, 200
+# addi $r4, $r0, -1
+# lw $r1, 204($r0)
+# right_check3:
+# addi $r4, $r4, 10
+# blt $r5, $r4, right_check4_setup
+# bne $r4, $r1, right_check3
+# j delay
 
-right_check4_setup:
-addi $r5, $r0, 200
-addi $r4, $r0, -1
-lw $r1, 205($r0)
-right_check4:
-addi $r4, $r4, 10
-blt $r5, $r4, set_right
-bne $r4, $r1, right_check4
-j delay
+# right_check4_setup:
+# addi $r5, $r0, 200
+# addi $r4, $r0, -1
+# lw $r1, 205($r0)
+# right_check4:
+# addi $r4, $r4, 10
+# blt $r5, $r4, set_right
+# bne $r4, $r1, right_check4
+# j delay
 
 set_right:
 lw $r1, 200($r0)
@@ -509,6 +720,33 @@ sw $r2, 208($r0)
 sw $r3, 209($r0)
 sw $r4, 210($r0)
 sw $r5, 211($r0)
+
+# updating the X and Y coords
+lw $r2, 219($r0)
+lw $r12, 220($r0)
+lw $r3, 221($r0)
+lw $r13, 222($r0)
+lw $r4, 223($r0)
+lw $r14, 224($r0)
+lw $r5, 225($r0)
+lw $r15, 226($r0)
+
+addi $r2, $r2, 1
+addi $r3, $r3, 1
+addi $r4, $r4, 1
+addi $r5, $r5, 1
+
+sw $r2, 227($r0)
+sw $r12, 228($r0)
+sw $r3, 229($r0)
+sw $r13, 230($r0)
+sw $r4, 231($r0)
+sw $r14, 232($r0)
+sw $r5, 233($r0)
+sw $r15, 234($r0)
+
+lw $r1, 201($r0)
+sw $r1, 207($r0)
 
 j collide_detect
 
@@ -545,6 +783,28 @@ blt $r8, $r3, delay
 blt $r8, $r4, delay
 blt $r8, $r5, delay
 
+# top check
+blt $r2, $r0, delay
+blt $r3, $r0, delay
+blt $r4, $r0, delay
+blt $r5, $r0, delay
+
+# left and right check
+lw $r2, 227($r0)
+lw $r3, 229($r0)
+lw $r4, 231($r0)
+lw $r5, 233($r0)
+blt $r2, $r0, delay
+blt $r3, $r0, delay
+blt $r4, $r0, delay
+blt $r5, $r0, delay
+
+addi $r1, $r0, 9
+blt $r1, $r2, delay
+blt $r1, $r3, delay
+blt $r1, $r4, delay
+blt $r1, $r5, delay
+
 j render_ns
 
 gen_empty_check1:
@@ -569,7 +829,7 @@ line_clear:
 addi $r11, $r0, -10
 addi $r18, $r0, 8 
 addi $r19, $r0, 189
-addi $r20, $r0, 10
+addi $r20, $r0, 9
 
 # zero score increment
 add $r14, $r0, $r0
@@ -595,8 +855,6 @@ j end_lc_loop
 lc_end_check:
 blt $r12, $r20, lc_row_loop
 
-clear:
-
 # increment line cleared counter
 addi $r14, $r14, 1
 
@@ -617,7 +875,7 @@ sw $r0, 9($r22)
 # shift everything above down
 shift_down:
 # row above
-addi $r23, $r22, -1
+addi $r23, $r22, -10
 
 # load row above
 lw $r1, 0($r23)
@@ -644,7 +902,7 @@ sw $r9, 8($r22)
 sw $r10, 9($r22)
 
 # move curr row up 
-addi $r22, $r22, -1
+addi $r22, $r22, -10
 # check if at the top
 blt $r0, $r22, shift_down
 
@@ -675,6 +933,129 @@ addi $r24, $r24, 100
 
 score_done:
 jr $ra
+
+RCW:
+
+# Load Current Status:
+lw $r1, 200($r0)
+
+addi $r2, $r0, 1
+bne $r1, $r2, RC_nI
+j RC_I
+
+RC_nI:
+
+j delay
+
+RC_I:
+lw $r1, 201($r0)
+addi $r2, $r0, 1
+bne $r1, $r2, RC_I_2_1
+
+# rotate from 1 to 2 
+lw $r2, 202($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -9
+addi $r4, $r4, 9
+addi $r5, $r5, 18
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, -1
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -2
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 2
+sw $r13, 234($r0)
+
+j collide_detect
+
+RC_I_2_1:
+
+lw $r2, 202($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 9
+addi $r4, $r4, -9
+addi $r5, $r5, -18
+
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 1
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, -1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 2
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -2
+sw $r13, 234($r0)
+
+j collide_detect
+
 
 die:
 nop
