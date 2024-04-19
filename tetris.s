@@ -51,6 +51,29 @@ sw $r5, 239($r0)
 
 
 place_block:
+# check for game over:
+addi $r7, $r0, 7
+addi $r8, $r0, 0
+addi $r9, $r0, 1
+addi $r10, $r0, 3
+
+# check loop
+check_end:
+lw $r11, 0($r10)
+bne $r11, $r0, new_game
+
+addi $r10, $r10, 1
+blt $r10, $r7, check_end
+
+addi $r8, $r8, 1
+bne $r8, $r9, board_good
+
+addi $r10, $r0, 13
+addi $r7, $r0, 16
+j check_end
+
+board_good:
+
 # Get next piece
 lw $r1, 235($r0)
 
@@ -380,7 +403,7 @@ add $r1, $r27, $r0
 
 addi $r2, $r0, 10
 bne $r1, $r2, not_reset
-j start_game
+j new_game
 
 not_reset:
 addi $r2, $r0, 8
@@ -388,6 +411,11 @@ bne $r1, $r2, not_RCW
 j RCW
 
 not_RCW:
+addi $r2, $r0, 7
+bne $r1, $r2, not_RCCW
+j RCCW
+
+not_RCCW:
 addi $r2, $r0, 4
 bne $r1, $r2, not_left
 j move_left
@@ -1552,7 +1580,7 @@ lw $r4, 204($r0)
 lw $r5, 205($r0)
 
 addi $r2, $r2, -20
-addi $r3, $r3, 9
+addi $r3, $r3, -9
 addi $r4, $r4, 0
 addi $r5, $r5, 11
 
@@ -1603,7 +1631,7 @@ j collide_detect
 RC_T:
 lw $r1, 201($r0)
 addi $r2, $r0, 1
-bne $r1, $r2, RC_S_n1
+bne $r1, $r2, RC_T_n1
 
 # rotate from 1 to 2 
 lw $r2, 202($r0)
@@ -1627,19 +1655,19 @@ sw $r5, 211($r0)
 
 # update x and ys
 lw $r6, 219($r0) #x1
-addi $r6, $r6, 1
+addi $r6, $r6, 0
 sw $r6, 227($r0)
 
 lw $r7, 220($r0) #y1
-addi $r7, $r7, 1
+addi $r7, $r7, 0
 sw $r7, 228($r0)
 
 lw $r8, 221($r0) #x2
-addi $r8, $r8, 0
+addi $r8, $r8, 1
 sw $r8, 229($r0)
 
 lw $r9, 222($r0) #y2
-addi $r9, $r9, 0
+addi $r9, $r9, 1
 sw $r9, 230($r0)
 
 lw $r10, 223($r0) #x3
@@ -1662,7 +1690,7 @@ j collide_detect
 
 RC_T_n1:
 addi $r2, $r0, 2
-bne $r1, $r2, RC_S_n2
+bne $r1, $r2, RC_T_n2
 # rotate from 2 to 3 
 lw $r2, 202($r0)
 lw $r3, 203($r0)
@@ -2302,6 +2330,1452 @@ sw $r13, 234($r0)
 
 j collide_detect
 
+RCCW:
+
+# Load Current Status:
+lw $r1, 200($r0)
+
+addi $r2, $r0, 1
+bne $r1, $r2, RCC_nI
+j RCC_I
+
+RCC_nI:
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_nO
+j delay
+
+RCC_nO:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_nS
+j RCC_S
+
+RCC_nS:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_nZ
+j RCC_Z
+
+RCC_nZ:
+addi $r2, $r0, 5
+bne $r1, $r2, RCC_nT
+j RCC_T
+
+RCC_nT:
+addi $r2, $r0, 6
+bne $r1, $r2, RCC_nL
+j RCC_L
+
+RCC_nL:
+addi $r2, $r0, 7
+bne $r1, $r2, RCC_nJ
+j RCC_J
+
+RCC_nJ: 
+
+j delay
+
+RCC_I:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_I_n2
+
+# rotate from 1 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -22
+addi $r3, $r3, -11
+addi $r4, $r4, 0
+addi $r5, $r5, 11
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_I_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_I_n3
+# rotate from 3 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 9
+addi $r3, $r3, 0
+addi $r4, $r4, -9
+addi $r5, $r5, -18
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 1
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, -1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 2
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -2
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_I_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_I_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 22
+addi $r3, $r3, 11
+addi $r4, $r4, 0
+addi $r5, $r5, -11
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_I_n4:
+
+# rotate from 1 to 4 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -9
+addi $r3, $r3, 0
+addi $r4, $r4, 9
+addi $r5, $r5, 18
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, -1
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -2
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 2
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_S:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_S_n2
+
+# rotate from 2 to 21
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 0
+addi $r3, $r3, -10
+addi $r4, $r4, -12
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, -2
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, -1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_S_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_S_n3
+# rotate from 3 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -20
+addi $r3, $r3, 0
+addi $r4, $r4, 2
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 2
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_S_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_S_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 0
+addi $r3, $r3, 12
+addi $r4, $r4, 10
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 2
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 1
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_S_n4:
+
+# rotate from 1 to 4
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 20
+addi $r3, $r3, -2
+addi $r4, $r4, 0
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -2
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_Z:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_Z_n2
+
+# rotate from 1 to 2 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -21
+addi $r3, $r3, -1
+addi $r4, $r4, 0
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_Z_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_Z_n3
+# rotate from 3 to 2 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 0
+addi $r3, $r3, -8
+addi $r4, $r4, 0
+addi $r5, $r5, -10
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 2
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_Z_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_Z_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 1
+addi $r3, $r3, 0
+addi $r4, $r4, 0
+addi $r5, $r5, 21
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 2
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_Z_n4:
+
+# rotate from 1 to 4
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 20
+addi $r3, $r3, 9
+addi $r4, $r4, 0
+addi $r5, $r5, -11
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_T:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_T_n2
+
+# rotate from 2 to 1 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 0
+addi $r3, $r3, -11
+addi $r4, $r4, 0
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_T_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_T_n3
+# rotate from 3 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -9
+addi $r3, $r3, 0
+addi $r4, $r4, 0
+addi $r5, $r5, 0
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 0
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 0
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_T_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_T_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 0
+addi $r3, $r3, 0
+addi $r4, $r4, 0
+addi $r5, $r5, 11
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 0
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 0
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_T_n4:
+
+# rotate from 1 to 4
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 9
+addi $r3, $r3, 11
+addi $r4, $r4, 0
+addi $r5, $r5, -11
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -1
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 1
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_L:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_L_n2
+
+# rotate from 2 to 1
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -20
+addi $r3, $r3, 9
+addi $r4, $r4, 0
+addi $r5, $r5, -9
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_L_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_L_n3
+# rotate from 3 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 2
+addi $r3, $r3, -11
+addi $r4, $r4, 0
+addi $r5, $r5, 11
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_L_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_L_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 20
+addi $r3, $r3, -9
+addi $r4, $r4, 0
+addi $r5, $r5, 9
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_L_n4:
+
+# rotate from 1 to 4
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -2
+addi $r3, $r3, 11
+addi $r4, $r4, 0
+addi $r5, $r5, -11
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_J:
+lw $r1, 201($r0)
+addi $r2, $r0, 2
+bne $r1, $r2, RCC_J_n2
+
+# rotate from 1 to 2 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -2
+addi $r3, $r3, 9
+addi $r4, $r4, 0
+addi $r5, $r5, -9
+
+# Update roation
+addi $r1, $r0, 1
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, -2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_J_n2:
+addi $r2, $r0, 3
+bne $r1, $r2, RCC_J_n3
+# rotate from 3 to 2
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, -20
+addi $r3, $r3, -11
+addi $r4, $r4, 0
+addi $r5, $r5, 11
+
+# Update roation
+addi $r1, $r0, 2
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, -2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, -1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, 1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_J_n3:
+addi $r2, $r0, 4
+bne $r1, $r2, RCC_J_n4
+
+# rotate from 4 to 3
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 2
+addi $r3, $r3, -9
+addi $r4, $r4, 0
+addi $r5, $r5, 9
+
+# Update roation
+addi $r1, $r0, 3
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 2
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 0
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, -1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, 1
+sw $r13, 234($r0)
+
+j collide_detect
+
+RCC_J_n4:
+
+# rotate from 1 to 4 
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+
+addi $r2, $r2, 20
+addi $r3, $r3, 11
+addi $r4, $r4, 0
+addi $r5, $r5, -11
+
+# Update roation
+addi $r1, $r0, 4
+sw $r1, 207($r0)
+
+sw $r2, 208($r0)
+sw $r3, 209($r0)
+sw $r4, 210($r0)
+sw $r5, 211($r0)
+
+# update x and ys
+lw $r6, 219($r0) #x1
+addi $r6, $r6, 0
+sw $r6, 227($r0)
+
+lw $r7, 220($r0) #y1
+addi $r7, $r7, 2
+sw $r7, 228($r0)
+
+lw $r8, 221($r0) #x2
+addi $r8, $r8, 1
+sw $r8, 229($r0)
+
+lw $r9, 222($r0) #y2
+addi $r9, $r9, 1
+sw $r9, 230($r0)
+
+lw $r10, 223($r0) #x3
+addi $r10, $r10, 0
+sw $r10, 231($r0)
+
+lw $r11, 224($r0) #y3
+addi $r11, $r11, 0
+sw $r11, 232($r0)
+
+lw $r12, 225($r0) #x4
+addi $r12, $r12, -1
+sw $r12, 233($r0)
+
+lw $r13, 226($r0) #y4
+addi $r13, $r13, -1
+sw $r13, 234($r0)
+
+j collide_detect
 
 die:
 nop
