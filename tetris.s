@@ -6,6 +6,12 @@ sll $r26, $r26, 10  # build ~50,000,000
 
 new_game:
 
+# give a second for inputs
+addi $r20, $r0, 0
+wait_to_start:
+addi $r20, $r20, 1
+blt $r20, $r26, wait_to_start
+
 # wait for start/reset
 addi $r2, $r0, 10
 check_start:
@@ -427,15 +433,17 @@ bne $r1, $r2, not_down
 j fall
 
 not_down:
-
 addi $r2, $r0, 2
 bne $r1, $r2, not_right
 j move_right
 
 not_right:
+addi $r2, $r0, 1
+bne $r1, $r2, not_HD
+j hard_drop
 
+not_HD:
 j delay
-
 
 fall:
 
@@ -609,12 +617,9 @@ sw $r7, 224($r0)
 sw $r8, 225($r0)
 sw $r9, 226($r0)
 
-jal line_clear
-
 j delay
 
 hold:
-
 # check if a hold has already been done
 bne $r29, $r0, delay
 
@@ -3813,6 +3818,81 @@ addi $r13, $r13, -1
 sw $r13, 234($r0)
 
 j collide_detect
+
+hard_drop:
+
+still_drop:
+# calculate next block position and store in next state
+lw $r2, 202($r0)
+addi $r2, $r2, 10
+sw $r2, 208($r0)
+
+lw $r3, 203($r0)
+addi $r3, $r3, 10
+sw $r3, 209($r0)
+
+lw $r4, 204($r0)
+addi $r4, $r4, 10
+sw $r4, 210($r0)
+
+lw $r5, 205($r0)
+addi $r5, $r5, 10
+sw $r5, 211($r0)
+
+#check for collisions:
+
+#load game board slots
+lw $r12, 0($r2)
+lw $r13, 0($r3)
+lw $r14, 0($r4)
+lw $r15, 0($r5)
+
+# check to see if colliding with any non-active pieces
+addi $r8, $r0, 8
+blt $r12, $r8, hd_empty_check1
+hd_fall_check2:
+blt $r13, $r8, hd_empty_check2
+hd_fall_check3:
+blt $r14, $r8, hd_empty_check3
+hd_fall_check4:
+blt $r15, $r8, hd_empty_check4
+
+# check to see if colliding with out of bounds
+hd_bottom_check:
+addi $r8, $r0, 199
+blt $r8, $r2, fall_fail
+blt $r8, $r3, fall_fail
+blt $r8, $r4, fall_fail
+blt $r8, $r5, fall_fail
+
+# update current block
+lw $r12, 208($r0)
+lw $r13, 209($r0)
+lw $r14, 210($r0)
+lw $r15, 211($r0)
+# store next in current
+sw $r12, 202($r0)
+sw $r13, 203($r0)
+sw $r14, 204($r0)
+sw $r15, 205($r0)
+
+j still_drop
+
+hd_empty_check1:
+bne $r12, $r0, fall_fail
+j hd_fall_check2
+
+hd_empty_check2:
+bne $r13, $r0, fall_fail
+j hd_fall_check3
+
+hd_empty_check3:
+bne $r14, $r0, fall_fail
+j hd_fall_check4
+
+hd_empty_check4:
+bne $r15, $r0, fall_fail
+j hd_bottom_check
 
 die:
 nop
