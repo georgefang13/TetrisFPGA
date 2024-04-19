@@ -4,9 +4,6 @@
 addi $r26, $r0, 1220
 sll $r26, $r26, 10  # build ~50,000,000
 
-# set stack pointer:
-addi $r29, $r0, 250
-
 new_game:
 
 # wait for start/reset
@@ -93,6 +90,7 @@ sw $r5, 238($r0)
 add $r5, $r28, $r0
 sw $r5, 239($r0)
 
+spawn_hold:
 
 # Store rotation
 addi $r2, $r0, 1
@@ -136,7 +134,6 @@ addi $r2, $r0, 1
 sw $r2, 226($r0) # y4
 
 j decode_done
-
 
 lt7:
 addi $r6, $r0, 6
@@ -398,7 +395,6 @@ add $r25, $r0, $r0
 j fall
 
 not_fall:
-
 add $r1, $r27, $r0
 
 addi $r2, $r0, 10
@@ -406,6 +402,11 @@ bne $r1, $r2, not_reset
 j new_game
 
 not_reset:
+addi $r2, $r0, 9
+bne $r1, $r2, not_hold
+j hold
+
+not_hold:
 addi $r2, $r0, 8
 bne $r1, $r2, not_RCW
 j RCW
@@ -545,6 +546,12 @@ sw $r1, 0($r4)
 lw $r5, 205($r0)
 sw $r1, 0($r5)
 
+# reset hold 
+addi $r1, $r0, 1
+blt $r29, $r1, non_hold
+addi $r29, $r0, 0
+
+non_hold:
 jal line_clear
 
 j place_block
@@ -605,6 +612,36 @@ sw $r9, 226($r0)
 jal line_clear
 
 j delay
+
+hold:
+
+# check if a hold has already been done
+bne $r29, $r0, delay
+
+# mark hold as done
+addi $r29, $r0, 1
+
+# load out the held block
+lw $r1, 218($r0)
+
+# store current piece
+lw $r2, 200($r0)
+sw $r2, 218($r0)
+
+# wipe current piece 
+lw $r12, 202($r0)
+lw $r13, 203($r0)
+lw $r14, 204($r0)
+lw $r15, 205($r0)
+sw $r0, 0($r12)
+sw $r0, 0($r13)
+sw $r0, 0($r14)
+sw $r0, 0($r15)
+
+# check if anyting is held
+bne $r1, $r0, spawn_hold
+
+j place_block
 
 move_left:
 
