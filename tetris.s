@@ -6,12 +6,6 @@ sll $r26, $r26, 10  # build ~50,000,000
 
 new_game:
 
-# give a second for inputs
-addi $r20, $r0, 0
-wait_to_start:
-addi $r20, $r20, 1
-blt $r20, $r26, wait_to_start
-
 # wait for start/reset
 addi $r2, $r0, 10
 check_start:
@@ -3865,7 +3859,19 @@ blt $r8, $r3, fall_fail
 blt $r8, $r4, fall_fail
 blt $r8, $r5, fall_fail
 
-# update current block
+# load type and make active
+lw $r1, 200($r0)
+addi $r1, $r1, 8
+
+# load and store rotation
+lw $r16, 207($r0)
+sw $r16, 201($r0)
+
+# grab current and next state
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
 lw $r12, 208($r0)
 lw $r13, 209($r0)
 lw $r14, 210($r0)
@@ -3875,6 +3881,16 @@ sw $r12, 202($r0)
 sw $r13, 203($r0)
 sw $r14, 204($r0)
 sw $r15, 205($r0)
+# clear current state
+sw $r0, 0($r2)
+sw $r0, 0($r3)
+sw $r0, 0($r4)
+sw $r0, 0($r5)
+# store active state
+sw $r1, 0($r12)
+sw $r1, 0($r13)
+sw $r1, 0($r14)
+sw $r1, 0($r15)
 
 j still_drop
 
