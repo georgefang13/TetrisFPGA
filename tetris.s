@@ -17,6 +17,12 @@ bne $r1, $r2, check_start
 
 start_game:
 
+# wipe current score
+add $r24, $r0, $r0
+
+# reset fall speed
+addi $r21, $r0, 10
+
 #clear the board:
 addi $r5, $r0, 0
 addi $r6, $r0, 200
@@ -70,6 +76,9 @@ addi $r7, $r0, 16
 j check_end
 
 board_good:
+
+# reset game step
+add $r25, $r0, $r0
 
 # Get next piece
 lw $r1, 235($r0)
@@ -389,8 +398,7 @@ blt $r20, $r26, wait
 update_game:
 
 addi $r25, $r25, 1
-addi $r10, $r0, 10
-bne $r10, $r25, not_fall
+blt $r25, $r21, not_fall
 add $r25, $r0, $r0
 j fall
 
@@ -424,7 +432,7 @@ j move_left
 not_left:
 addi $r2, $r0, 3
 bne $r1, $r2, not_down
-j fall
+j soft_down
 
 not_down:
 addi $r2, $r0, 2
@@ -516,7 +524,59 @@ blt $r8, $r3, fall_fail
 blt $r8, $r4, fall_fail
 blt $r8, $r5, fall_fail
 
-j render_ns
+# load type and make active
+lw $r1, 200($r0)
+addi $r1, $r1, 8
+
+# load and store rotation
+lw $r16, 207($r0)
+sw $r16, 201($r0)
+
+# grab current and next state
+lw $r2, 202($r0)
+lw $r3, 203($r0)
+lw $r4, 204($r0)
+lw $r5, 205($r0)
+lw $r12, 208($r0)
+lw $r13, 209($r0)
+lw $r14, 210($r0)
+lw $r15, 211($r0)
+# store next in current
+sw $r12, 202($r0)
+sw $r13, 203($r0)
+sw $r14, 204($r0)
+sw $r15, 205($r0)
+# clear current state
+sw $r0, 0($r2)
+sw $r0, 0($r3)
+sw $r0, 0($r4)
+sw $r0, 0($r5)
+# store active state
+sw $r1, 0($r12)
+sw $r1, 0($r13)
+sw $r1, 0($r14)
+sw $r1, 0($r15)
+
+# grab next X and Y and store in current
+lw $r2, 227($r0)
+lw $r3, 228($r0)
+lw $r4, 229($r0)
+lw $r5, 230($r0)
+lw $r6, 231($r0)
+lw $r7, 232($r0)
+lw $r8, 233($r0)
+lw $r9, 234($r0)
+
+sw $r2, 219($r0)
+sw $r3, 220($r0)
+sw $r4, 221($r0)
+sw $r5, 222($r0)
+sw $r6, 223($r0)
+sw $r7, 224($r0)
+sw $r8, 225($r0)
+sw $r9, 226($r0)
+
+j update_game
 
 empty_check1:
 bne $r12, $r0, fall_fail
@@ -918,6 +978,41 @@ blt $r14, $r15, score_done
 addi $r24, $r24, 100
 
 score_done:
+
+# update fall speed
+add $r10, $r24, $r0
+addi $r11, $r0, 1000
+blt $r10, $r11, speed_1
+addi $r11, $r0, 2000
+blt $r10, $r11, speed_2
+addi $r11, $r0, 3000
+blt $r10, $r11, speed_3
+addi $r11, $r0, 4000
+blt $r10, $r11, speed_4
+addi $r11, $r0, 5000
+blt $r10, $r11, speed_5
+
+addi $r21, $r0, 5
+jr $ra
+
+speed_1:
+addi $r21, $r0, 10
+jr $ra
+
+speed_2:
+addi $r21, $r0, 9
+jr $ra
+
+speed_3:
+addi $r21, $r0, 8
+jr $ra
+
+speed_4:
+addi $r21, $r0, 7
+jr $ra
+
+speed_5:
+addi $r21, $r0, 6
 jr $ra
 
 RCW:
@@ -3816,7 +3911,12 @@ j collide_detect
 hard_drop:
 
 still_drop:
+
+# add to score
+addi $r24, $r24, 2
+
 # calculate next block position and store in next state
+
 lw $r2, 202($r0)
 addi $r2, $r2, 10
 sw $r2, 208($r0)
@@ -3854,10 +3954,10 @@ blt $r15, $r8, hd_empty_check4
 # check to see if colliding with out of bounds
 hd_bottom_check:
 addi $r8, $r0, 199
-blt $r8, $r2, fall_fail
-blt $r8, $r3, fall_fail
-blt $r8, $r4, fall_fail
-blt $r8, $r5, fall_fail
+blt $r8, $r2, hd_delay
+blt $r8, $r3, hd_delay
+blt $r8, $r4, hd_delay
+blt $r8, $r5, hd_delay
 
 # load type and make active
 lw $r1, 200($r0)
@@ -3895,20 +3995,130 @@ sw $r1, 0($r15)
 j still_drop
 
 hd_empty_check1:
-bne $r12, $r0, fall_fail
+bne $r12, $r0, hd_delay
 j hd_fall_check2
 
 hd_empty_check2:
-bne $r13, $r0, fall_fail
+bne $r13, $r0, hd_delay
 j hd_fall_check3
 
 hd_empty_check3:
-bne $r14, $r0, fall_fail
+bne $r14, $r0, hd_delay
 j hd_fall_check4
 
 hd_empty_check4:
-bne $r15, $r0, fall_fail
+bne $r15, $r0, hd_delay
 j hd_bottom_check
+
+hd_delay:
+
+addi $r20, $r0, 0
+
+add $r10, $r26, $r26
+
+hd_wait:
+addi $r20, $r20, 1
+blt $r20, $r10, hd_wait
+j fall_fail
+
+soft_down:
+
+# add to score
+addi $r24, $r24, 1
+
+# calculate next block position and store in next state
+lw $r2, 202($r0)
+addi $r2, $r2, 10
+sw $r2, 208($r0)
+
+lw $r3, 203($r0)
+addi $r3, $r3, 10
+sw $r3, 209($r0)
+
+lw $r4, 204($r0)
+addi $r4, $r4, 10
+sw $r4, 210($r0)
+
+lw $r5, 205($r0)
+addi $r5, $r5, 10
+sw $r5, 211($r0)
+
+# updating the X and Y coords
+lw $r16, 219($r0)
+sw $r16, 227($r0)
+
+lw $r6, 220($r0)
+addi $r6, $r6, 1
+sw $r6, 228($r0)
+
+lw $r17, 221($r0)
+sw $r17, 229($r0)
+
+lw $r7, 222($r0)
+addi $r7, $r7, 1
+sw $r7, 230($r0)
+
+lw $r18, 223($r0)
+sw $r18, 231($r0)
+
+lw $r8, 224($r0)
+addi $r8, $r8, 1
+sw $r8, 232($r0)
+
+lw $r18, 225($r0)
+sw $r18, 233($r0)
+
+lw $r9, 226($r0)
+addi $r9, $r9, 1
+sw $r9, 234($r0)
+
+lw $r1, 201($r0)
+sw $r1, 207($r0)
+
+#check for collisions:
+
+#load game board slots
+lw $r12, 0($r2)
+lw $r13, 0($r3)
+lw $r14, 0($r4)
+lw $r15, 0($r5)
+
+# check to see if colliding with any non-active pieces
+addi $r8, $r0, 8
+blt $r12, $r8, soft_empty_check1
+soft_fall_check2:
+blt $r13, $r8, soft_empty_check2
+soft_fall_check3:
+blt $r14, $r8, soft_empty_check3
+soft_fall_check4:
+blt $r15, $r8, soft_empty_check4
+
+# check to see if colliding with out of bounds
+soft_bottom_check:
+addi $r8, $r0, 199
+blt $r8, $r2, fall_fail
+blt $r8, $r3, fall_fail
+blt $r8, $r4, fall_fail
+blt $r8, $r5, fall_fail
+
+j delay
+
+soft_empty_check1:
+bne $r12, $r0, fall_fail
+j soft_fall_check2
+
+soft_empty_check2:
+bne $r13, $r0, fall_fail
+j soft_fall_check3
+
+soft_empty_check3:
+bne $r14, $r0, fall_fail
+j soft_fall_check4
+
+soft_empty_check4:
+bne $r15, $r0, fall_fail
+j soft_bottom_check
+
 
 die:
 nop
