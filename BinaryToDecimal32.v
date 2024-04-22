@@ -9,7 +9,7 @@ module BinaryToDecimal32(
     output reg [3:0] thousands,  // Each output digit from 0 to 9
     output reg [3:0] hundreds,
     output reg [3:0] tens,
-    output reg [3:0] ones,
+    output reg [3:0] units,
     input clk,  // Clock input for synchronous operation
     input reset  // Reset input to initialize the outputs
 );
@@ -29,7 +29,7 @@ always @(posedge clk or posedge reset) begin
         thousands <= 0;
         hundreds <= 0;
         tens <= 0;
-        ones <= 0;
+        units <= 0;
     end else begin
         // Initialize temporary variables
         temp = binaryInput;
@@ -42,7 +42,7 @@ always @(posedge clk or posedge reset) begin
         thousands = 0;
         hundreds = 0;
         tens = 0;
-        ones = 0;
+        units = 0;
 
         // Loop to convert binary to decimal (Double Dabble Algorithm)
         for (i = 0; i < 32; i = i + 1) begin
@@ -65,8 +65,8 @@ always @(posedge clk or posedge reset) begin
                 hundreds = hundreds + 3;
             if (tens >= 5)
                 tens = tens + 3;
-            if (ones >= 5)
-                ones = ones + 3;
+            if (units >= 5)
+                units = units + 3;
 
             // Shift left by 1
             billions = billions << 1;
@@ -86,12 +86,12 @@ always @(posedge clk or posedge reset) begin
             hundreds = hundreds << 1;
             hundreds[0] = tens[3];
             tens = tens << 1;
-            tens[0] = ones[3];
-            ones = ones << 1;
-            ones[0] = temp[31];
+            tens[0] = units[3];
+            units = units << 1;
+            units[0] = temp[31];
 
             temp = temp << 1;  // Shift the binary input left
-        }
+        end
     end
 end
 

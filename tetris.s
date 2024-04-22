@@ -35,23 +35,28 @@ blt $r5, $r6, clear
 # get 5 random numbers and store them
 add $r1, $r28, $r0
 sw $r1, 235($r0)
-nop  # allow for more random generation
-nop 
-add $r2, $r28, $r0
-sw $r2, 236($r0)
-nop
-nop
-add $r3, $r28, $r0
-sw $r3, 237($r0)
-nop
-nop
-add $r4, $r28, $r0
-sw $r4, 238($r0)
-nop
-nop
-add $r5, $r28, $r0
-sw $r5, 239($r0)
+addi $r2, $r0, 300
+jal next_store
 
+add $r1, $r28, $r0
+sw $r1, 236($r0)
+addi $r2, $r0, 310
+jal next_store
+
+add $r1, $r28, $r0
+sw $r1, 237($r0)
+addi $r2, $r0, 320
+jal next_store
+
+add $r1, $r28, $r0
+sw $r1, 238($r0)
+addi $r2, $r0, 330
+jal next_store
+
+add $r1, $r28, $r0
+sw $r, 239($r0)
+addi $r2, $r0, 340
+jal next_store
 
 place_block:
 # check for game over:
@@ -84,20 +89,30 @@ add $r25, $r0, $r0
 lw $r1, 235($r0)
 
 # shift up next blocks and get new random block
-lw $r2, 236($r0)
-sw $r2, 235($r0)
+lw $r1, 236($r0)
+sw $r1, 235($r0)
+addi $r2, $r0, 300
+jal next_store
 
-lw $r3, 237($r0)
-sw $r3, 236($r0)
+lw $r1, 237($r0)
+sw $r1, 236($r0)
+addi $r2, $r0, 310
+jal next_store
 
-lw $r4, 238($r0)
-sw $r4, 237($r0)
+lw $r1, 238($r0)
+sw $r1, 237($r0)
+addi $r2, $r0, 320
+jal next_store
 
-lw $r5, 239($r0)
-sw $r5, 238($r0)
+lw $r1, 239($r0)
+sw $r1, 238($r0)
+addi $r2, $r0, 330
+jal next_store
 
-add $r5, $r28, $r0
-sw $r5, 239($r0)
+add $r1, $r28, $r0
+sw $r1, 239($r0)
+addi $r2, $r0, 340
+jal next_store
 
 spawn_hold:
 
@@ -392,6 +407,15 @@ delay:
 addi $r20, $r0, 0
 
 wait:
+#grab current input
+# add $r2, $r27, $r0
+# bne $r2, $r0, new_input
+# j delay_check
+
+# new_input:
+# add $r1, $r2, $r0
+
+# delay_check:
 addi $r20, $r20, 1
 blt $r20, $r26, wait
 
@@ -495,8 +519,8 @@ lw $r9, 226($r0)
 addi $r9, $r9, 1
 sw $r9, 234($r0)
 
-lw $r1, 201($r0)
-sw $r1, 207($r0)
+lw $r2, 201($r0)
+sw $r2, 207($r0)
 
 #check for collisions:
 
@@ -525,8 +549,8 @@ blt $r8, $r4, fall_fail
 blt $r8, $r5, fall_fail
 
 # load type and make active
-lw $r1, 200($r0)
-addi $r1, $r1, 8
+lw $r10, 200($r0)
+addi $r10, $r10, 8
 
 # load and store rotation
 lw $r16, 207($r0)
@@ -552,10 +576,10 @@ sw $r0, 0($r3)
 sw $r0, 0($r4)
 sw $r0, 0($r5)
 # store active state
-sw $r1, 0($r12)
-sw $r1, 0($r13)
-sw $r1, 0($r14)
-sw $r1, 0($r15)
+sw $r10, 0($r12)
+sw $r10, 0($r13)
+sw $r10, 0($r14)
+sw $r10, 0($r15)
 
 # grab next X and Y and store in current
 lw $r2, 227($r0)
@@ -576,7 +600,7 @@ sw $r7, 224($r0)
 sw $r8, 225($r0)
 sw $r9, 226($r0)
 
-j update_game
+j not_fall
 
 empty_check1:
 bne $r12, $r0, fall_fail
@@ -686,6 +710,10 @@ lw $r1, 218($r0)
 # store current piece
 lw $r2, 200($r0)
 sw $r2, 218($r0)
+
+# update hold grid
+addi $r2, $r0, 250
+jal next_store
 
 # wipe current piece 
 lw $r12, 202($r0)
@@ -4101,7 +4129,7 @@ blt $r8, $r3, fall_fail
 blt $r8, $r4, fall_fail
 blt $r8, $r5, fall_fail
 
-j delay
+j render_ns
 
 soft_empty_check1:
 bne $r12, $r0, fall_fail
@@ -4119,6 +4147,76 @@ soft_empty_check4:
 bne $r15, $r0, fall_fail
 j soft_bottom_check
 
+next_store:
+
+sw $r0, 0($r2)
+sw $r0, 1($r2)
+sw $r0, 2($r2)
+sw $r0, 3($r2)
+sw $r0, 4($r2)
+sw $r0, 5($r2)
+sw $r0, 6($r2)
+sw $r0, 7($r2)
+
+addi $r3, $r0, 7
+bne $r7, $r1, not_next_J
+lw $r1, 0($r2)
+lw $r1, 4($r2)
+lw $r1, 5($r2)
+lw $r1, 6($r2)
+jr $ra
+
+not_next_J:
+addi $r3, $r0, 6
+bne $r7, $r1, not_next_L
+lw $r1, 2($r2)
+lw $r1, 4($r2)
+lw $r1, 5($r2)
+lw $r1, 6($r2)
+jr $ra
+
+not_next_L:
+addi $r3, $r0, 5
+bne $r7, $r1, not_next_T
+lw $r1, 1($r2)
+lw $r1, 4($r2)
+lw $r1, 5($r2)
+lw $r1, 6($r2)
+jr $ra
+
+not_next_T:
+addi $r3, $r0, 4
+bne $r7, $r1, not_next_Z
+lw $r1, 0($r2)
+lw $r1, 1($r2)
+lw $r1, 5($r2)
+lw $r1, 6($r2)
+jr $ra
+
+not_next_Z:
+addi $r3, $r0, 3
+bne $r7, $r1, not_next_S
+lw $r1, 1($r2)
+lw $r1, 2($r2)
+lw $r1, 4($r2)
+lw $r1, 5($r2)
+jr $ra
+
+not_next_S:
+addi $r3, $r0, 2
+bne $r7, $r1, not_next_O
+lw $r1, 1($r2)
+lw $r1, 2($r2)
+lw $r1, 5($r2)
+lw $r1, 6($r2)
+jr $ra
+
+not_next_O:
+lw $r1, 0($r2)
+lw $r1, 1($r2)
+lw $r1, 2($r2)
+lw $r1, 3($r2)
+jr $ra
 
 die:
 nop

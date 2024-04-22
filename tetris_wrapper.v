@@ -63,14 +63,15 @@ module Wrapper (
     
     // Input Indicators
    always @(posedge clock) begin
-       LED[0] <= JB[1]; // Up
-       LED[1] <= JB[2]; // Right
-       LED[2] <= JB[3]; // Down
-       LED[3] <= JB[4]; // Left
-       LED[4] <= JB[7]; // SL
-       LED[5] <= JB[8]; // SR
-       LED[6] <= JB[9]; // Hold
-       LED[7] <= JB[10]; // Reset      
+//       LED[0] <= JB[1]; // Up
+//       LED[1] <= JB[2]; // Right
+//       LED[2] <= JB[3]; // Down
+//       LED[3] <= JB[4]; // Left
+//       LED[4] <= JB[7]; // SL
+//       LED[5] <= JB[8]; // SR
+//       LED[6] <= JB[9]; // Hold
+//       LED[7] <= JB[10]; // Reset      
+       LED[15:0] <= game_score[15:0];
    end
 //     always @(posedge clock) begin
 // //        LED[2:0] <= state[2:0];   
@@ -89,10 +90,13 @@ module Wrapper (
     wire next_msb;
     assign next_msb = ((state[0] ^ state[2]) ^ state[3]) ^ state[5];
     
+    reg [31:0] game_score;
+    
     always @(posedge clock)
     begin
         state <= (state >> 1);
         state[15] <= next_msb;
+        game_score <= (rd == 24) ? rData : game_score;
     end
              
         
@@ -103,8 +107,7 @@ module Wrapper (
 	//    assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
     assign cpu_regA = ((rs1 != 27) && (rs1 != 28)) ? regA : (rs1 == 28) ? {29'b0, state[2:0]} : JB[10] ? 10 : JB[9] ? 9 : JB[8] ? 8 : JB[7] ? 7 : JB[4] ? 4 : JB[3] ? 3 : JB[2] ? 2 : JB[1] ? 1 : 0;
     
-    
-    
+
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
 								
@@ -263,7 +266,9 @@ module Wrapper (
     wire isGameBoard, isGrid;
 	assign isGameBoard = (x >= 220) && (x < 420) && (y >= 40) && (y < 440);
 	assign isGrid = ((((x - 220) % 20) == 0) || (((x - 220) % 20) == 19) || (((y - 40) % 20) == 0) || (((y - 40) % 20) == 19)) && isGameBoard; // later we can make the grid fainter and the border solid white
-	assign colorOut = isGrid ? white : ~isGameBoard ? colorBack : (block_color == 3'b0) ? black : (block_color == 3'b001) ? cyan : (block_color == 3'b111) ? blue : (block_color == 3'b110) ? orange : (block_color == 3'b010) ? yellow : (block_color == 3'b011) ? green : (block_color == 3'b101) ? purple : (block_color == 3'b100) ? red : red;
+    assign isNextBox = ((((x > 469) && (x < 471)) || ((x > 589) && (x < 592))) && ((y > 118) && (y < 441))) || ((((y > 118) && (y < 121)) || ((y > 439) && (y < 442))) && ((x > 469) && (y < 592)));
+	assign isHoldBox = ((((x > 48) && (x < 51)) || ((x > 168) && (x < 171))) && ((y > 358) && (y < 442))) || ((((y > 358) && (y < 361)) || ((y > 439) && (y < 442))) && ((x > 48) && (y < 171)));
+	assign colorOut = (isGrid || isNextBox || isHoldBox) ? white : ~isGameBoard ? colorBack : (block_color == 3'b0) ? black : (block_color == 3'b001) ? cyan : (block_color == 3'b111) ? blue : (block_color == 3'b110) ? orange : (block_color == 3'b010) ? yellow : (block_color == 3'b011) ? green : (block_color == 3'b101) ? purple : (block_color == 3'b100) ? red : red;
     
     assign {VGA_R, VGA_G, VGA_B} = colorOut;
     
