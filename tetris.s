@@ -40,22 +40,22 @@ jal next_store
 
 add $r1, $r28, $r0
 sw $r1, 236($r0)
-addi $r2, $r0, 310
+addi $r2, $r0, 318
 jal next_store
 
 add $r1, $r28, $r0
 sw $r1, 237($r0)
-addi $r2, $r0, 320
+addi $r2, $r0, 336
 jal next_store
 
 add $r1, $r28, $r0
 sw $r1, 238($r0)
-addi $r2, $r0, 330
+addi $r2, $r0, 354
 jal next_store
 
 add $r1, $r28, $r0
-sw $r, 239($r0)
-addi $r2, $r0, 340
+sw $r1, 239($r0)
+addi $r2, $r0, 372
 jal next_store
 
 place_block:
@@ -96,22 +96,22 @@ jal next_store
 
 lw $r1, 237($r0)
 sw $r1, 236($r0)
-addi $r2, $r0, 310
+addi $r2, $r0, 318
 jal next_store
 
 lw $r1, 238($r0)
 sw $r1, 237($r0)
-addi $r2, $r0, 320
+addi $r2, $r0, 336
 jal next_store
 
 lw $r1, 239($r0)
 sw $r1, 238($r0)
-addi $r2, $r0, 330
+addi $r2, $r0, 354
 jal next_store
 
 add $r1, $r28, $r0
 sw $r1, 239($r0)
-addi $r2, $r0, 340
+addi $r2, $r0, 372
 jal next_store
 
 spawn_hold:
@@ -4149,73 +4149,72 @@ j soft_bottom_check
 
 next_store:
 
-sw $r0, 0($r2)
-sw $r0, 1($r2)
-sw $r0, 2($r2)
-sw $r0, 3($r2)
-sw $r0, 4($r2)
-sw $r0, 5($r2)
-sw $r0, 6($r2)
 sw $r0, 7($r2)
+sw $r0, 8($r2)
+sw $r0, 9($r2)
+sw $r0, 10($r2)
+sw $r0, 13($r2)
+sw $r0, 14($r2)
+sw $r0, 15($r2)
 
 addi $r3, $r0, 7
 bne $r7, $r1, not_next_J
-lw $r1, 0($r2)
-lw $r1, 4($r2)
-lw $r1, 5($r2)
-lw $r1, 6($r2)
+lw $r1, 7($r2)
+lw $r1, 13($r2)
+lw $r1, 14($r2)
+lw $r1, 15($r2)
 jr $ra
 
 not_next_J:
 addi $r3, $r0, 6
 bne $r7, $r1, not_next_L
-lw $r1, 2($r2)
-lw $r1, 4($r2)
-lw $r1, 5($r2)
-lw $r1, 6($r2)
+lw $r1, 9($r2)
+lw $r1, 13($r2)
+lw $r1, 14($r2)
+lw $r1, 15($r2)
 jr $ra
 
 not_next_L:
 addi $r3, $r0, 5
 bne $r7, $r1, not_next_T
-lw $r1, 1($r2)
-lw $r1, 4($r2)
-lw $r1, 5($r2)
-lw $r1, 6($r2)
+lw $r1, 8($r2)
+lw $r1, 13($r2)
+lw $r1, 14($r2)
+lw $r1, 15($r2)
 jr $ra
 
 not_next_T:
 addi $r3, $r0, 4
 bne $r7, $r1, not_next_Z
-lw $r1, 0($r2)
-lw $r1, 1($r2)
-lw $r1, 5($r2)
-lw $r1, 6($r2)
+lw $r1, 7($r2)
+lw $r1, 8($r2)
+lw $r1, 14($r2)
+lw $r1, 15($r2)
 jr $ra
 
 not_next_Z:
 addi $r3, $r0, 3
 bne $r7, $r1, not_next_S
-lw $r1, 1($r2)
-lw $r1, 2($r2)
-lw $r1, 4($r2)
-lw $r1, 5($r2)
+lw $r1, 8($r2)
+lw $r1, 9($r2)
+lw $r1, 13($r2)
+lw $r1, 14($r2)
 jr $ra
 
 not_next_S:
 addi $r3, $r0, 2
 bne $r7, $r1, not_next_O
-lw $r1, 1($r2)
-lw $r1, 2($r2)
-lw $r1, 5($r2)
-lw $r1, 6($r2)
+lw $r1, 8($r2)
+lw $r1, 9($r2)
+lw $r1, 14($r2)
+lw $r1, 15($r2)
 jr $ra
 
 not_next_O:
-lw $r1, 0($r2)
-lw $r1, 1($r2)
-lw $r1, 2($r2)
-lw $r1, 3($r2)
+lw $r1, 7($r2)
+lw $r1, 8($r2)
+lw $r1, 9($r2)
+lw $r1, 10($r2)
 jr $ra
 
 die:
