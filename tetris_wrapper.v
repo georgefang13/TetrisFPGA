@@ -152,6 +152,58 @@ module Wrapper (
 //		.curr_grid(curr_grid)
 		);
 		
+	// sprite ram
+	RAM #(		
+		.DEPTH(36000), 				  
+		.DATA_WIDTH(1),      
+		.ADDRESS_WIDTH(18),    
+		.MEMFILE({FILES_PATH, "sprite.mem"}))
+		
+	SpritesData(
+		.clk(clock), 						 // Falling edge of the 100 MHz clk
+		.addr(spriteAddress),					 // Image data address
+		.dataOut(spriteData),				 // Color palette address
+		.wEn(1'b0)); 
+		
+	wire spriteData;
+	wire[18-1:0] spriteAddress;
+	assign spriteAddress = 
+	   isNextWord ? 10000 + ((y - 60) * 120) + (x - 470) : 
+	   isHoldWord ? 16000 + ((y - 300) * 120) + (x - 50) :
+	   isOnes ? ones * 1000 + ((y - 40) * 20) + (x - 160) :
+	   isTens ? tens * 1000 + ((y - 40) * 20) + (x - 140) :
+	   isHundreds ? hundreds * 1000 + ((y - 40) * 20) + (x - 120) :
+	   isThousands ? thousands * 1000 + ((y - 40) * 20) + (x - 100) : 
+	   isTenThousands ? tenThou * 1000 + ((y - 40) * 20) + (x - 80) :
+	   isHundredThousands ? hunThou * 1000 + ((y - 40) * 20) + (x - 60) :
+	   isMillions ? millions * 1000 + ((y - 40) * 20) + (x - 40) : 
+	   0;
+	   
+    wire isNextWord, isHoldWord, isMillions, isHundredThousands, isTenThousands, isThousands, isHundreds, isTens, isOnes;
+    assign isHoldWord = (x >= 50) && (x < 170) && (y >= 300)&& (y < 350);
+    assign isNextWord = (x >= 470) && (x < 590) && (y >= 60) && (y < 110);	
+    assign isMillions = (x >= 40) && (x < 60) && (y >= 40) && (y < 90);	
+    assign isHundredThousands = (x >= 60) && (x < 80) && (y >= 40) && (y < 90);	
+    assign isTenThousands = (x >= 80) && (x < 100) && (y >= 40) && (y < 90);	
+    assign isThousands = (x >= 100) && (x < 120) && (y >= 40) && (y < 90);	
+    assign isHundreds = (x >= 120) && (x < 140) && (y >= 40) && (y < 90);	
+    assign isTens = (x >= 140) && (x < 160) && (y >= 40) && (y < 90);	
+    assign isOnes = (x >= 160) && (x < 180) && (y >= 40) && (y < 90);	
+    
+    wire [3:0] ones, tens, hundreds, thousands, tenThou, hunThou, millions;
+    BinaryToDecimal32 converter(
+        .binaryInput(game_score), 
+        .millions(millions),        
+        .hundred_thousands(hunThou),
+        .ten_thousands(tenThou),   
+        .thousands(thousands),  
+        .hundreds(hundreds),        
+        .tens(tens),            
+        .units(ones),
+        .clk(clock)
+        );    
+     		
+		
 		
     // VGA 
 		
@@ -225,7 +277,7 @@ module Wrapper (
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	assign colorBack = black; // When not active, output black
 	
-	wire [4:0] block_x, block_y;
+	wire [4:0] block_x, block_y, hold_x, hold_y, next_x, next_y;
     assign block_x = 
         ((x - 220) < 20)  ? 0  : 
         ((x - 220) < 40)  ? 1  : 
@@ -259,17 +311,57 @@ module Wrapper (
         ((y - 40) < 380) ? 18 :
         19; // Default value for cases beyond 380	
 //    assign block_addr = //(((y-40)/20) * 10) + ((x-220)/20);
-	assign block_addr = (10 * block_y) + block_x;
+    assign hold_x = 
+        ((x - 50) < 20)  ? 0  : 
+        ((x - 50) < 40)  ? 1  : 
+        ((x - 50) < 60)  ? 2  : 
+        ((x - 50) < 80)  ? 3  : 
+        ((x - 50) < 100) ? 4  :
+        5;
+    assign hold_y = 
+        ((y - 360) < 20)  ? 0  : 
+        ((y - 360) < 40)  ? 1  : 
+        ((y - 360) < 60)  ? 2  : 
+        3; 
+        
+    assign next_x = 
+        ((x - 470) < 20)  ? 0  : 
+        ((x - 470) < 40)  ? 1  : 
+        ((x - 470) < 60)  ? 2  : 
+        ((x - 470) < 80)  ? 3  : 
+        ((x - 470) < 100) ? 4  :
+        5;
+    assign next_y = 
+        ((y - 120) < 20)  ? 0  : 
+        ((y - 120) < 40)  ? 1  : 
+        ((y - 120) < 60)  ? 2  : 
+        ((y - 120) < 80)  ? 3  : 
+        ((y - 120) < 100) ? 4  :
+        ((y - 120) < 120) ? 5  :
+        ((y - 120) < 140) ? 6  :
+        ((y - 120) < 160) ? 7  :
+        ((y - 120) < 180) ? 8  :
+        ((y - 120) < 200) ? 9  :
+        ((y - 120) < 220) ? 10 :
+        ((y - 120) < 240) ? 11 :
+        ((y - 120) < 260) ? 12 :
+        ((y - 120) < 280) ? 13 :
+        ((y - 120) < 300) ? 14 :
+        15;
+        
+	assign block_addr = isGameBoard? ((10 * block_y) + block_x) : isHoldArea ? ((6 * hold_y) + hold_x + 250) : ((6 * next_y) + next_x + 300);
 	wire [2:0] block_color;
 	assign block_color = memDataOut[2:0];
 	
-    wire isGameBoard, isGrid;
+    wire isGameBoard, isGrid, isScoreArea, isNextArea, isNextBox, isHoldBox;
 	assign isGameBoard = (x >= 220) && (x < 420) && (y >= 40) && (y < 440);
+	assign isHoldArea = (x >= 48) && (x < 171) && (y >= 360) && (y < 441);
+	assign isScoreArea = isMillions || isHundredThousands || isTenThousands || isThousands || isHundreds || isTens || isOnes; 
+	assign isNextArea = (x >= 469) && (x < 591) && (y >= 119) && (y < 441);
 	assign isGrid = ((((x - 220) % 20) == 0) || (((x - 220) % 20) == 19) || (((y - 40) % 20) == 0) || (((y - 40) % 20) == 19)) && isGameBoard; // later we can make the grid fainter and the border solid white
-    assign isNextBox = ((((x > 469) && (x < 471)) || ((x > 589) && (x < 592))) && ((y > 118) && (y < 441))) || ((((y > 118) && (y < 121)) || ((y > 439) && (y < 442))) && ((x > 469) && (y < 592)));
-	assign isHoldBox = ((((x > 48) && (x < 51)) || ((x > 168) && (x < 171))) && ((y > 358) && (y < 442))) || ((((y > 358) && (y < 361)) || ((y > 439) && (y < 442))) && ((x > 48) && (y < 171)));
-	assign colorOut = (isGrid || isNextBox || isHoldBox) ? white : ~isGameBoard ? colorBack : (block_color == 3'b0) ? black : (block_color == 3'b001) ? cyan : (block_color == 3'b111) ? blue : (block_color == 3'b110) ? orange : (block_color == 3'b010) ? yellow : (block_color == 3'b011) ? green : (block_color == 3'b101) ? purple : (block_color == 3'b100) ? red : red;
-    
+    assign isNextBox = ((((x > 468) && (x < 471)) || ((x > 588) && (x < 591))) && ((y > 118) && (y < 443))) || ((((y > 118) && (y < 121)) || ((y > 440) && (y < 443))) && ((x > 469) && (x < 592)));
+	assign isHoldBox = ((((x > 48) && (x < 51)) || ((x > 170) && (x < 173))) && ((y > 358) && (y < 443))) || ((((y > 358) && (y < 361)) || ((y > 440) && (y < 443))) && ((x > 48) && (x < 173)));
+	assign colorOut = (isGrid || isNextBox || isHoldBox) ? white : (isHoldWord || isNextWord || isScoreArea) ? {spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData, spriteData} :(~isGameBoard && ~isHoldArea && ~isNextArea) ? colorBack : (block_color == 3'b0) ? black : (block_color == 3'b001) ? cyan : (block_color == 3'b111) ? blue : (block_color == 3'b110) ? orange : (block_color == 3'b010) ? yellow : (block_color == 3'b011) ? green : (block_color == 3'b101) ? purple : (block_color == 3'b100) ? red : red;
     assign {VGA_R, VGA_G, VGA_B} = colorOut;
     
 endmodule

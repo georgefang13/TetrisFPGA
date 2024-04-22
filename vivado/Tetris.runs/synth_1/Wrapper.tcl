@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -88,8 +89,12 @@ set_property ip_output_repo c:/Users/lja26/Desktop/tetris/vivado/Tetris.cache/ip
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/lja26/Desktop/tetris/tetris.mem
+read_mem {
+  C:/Users/lja26/Desktop/tetris/tetris.mem
+  C:/Users/lja26/Desktop/tetris/sprite.mem
+}
 read_verilog -library xil_defaultlib {
+  C:/Users/lja26/Desktop/tetris/BinaryToDecimal32.v
   C:/Users/lja26/Desktop/tetris/processor-main/RAM.v
   C:/Users/lja26/Desktop/tetris/processor-main/ROM.v
   C:/Users/lja26/Desktop/lab6_kit/VGATimingGenerator.v

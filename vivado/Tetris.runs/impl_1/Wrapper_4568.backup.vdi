@@ -1,0 +1,1550 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Apr 22 15:53:42 2024
+# Process ID: 4568
+# Current directory: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1
+# Command line: vivado.exe -log Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Wrapper.tcl -notrace
+# Log file: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper.vdi
+# Journal file: C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Wrapper.tcl -notrace
+Command: link_design -top Wrapper -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'pll'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1329.977 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 147 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, pll/inst/clkin1_ibufg, from the path connected to top-level port: clk_100mhz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'pll/inst'
+Finished Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'pll/inst'
+Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'pll/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1650.895 ; gain = 320.918
+Finished Parsing XDC File [c:/Users/lja26/Desktop/tetris/vivado/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'pll/inst'
+Parsing XDC File [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '//' is not supported in the xdc constraint file. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command '//' is not supported in the xdc constraint file. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/lja26/Desktop/tetris/Nexys-A7-100T-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1650.895 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+10 Infos, 19 Warnings, 19 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1650.895 ; gain = 320.918
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.771 . Memory (MB): peak = 1650.895 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: ffb7ec9f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.247 . Memory (MB): peak = 1662.844 ; gain = 11.949
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1491bf187
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.254 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 17 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 147a3f641
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.295 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15d3ffab4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.361 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15d3ffab4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.446 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 15d3ffab4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.458 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 15d3ffab4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.477 . Memory (MB): peak = 1877.246 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              17  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              1  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1877.246 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 17d479bb1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.530 . Memory (MB): peak = 1877.246 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 10 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 20
+Ending PowerOpt Patch Enables Task | Checksum: 17d479bb1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 17d479bb1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2013.699 ; gain = 136.453
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 17d479bb1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 17d479bb1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+34 Infos, 19 Warnings, 19 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Wrapper_drc_opted.rpt -pb Wrapper_drc_opted.pb -rpx Wrapper_drc_opted.rpx
+Command: report_drc -file Wrapper_drc_opted.rpt -pb Wrapper_drc_opted.pb -rpx Wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: ddd81648
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus JB are not locked:  'JB[6]'  'JB[5]' 
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9059f858
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.472 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: a80c0ccd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: a80c0ccd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: a80c0ccd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: ae7dd4f7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: f33b4923
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: f33b4923
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 57 LUTNM shape to break, 237 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 16, two critical 41, total 57, new lutff created 19
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 156 nets or LUTs. Breaked 57 LUTs, combined 99 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           57  |             99  |                   156  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           57  |             99  |                   156  |           0  |          10  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 19e51eafc
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 1c79ece96
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1c79ece96
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1bcd1856d
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 168a582da
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 235ac9dd8
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 14c44330e
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 2331a2008
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 223b44e14
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 21244a93c
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1f9796dad
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1edf51239
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1edf51239
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1410b0009
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.320 | TNS=-83.088 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1619a38c3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1ca2e5562
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1410b0009
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.266. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 28cccfb31
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 28cccfb31
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 28cccfb31
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 28cccfb31
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 28cccfb31
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2a3891882
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Ending Placer Task | Checksum: 1c202a926
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+77 Infos, 20 Warnings, 19 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.371 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file Wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_placed.rpt -pb Wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.70s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.266 | TNS=-51.076 |
+Phase 1 Physical Synthesis Initialization | Checksum: 25d88d9e8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.531 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.266 | TNS=-51.076 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 25d88d9e8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.546 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.266 | TNS=-51.076 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[30].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net pll/inst/clk_out1_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/wDiv_B[26]. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_1__68_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.254 | TNS=-50.803 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[31].dff/wDivisor[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/c7. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_1__67_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.228 | TNS=-50.641 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__32
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__33
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__32_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.050 | TNS=-49.559 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[28].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__170
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38
+INFO: [Physopt 32-81] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.038 | TNS=-49.918 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.012 | TNS=-49.840 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118
+INFO: [Physopt 32-242] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Rewired (signal push) CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0 to 3 loads. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.010 | TNS=-50.000 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__75_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__75
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__75_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.010 | TNS=-49.930 |
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__70
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[9].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__174
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__70_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.997 | TNS=-49.458 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__74_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__74
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__74_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.982 | TNS=-49.383 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__77
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp_2.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.978 | TNS=-49.363 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__76_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__76
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__76_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.971 | TNS=-49.068 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__200
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.970 | TNS=-49.065 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__73
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_6__19
+INFO: [Physopt 32-134] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.964 | TNS=-49.047 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__80_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__80
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__73_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__80_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.962 | TNS=-49.057 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__200
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_7__51_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_7__51
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__200_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_7__51_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.953 | TNS=-49.014 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_6__19
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__309_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__309
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_6__19_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__309_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.948 | TNS=-49.015 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__81
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[18].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__190
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__81_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[18]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.946 | TNS=-49.009 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__82_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__82
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__82_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.941 | TNS=-48.994 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_rewire
+INFO: [Physopt 32-242] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Rewired (signal push) CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0 to 2 loads. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.935 | TNS=-49.002 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__68
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.932 | TNS=-48.993 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[17].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__33_rewire
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_68. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_1__529_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.932 | TNS=-48.425 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__77
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__73_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.929 | TNS=-48.416 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.929 | TNS=-48.371 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_rewire_rewire
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__69_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__69
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_4__118_rewire_rewire_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__69_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.926 | TNS=-47.991 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31_comp
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/wDiv_B[26]. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_1__68_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.920 | TNS=-47.869 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.905 | TNS=-47.240 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_5__22_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_5__22
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_5__22_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_5__22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[17].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__188
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_5__22_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_5__22_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[17]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.905 | TNS=-47.196 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__67
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__200_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.905 | TNS=-47.135 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__74_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__74
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_6__19_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__74_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.902 | TNS=-47.126 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__79_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__79
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__73_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__79_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.888 | TNS=-46.961 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__70_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__70_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.885 | TNS=-46.537 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.867 | TNS=-46.083 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.857 | TNS=-46.109 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[21].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__148_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__148
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_109. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__147_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__148_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.857 | TNS=-45.286 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.850 | TNS=-45.160 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__66
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.841 | TNS=-44.593 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[28].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__150
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_114. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__152_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.821 | TNS=-44.021 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.818 | TNS=-43.924 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__68
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__68_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.804 | TNS=-42.750 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31_comp_2
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.778 | TNS=-42.590 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__75_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__75
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__75_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__75_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.777 | TNS=-42.563 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__69_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__69
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__69_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.769 | TNS=-42.467 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__65_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__65
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__65_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.767 | TNS=-42.900 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__65_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__65
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__200_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__65_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.763 | TNS=-42.781 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0.  Re-placed instance CPU/dx/ir/dff_loop[16].dff/q_reg
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.753 | TNS=-42.626 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[22].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__147_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__147
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_110. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__148_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__147_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.753 | TNS=-41.878 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.743 | TNS=-41.818 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__76_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__76
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_6__19_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__76_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.738 | TNS=-41.791 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__37_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_4__37
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__37_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.734 | TNS=-41.431 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.729 | TNS=-41.586 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__34_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__34
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__200_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_3__200_comp_2.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__34_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.723 | TNS=-41.568 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__309_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__309_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__309_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__187_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__187
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__187_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__187_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.711 | TNS=-41.457 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[5].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__170
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__68_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__68_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.705 | TNS=-41.361 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__66
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__330
+INFO: [Physopt 32-134] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_50 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__310
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.695 | TNS=-40.867 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[15].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__153_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__153
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_105. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__143_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__153_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.686 | TNS=-40.548 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_7__51_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_7__51_comp
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_7__51_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.684 | TNS=-40.506 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31_comp_1
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/c7. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_1__67_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.679 | TNS=-40.463 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__310
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__105
+INFO: [Physopt 32-81] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.677 | TNS=-40.280 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__78_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__78
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__78_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__78_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[15].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__183
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__78_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__78_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.675 | TNS=-40.276 |
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__105
+INFO: [Physopt 32-81] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.675 | TNS=-40.207 |
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[28].dff/MemoryArray_reg_2.  Did not re-place instance CPU/xm/ir/dff_loop[28].dff/q_i_3__102
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__309_n_0_repN. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__309_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[28].dff/MemoryArray_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.675 | TNS=-40.208 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__72_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__72
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__72_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__72_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[13].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__178
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__72_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__72_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.674 | TNS=-40.172 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[14].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__153_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__153
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_104. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__142_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__153_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.671 | TNS=-39.777 |
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__105
+INFO: [Physopt 32-81] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.671 | TNS=-39.789 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__67
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__168
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.666 | TNS=-39.721 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__105
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.666 | TNS=-38.993 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[28].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net pll/inst/clk_out1_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__170
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38_rewire_rewire
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.660 | TNS=-38.234 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__32_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__33_comp
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__33_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.657 | TNS=-38.054 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[13].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__154_n_0.  Re-placed instance CPU/xm/ir/dff_loop[26].dff/q_i_2__154
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__154_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.647 | TNS=-37.554 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[31].dff/wDivisor[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__39_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_4__39
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__39_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.617 | TNS=-37.424 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__71_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__71
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[12].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__177
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[12]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_26.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__312
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_26. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__101
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_10__24
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.615 | TNS=-36.097 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica_comp_1
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.608 | TNS=-36.040 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0.  Did not re-place instance CPU/dx/ir/dff_loop[16].dff/q_reg
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_9__21
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.602 | TNS=-30.373 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__118_replica_comp_1
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__118_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.569 | TNS=-30.181 |
+INFO: [Physopt 32-662] Processed net CPU/mw/ir/dff_loop[25].dff/q_reg_1.  Did not re-place instance CPU/mw/ir/dff_loop[25].dff/q_i_6__41
+INFO: [Physopt 32-702] Processed net CPU/mw/ir/dff_loop[25].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1.  Did not re-place instance CPU/mw/ir/dff_loop[22].dff/q_i_15__9
+INFO: [Physopt 32-735] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.567 | TNS=-29.641 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[30].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__150
+INFO: [Physopt 32-702] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__307_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__307
+INFO: [Physopt 32-702] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__307_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__151_n_0.  Re-placed instance CPU/xm/ir/dff_loop[26].dff/q_i_2__151
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__151_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.563 | TNS=-28.915 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__73_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_6__19_comp
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.556 | TNS=-28.861 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[30].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31_comp_2
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.545 | TNS=-28.848 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_10__24
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_55.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_14__11
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_55. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.543 | TNS=-27.173 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__81_comp
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.543 | TNS=-26.972 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_9__21
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.480 | TNS=-22.376 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_9__21
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_21_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_21
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_21_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.476 | TNS=-17.351 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__81_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_43.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__324
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_43. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__191_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__191
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__191_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.472 | TNS=-17.336 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[23].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__147_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__147
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__147_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.471 | TNS=-17.227 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__66
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__330
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__310
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.471 | TNS=-16.953 |
+INFO: [Physopt 32-662] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1.  Did not re-place instance CPU/mw/ir/dff_loop[22].dff/q_i_15__9
+INFO: [Physopt 32-702] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_5__56
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_17__2
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/wDiv_B[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net q_reg_i_6_n_0.  Re-placed instance q_reg_i_6
+INFO: [Physopt 32-735] Processed net q_reg_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.453 | TNS=-17.559 |
+INFO: [Physopt 32-662] Processed net q_reg_i_6_n_0.  Did not re-place instance q_reg_i_6
+INFO: [Physopt 32-702] Processed net q_reg_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[27].dff/q_reg_0.  Did not re-place instance CPU/dx/ir/dff_loop[27].dff/q_reg
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[27].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.453 | TNS=-17.559 |
+Phase 3 Critical Path Optimization | Checksum: 25d88d9e8
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2013.699 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.453 | TNS=-17.559 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[28].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net pll/inst/clk_out1_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__170
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__170_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38_rewire_rewire
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.451 | TNS=-17.553 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__38_rewire_rewire
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__308
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__308_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__308_comp_1.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.439 | TNS=-17.516 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__32_comp
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__66
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__330
+INFO: [Physopt 32-134] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_50 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__310
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_9 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__101
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/mw/ir/dff_loop[25].dff/q_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/mw/ir/dff_loop[25].dff/q_reg_1.  Did not re-place instance CPU/mw/ir/dff_loop[25].dff/q_i_6__41
+INFO: [Physopt 32-572] Net CPU/mw/ir/dff_loop[25].dff/q_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/mw/ir/dff_loop[25].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1.  Did not re-place instance CPU/mw/ir/dff_loop[22].dff/q_i_15__9
+INFO: [Physopt 32-702] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_5__56
+INFO: [Physopt 32-710] Processed net CPU/mw/ir/dff_loop[22].dff/q_reg_1. Critical path length was reduced through logic transformation on cell CPU/mw/ir/dff_loop[22].dff/q_i_15__9_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.431 | TNS=-17.200 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__73_comp
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__73_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/alu_in_b[22].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__185
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/alu_in_b[22] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/alu_in_b[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[28].dff/MemoryArray_reg_2_0.  Did not re-place instance CPU/xm/ir/dff_loop[28].dff/q_i_3__103
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/alu_in_b[22]. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__185_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[28].dff/MemoryArray_reg_2_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.427 | TNS=-17.162 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__67
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__67_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3].  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__168
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_4[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.418 | TNS=-17.036 |
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_51 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_51.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_11__16
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_51 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_51. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.418 | TNS=-16.544 |
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0_repN_1.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_2__77_comp_1
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__77_n_0_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.418 | TNS=-16.493 |
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0.  Did not re-place instance CPU/dx/ir/dff_loop[16].dff/q_reg
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[16].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_9__21
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_19_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_19
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__31_n_0.  Re-placed instance CPU/dx/ir/dff_loop[31].dff/q_i_4__31
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__31_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.417 | TNS=-13.728 |
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[30].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__150
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_116. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__154_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.409 | TNS=-13.429 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[31].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__150
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_117. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__155_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_6__19_comp
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_6__19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_20_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_20
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[2].dff/q_reg_19.  Did not re-place instance CPU/dx/ir/dff_loop[2].dff/q_i_4__24
+INFO: [Physopt 32-81] Processed net CPU/dx/ir/dff_loop[2].dff/q_reg_19. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[2].dff/q_reg_19. Optimization improves timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_4__105
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_10__24
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_4__105_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_4__105_comp.
+INFO: [Physopt 32-735] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[29].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__150
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_115. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__153_comp.
+INFO: [Physopt 32-735] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__150_n_0. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[30].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__31_comp_2
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__31_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__83_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__83
+INFO: [Physopt 32-601] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__83_n_0. Net driver CPU/dx/ir/dff_loop[31].dff/q_i_2__83 was replaced.
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_10__24
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_5__56
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_reg_58 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_17__2
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_RQ/dff_loop[13].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/xm/ir/dff_loop[26].dff/q_i_2__154_n_0.  Did not re-place instance CPU/xm/ir/dff_loop[26].dff/q_i_2__154
+INFO: [Physopt 32-710] Processed net CPU/xm/ir/dff_loop[26].dff/q_reg_103. Critical path length was reduced through logic transformation on cell CPU/xm/ir/dff_loop[26].dff/q_i_1__141_comp.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__81_comp
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_43.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__324
+INFO: [Physopt 32-710] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__81_n_0. Critical path length was reduced through logic transformation on cell CPU/dx/ir/dff_loop[31].dff/q_i_2__81_comp_1.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_17__2
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/wDiv_B[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net q_reg_i_6_n_0.  Did not re-place instance q_reg_i_6
+INFO: [Physopt 32-702] Processed net q_reg_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[28].dff/q_reg_0.  Did not re-place instance CPU/dx/ir/dff_loop[28].dff/q_reg
+INFO: [Physopt 32-572] Net CPU/dx/ir/dff_loop[28].dff/q_reg_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[28].dff/q_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CPU/md/divider/r_divisor/dff_loop[22].dff/q_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net pll/inst/clk_out1_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__32_comp
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_3__32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__63
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__63_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__66
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__66_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__198
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_1__330
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_50. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_2__310
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_2__310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_3__101
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_9. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_10__24
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_10__24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_5__56
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_reg_58. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0.  Did not re-place instance CPU/dx/ir/dff_loop[31].dff/q_i_17__2
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/q_i_17__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[31].dff/wDiv_B[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net q_reg_i_6_n_0.  Did not re-place instance q_reg_i_6
+INFO: [Physopt 32-702] Processed net q_reg_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net CPU/dx/ir/dff_loop[28].dff/q_reg_0.  Did not re-place instance CPU/dx/ir/dff_loop[28].dff/q_reg
+INFO: [Physopt 32-702] Processed net CPU/dx/ir/dff_loop[28].dff/q_reg_0. Optimizations did not improve timing on the net.
+Phase 4 Critical Path Optimization | Checksum: 25d88d9e8
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.367 | TNS=-9.957 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.899  |         41.118  |            8  |              0  |                   104  |           0  |           2  |  00:00:15  |
+|  Total          |          0.899  |         41.118  |            8  |              0  |                   104  |           0  |           3  |  00:00:15  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2013.699 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 2b92d52cf
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+713 Infos, 20 Warnings, 19 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.366 . Memory (MB): peak = 2013.699 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PLIO-3] Placement Constraints Check for IO constraints: Partially locked IO Bus is found. Following components of the IO Bus JB[10:1] are not locked:  JB[6] JB[5]
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: f82c2fb7 ConstDB: 0 ShapeSum: fa0019b5 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 12f930edc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2081.793 ; gain = 68.094
+Post Restoration Checksum: NetGraph: e3870f91 NumContArr: 4c0bff4b Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 12f930edc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2081.793 ; gain = 68.094
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 12f930edc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2087.922 ; gain = 74.223
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 12f930edc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2087.922 ; gain = 74.223
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 133eb1336
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2110.336 ; gain = 96.637
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.542 | TNS=-12.907| WHS=-0.120 | THS=-6.998 |
+
+Phase 2 Router Initialization | Checksum: 176c4eb6b
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2151.262 ; gain = 137.562
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00147974 %
+  Global Horizontal Routing Utilization  = 0.00468883 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 6266
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 6264
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 176c4eb6b
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2151.262 ; gain = 137.562
+Phase 3 Initial Routing | Checksum: 2488e404f
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2165.676 ; gain = 151.977
+INFO: [Route 35-580] Design has 8 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[29].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[14].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[27].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[20].dff/q_reg/D|
+|       clk_out1_clk_wiz_0 |       clk_out1_clk_wiz_0 |                                                              CPU/md/divider/r_RQ/dff_loop[26].dff/q_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 2430
+ Number of Nodes with overlaps = 1089
+ Number of Nodes with overlaps = 560
+ Number of Nodes with overlaps = 279
+ Number of Nodes with overlaps = 116
+ Number of Nodes with overlaps = 66
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.201 | TNS=-78.258| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1e7374e0b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 362
+ Number of Nodes with overlaps = 132
+ Number of Nodes with overlaps = 75
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.920 | TNS=-68.255| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 196882c1a
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:36 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 378
+ Number of Nodes with overlaps = 180
+ Number of Nodes with overlaps = 85
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.700 | TNS=-62.327| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 1ee916250
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:42 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 367
+ Number of Nodes with overlaps = 123
+ Number of Nodes with overlaps = 43
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.601 | TNS=-58.691| WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 1c2ed89a6
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:48 . Memory (MB): peak = 2165.676 ; gain = 151.977
+Phase 4 Rip-up And Reroute | Checksum: 1c2ed89a6
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:48 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1ecec521d
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:48 . Memory (MB): peak = 2165.676 ; gain = 151.977
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.601 | TNS=-58.691| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1ac192993
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1ac192993
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+Phase 5 Delay and Skew Optimization | Checksum: 1ac192993
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 265fce1e1
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.584 | TNS=-57.116| WHS=0.081  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 265fce1e1
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+Phase 6 Post Hold Fix | Checksum: 265fce1e1
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.73343 %
+  Global Horizontal Routing Utilization  = 1.94892 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 54.955%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 84.6847%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 22459b25e
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 22459b25e
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2391c321d
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:50 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.584 | TNS=-57.116| WHS=0.081  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 2391c321d
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2165.676 ; gain = 151.977
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2165.676 ; gain = 151.977
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+734 Infos, 22 Warnings, 19 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:52 . Memory (MB): peak = 2165.676 ; gain = 151.977
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.501 . Memory (MB): peak = 2165.676 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
+Command: report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file Wrapper_methodology_drc_routed.rpt -pb Wrapper_methodology_drc_routed.pb -rpx Wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file Wrapper_methodology_drc_routed.rpt -pb Wrapper_methodology_drc_routed.pb -rpx Wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/lja26/Desktop/tetris/vivado/Tetris.runs/impl_1/Wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
+Command: report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+746 Infos, 22 Warnings, 19 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file Wrapper_route_status.rpt -pb Wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Wrapper_timing_summary_routed.rpt -pb Wrapper_timing_summary_routed.pb -rpx Wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Wrapper_bus_skew_routed.rpt -pb Wrapper_bus_skew_routed.pb -rpx Wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 22 15:55:49 2024...
