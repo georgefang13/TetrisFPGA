@@ -23,6 +23,16 @@ add $r24, $r0, $r0
 # reset fall speed
 addi $r21, $r0, 10
 
+# clear hold piece
+sw $r0, 218($r0)
+sw $r0, 257($r0)
+sw $r0, 258($r0)
+sw $r0, 259($r0)
+sw $r0, 260($r0)
+sw $r0, 263($r0)
+sw $r0, 264($r0)
+sw $r0, 265($r0)
+
 #clear the board:
 addi $r5, $r0, 0
 addi $r6, $r0, 200
@@ -77,7 +87,7 @@ addi $r8, $r8, 1
 bne $r8, $r9, board_good
 
 addi $r10, $r0, 13
-addi $r7, $r0, 16
+addi $r7, $r0, 17
 j check_end
 
 board_good:
@@ -86,7 +96,7 @@ board_good:
 add $r25, $r0, $r0
 
 # Get next piece
-lw $r1, 235($r0)
+lw $r10, 235($r0)
 
 # shift up next blocks and get new random block
 lw $r1, 236($r0)
@@ -113,6 +123,8 @@ add $r1, $r28, $r0
 sw $r1, 239($r0)
 addi $r2, $r0, 372
 jal next_store
+
+addi $r1, $r10, 0
 
 spawn_hold:
 
@@ -362,7 +374,7 @@ lt2:
 addi $r1, $r0, 1
 sw $r1, 200($r0) # type
 # locaitons of each block
-addi $r2, $r0, 3
+addi $r2, $r0, 13
 sw $r2, 202($r0)
 addi $r2, $r2, 1
 sw $r2, 203($r0)
@@ -373,19 +385,19 @@ sw $r2, 205($r0)
 
 addi $r2, $r0, 3
 sw $r2, 219($r0) # x1
-addi $r2, $r0, 0
+addi $r2, $r0, 1
 sw $r2, 220($r0) # y1
 addi $r2, $r0, 4
 sw $r2, 221($r0) # x2
-addi $r2, $r0, 0
+addi $r2, $r0, 1
 sw $r2, 222($r0) # y2
 addi $r2, $r0, 5
 sw $r2, 223($r0) # x3
-addi $r2, $r0, 0
+addi $r2, $r0, 1
 sw $r2, 224($r0) # y3
 addi $r2, $r0, 6
 sw $r2, 225($r0) # x4
-addi $r2, $r0, 0
+addi $r2, $r0, 1
 sw $r2, 226($r0) # y4
 
 decode_done:
@@ -705,11 +717,11 @@ bne $r29, $r0, delay
 addi $r29, $r0, 1
 
 # load out the held block
-lw $r1, 218($r0)
+lw $r10, 218($r0)
 
 # store current piece
-lw $r2, 200($r0)
-sw $r2, 218($r0)
+lw $r1, 200($r0)
+sw $r1, 218($r0)
 
 # update hold grid
 addi $r2, $r0, 250
@@ -724,6 +736,8 @@ sw $r0, 0($r12)
 sw $r0, 0($r13)
 sw $r0, 0($r14)
 sw $r0, 0($r15)
+
+addi $r1, $r10, 0
 
 # check if anyting is held
 bne $r1, $r0, spawn_hold
@@ -1019,8 +1033,16 @@ addi $r11, $r0, 4000
 blt $r10, $r11, speed_4
 addi $r11, $r0, 5000
 blt $r10, $r11, speed_5
+addi $r11, $r0, 10000
+blt $r10, $r11, speed_6
+addi $r11, $r0, 15000
+blt $r10, $r11, speed_7
+addi $r11, $r0, 25000
+blt $r10, $r11, speed_8
+addi $r11, $r0, 50000
+blt $r10, $r11, speed_9
 
-addi $r21, $r0, 5
+addi $r21, $r0, 1
 jr $ra
 
 speed_1:
@@ -1041,6 +1063,22 @@ jr $ra
 
 speed_5:
 addi $r21, $r0, 6
+jr $ra
+
+speed_6:
+addi $r21, $r0, 5
+jr $ra
+
+speed_7:
+addi $r21, $r0, 4
+jr $ra
+
+speed_8:
+addi $r21, $r0, 3
+jr $ra
+
+speed_9:
+addi $r21, $r0, 2
 jr $ra
 
 RCW:
@@ -4158,63 +4196,64 @@ sw $r0, 14($r2)
 sw $r0, 15($r2)
 
 addi $r3, $r0, 7
-bne $r7, $r1, not_next_J
-lw $r1, 7($r2)
-lw $r1, 13($r2)
-lw $r1, 14($r2)
-lw $r1, 15($r2)
+bne $r3, $r1, not_next_J
+sw $r1, 7($r2)
+sw $r1, 13($r2)
+sw $r1, 14($r2)
+sw $r1, 15($r2)
 jr $ra
 
 not_next_J:
 addi $r3, $r0, 6
-bne $r7, $r1, not_next_L
-lw $r1, 9($r2)
-lw $r1, 13($r2)
-lw $r1, 14($r2)
-lw $r1, 15($r2)
+bne $r3, $r1, not_next_L
+sw $r1, 9($r2)
+sw $r1, 13($r2)
+sw $r1, 14($r2)
+sw $r1, 15($r2)
 jr $ra
 
 not_next_L:
 addi $r3, $r0, 5
-bne $r7, $r1, not_next_T
-lw $r1, 8($r2)
-lw $r1, 13($r2)
-lw $r1, 14($r2)
-lw $r1, 15($r2)
+bne $r3, $r1, not_next_T
+sw $r1, 8($r2)
+sw $r1, 13($r2)
+sw $r1, 14($r2)
+sw $r1, 15($r2)
 jr $ra
 
 not_next_T:
 addi $r3, $r0, 4
-bne $r7, $r1, not_next_Z
-lw $r1, 7($r2)
-lw $r1, 8($r2)
-lw $r1, 14($r2)
-lw $r1, 15($r2)
+bne $r3, $r1, not_next_Z
+sw $r1, 7($r2)
+sw $r1, 8($r2)
+sw $r1, 14($r2)
+sw $r1, 15($r2)
 jr $ra
 
 not_next_Z:
 addi $r3, $r0, 3
-bne $r7, $r1, not_next_S
-lw $r1, 8($r2)
-lw $r1, 9($r2)
-lw $r1, 13($r2)
-lw $r1, 14($r2)
+bne $r3, $r1, not_next_S
+sw $r1, 8($r2)
+sw $r1, 9($r2)
+sw $r1, 13($r2)
+sw $r1, 14($r2)
 jr $ra
 
 not_next_S:
 addi $r3, $r0, 2
-bne $r7, $r1, not_next_O
-lw $r1, 8($r2)
-lw $r1, 9($r2)
-lw $r1, 14($r2)
-lw $r1, 15($r2)
+bne $r3, $r1, not_next_O
+sw $r1, 8($r2)
+sw $r1, 9($r2)
+sw $r1, 14($r2)
+sw $r1, 15($r2)
 jr $ra
 
 not_next_O:
-lw $r1, 7($r2)
-lw $r1, 8($r2)
-lw $r1, 9($r2)
-lw $r1, 10($r2)
+addi $r1, $r0, 1
+sw $r1, 7($r2)
+sw $r1, 8($r2)
+sw $r1, 9($r2)
+sw $r1, 10($r2)
 jr $ra
 
 die:
@@ -4227,5 +4266,3 @@ nop
 nop
 nop
 j die
-
-
